@@ -1,10 +1,10 @@
 const titles = [
-  { main: '我们在创造谁？', sub: '机器人的认知、成长与共处', reason: '首选：主标题承载哲学问题，副标题交代三幕故事。“成长”容纳学习与自我改进，不预设无限自主进化已经实现。' },
-  { main: '我们在创造谁？', sub: '从世界模型、自我改进到人机共处', reason: '学术海报版：前沿方向更明确，但术语较多，适合希望在海报上直接展示技术内容的场合。' },
-  { main: '机器人是一面镜子', sub: '在预测、成长与共处中重新认识人类', reason: '更温和、更易理解。演讲中需让镜子的比喻继续发展：机器会回应，也会改变映照它的人。' },
-  { main: '硅基的我们？', sub: '机器人与人类经验的另一种延伸', reason: '辨识度高、思辨感强，但必须保留问号；“硅基”是技术意象，不能代指已经成立的新生命形式。' }
+  { main: '硅基的我们？', sub: '从具身智能到社会共处', reason: '推荐：从技术研究走向关系、规则与公共生活。主标题的问号留到社会具身之后，在结尾讨论人的经验如何延伸。' },
+  { main: '硅基的我们？', sub: '机器人的行动、关系与共同生活', reason: '更适合跨学科海报：少一些技术术语，直接呈现身体行动、社会关系与共同生活。' },
+  { main: '硅基的我们？', sub: '从学会行动到学会共处', reason: '最口语的一版，故事路径清楚。社会具身的具体研究内容在简介和第三幕展开。' },
+  { main: '硅基的我们？', sub: '机器人与人类经验的另一种延伸', reason: '保留最初喜欢的表达，哲思更明显；需要靠简介补足社会具身与公共生活的内容。' }
 ];
-const abstract = '当机器人开始预测世界、从经历中学习、与人建立关系，我们在创造谁？分享结合世界模型、自我改进、社会具身研究与空中机器人实践，追问机器如何继承人的经验，又因不同的身体与经历走向差异，借此重新认识人类自己。';
+const abstract = '机器人怎样预测世界、从尝试中学习，又怎样进入人与人的关系？本次分享结合空中机器人研究与前沿案例，从世界模型、仿真学习谈到社会具身，讨论行为、规则与公共生活的联系，并留下一个问题：我们是否也在延伸自己？';
 const $ = id => document.getElementById(id);
 let selected = 0;
 $('abstract').textContent = abstract;
@@ -52,6 +52,12 @@ function bindChoices(attribute, cases, output) {
 }
 bindChoices('data-drawer', drawerCases, 'drawer-result');
 bindChoices('data-social', socialCases, 'social-result');
+const publicCases = {
+  visitor: '对使用者：它是否真的帮我完成了事情？我能否看懂、打断或纠正它？如果我走得慢、听不清，服务是否仍然适合我？',
+  bystander: '对旁观者：我没有使用机器人，却可能被要求让路、被记录，或被迫配合。我的意见怎样进入设计？谁来承担便利背后的打扰？',
+  staff: '对工作人员：整体服务是否改善，还是把困难转交给了人？遇到冲突谁来处理，如何记录反馈、调整规则，并向受影响的人解释？'
+};
+bindChoices('data-public', publicCases, 'public-result');
 function poster() { return `分享主题：${titles[selected].main}——${titles[selected].sub}\n\n内容简介：${abstract}`; }
 $('copy').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(poster()); $('copy-status').textContent = '已复制，可直接提交给活动老师。'; }
@@ -70,7 +76,7 @@ $('export').addEventListener('click', () => {
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
-  link.download = '我们在创造谁-备讲笔记.txt';
+  link.download = '硅基的我们-备讲笔记.txt';
   document.body.appendChild(link);
   link.click();
   link.remove();
@@ -91,4 +97,39 @@ $('present').addEventListener('click', () => {
   const active = document.body.classList.toggle('focus');
   $('present').textContent = active ? '退出专注' : '专注阅读';
   $('present').setAttribute('aria-pressed', String(active));
+});
+
+// Keep external media optional, attributed and under the reader's control.
+document.querySelectorAll('video').forEach(video => {
+  const status = video.closest('figure').querySelector('.media-status');
+  const failure = () => { status.textContent = '视频暂时无法加载，可通过上方出处链接查看原站。'; };
+  video.addEventListener('error', failure);
+  video.querySelectorAll('source').forEach(source => source.addEventListener('error', failure));
+  video.addEventListener('playing', () => {
+    status.textContent = '';
+    document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
+  });
+});
+document.querySelectorAll('.load-video').forEach(button => button.addEventListener('click', () => {
+  const container = button.closest('.video-embed');
+  const frame = document.createElement('iframe');
+  frame.src = `https://www.youtube-nocookie.com/embed/${container.dataset.youtube}?autoplay=1&rel=0`;
+  frame.title = 'Emo 人机表情互动：Columbia Engineering 官方演示';
+  frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  frame.allowFullscreen = true;
+  frame.referrerPolicy = 'strict-origin-when-cross-origin';
+  container.replaceChildren(frame);
+}));
+document.querySelectorAll('img').forEach(img => {
+  const failure = () => {
+    if (img.dataset.failed) return;
+    img.dataset.failed = 'true';
+    img.classList.add('media-unavailable');
+    const notice = document.createElement('span');
+    notice.className = 'image-fallback';
+    notice.textContent = '图像暂时无法加载 · ' + img.alt + '。可通过出处链接查看原图。';
+    img.insertAdjacentElement('afterend', notice);
+  };
+  img.addEventListener('error', failure);
+  if (img.complete && !img.naturalWidth) failure();
 });
