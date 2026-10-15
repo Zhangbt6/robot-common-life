@@ -68,6 +68,14 @@
 @media print{.act-map{display:none}.mirror-art{display:none}.evidence-grid{gap:20px}.evidence,.own-work,.thought-experiment,.relationship{break-inside:avoid}.dark .own-work,.dark .bridge{background:white}.dark .tag,.dark .evidence dt,.dark .bridge b,.dark .own-work small,.dark .caption,.act-quote{color:#333}.workbench-content{padding-top:20px}.focus .own-work,.focus .caption,.focus .evidence dl{display:block}a{overflow-wrap:anywhere}.slide-plan{columns:2}}
 
 /* Social embodiment: visible questions across behavior, relationships and rules. */
+.study-context{font-size:14px;line-height:1.9}.study-context b{font-weight:500;color:var(--orange)}
+.dark .study-context b{color:#efbd8f}
+.evidence-notes{border-top:1px solid var(--line);margin:20px 0;padding:14px 0}
+.evidence-notes summary{cursor:pointer;font-size:13px;color:var(--muted)}
+.evidence-notes dl{margin:12px 0}.dark .evidence-notes{border-color:#5d7065}.dark .evidence-notes summary{color:#c7d2c8}
+.discussion-pause{border-left:2px solid var(--orange);padding:12px 18px}
+.public-scenario .script{margin:20px 0}.public-scenario .social-path{margin:20px 0}
+@media print{.study-context b,.dark .study-context b,.dark .evidence-notes summary{color:#333}}
 .social-lens{border-left:2px solid var(--orange);padding:12px 24px;margin:34px 0;background:#eadbc530}
 .social-lens p{font-size:16px;margin:0}.social-lens .tag{margin-bottom:12px}
 .social-path{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:36px 0 48px}
