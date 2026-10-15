@@ -1,36 +1,10 @@
-const titles = [
-  { main: '硅基的我们？', sub: '从自主行动到社会共处', reason: '推荐：自主机器人研究是起点，社会共处是落点。世界模型、探索与身体能力构成中间的叙事；这是问题视角的展开，不是必须依次完成的技术阶段。' },
-  { main: '硅基的我们？', sub: '从自主智能到社会共处', reason: '保留“自主智能”的表达，范围更宽、技术意味更强；正式讲述仍需说明自主的是哪些任务和环节。' },
-  { main: '硅基的我们？', sub: '从具身智能到社会共处', reason: '强调身体、环境与学习的联系。与自主性是不同维度，适合更突出具身认知的版本。' },
-  { main: '硅基的我们？', sub: '机器人与人类经验的另一种延伸', reason: '更有哲思的备选。把关于“我们”的解释留到社会具身之后，以个人猜想收束。' }
-];
-const abstract = '本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验，以及走向与人共处时面临的问题。在技术与社会的交汇处，思考人与机器人的关系。';
+const talkTitle = '硅基的我们？——从自主行动到社会共处';
+const abstract = '本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。';
 const $ = id => document.getElementById(id);
-let selected = 0;
 $('abstract').textContent = abstract;
+$('hero-abstract').textContent = abstract;
+$('poster-title').textContent = talkTitle;
 $('count').textContent = `简介 ${Array.from(abstract).length} 字（含标点）`;
-titles.forEach((t, i) => {
-  const button = document.createElement('button');
-  button.className = 'title-option';
-  const main = document.createElement('b');
-  const sub = document.createElement('small');
-  main.textContent = t.main;
-  sub.textContent = t.sub;
-  button.append(main, sub);
-  button.addEventListener('click', () => select(i));
-  $('titles').appendChild(button);
-});
-function select(i) {
-  selected = i;
-  document.querySelectorAll('.title-option').forEach((button, j) => {
-    button.classList.toggle('selected', j === i);
-    button.setAttribute('aria-pressed', String(j === i));
-  });
-  $('poster-title').textContent = `${titles[i].main}——${titles[i].sub}`;
-  $('title-reason').textContent = titles[i].reason;
-  $('copy-status').textContent = '';
-}
-select(0);
 const drawerCases = {
   compute: '更多计算可以比较可能性，却不能凭空补出缺失的事实。此时应保留多种假设。',
   observe: '获得相应授权并确保安全后，打开抽屉或使用合适的传感器，可能得到能区分假设的新信息。预测开始接受现实检验。',
@@ -58,7 +32,7 @@ const publicCases = {
   staff: '对工作人员：整体服务是否改善，还是把困难转交给了人？遇到冲突谁来处理，如何记录反馈、调整规则，并向受影响的人解释？'
 };
 bindChoices('data-public', publicCases, 'public-result');
-function poster() { return `分享主题：${titles[selected].main}——${titles[selected].sub}\n\n内容简介：${abstract}`; }
+function poster() { return `分享主题：${talkTitle}\n\n内容简介：${abstract}`; }
 $('copy').addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(poster()); $('copy-status').textContent = '已复制，可直接提交给活动老师。'; }
   catch { $('copy-status').textContent = '浏览器未允许自动复制，请选择上方文案手动复制。'; }
@@ -93,11 +67,68 @@ window.addEventListener('afterprint', () => {
   printStates = undefined;
 });
 $('print').addEventListener('click', () => window.print());
-$('present').addEventListener('click', () => {
-  const active = document.body.classList.toggle('focus');
-  $('present').textContent = active ? '退出专注' : '专注阅读';
+// Keep the reading position visible, including while navigating in presentation mode.
+const chapters = [
+  ['home', '封面'], ['prologue', '01 / 自主行动'], ['prediction', '02 / 预测与边界'],
+  ['growth', '03 / 探索与成长'], ['embodiment', '04 / 身体与互动'],
+  ['social', '05 / 社会共处'], ['return', '06 / 回望我们']
+];
+let currentChapter = 0;
+let scheduled = false;
+function updateReading() {
+  scheduled = false;
+  const marker = document.querySelector('header').getBoundingClientRect().height + 100;
+  currentChapter = 0;
+  chapters.forEach(([id], index) => {
+    if ($(id).getBoundingClientRect().top <= marker) currentChapter = index;
+  });
+  const isStudio = !document.body.classList.contains('focus') && $('studio').getBoundingClientRect().top <= marker;
+  const activeId = isStudio ? 'studio' : chapters[currentChapter][0];
+  document.querySelectorAll('header nav a').forEach(link => {
+    if (link.hash === '#' + activeId) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+  const total = document.documentElement.scrollHeight - innerHeight;
+  $('reading-progress').style.transform = `scaleX(${total > 0 ? Math.min(1, Math.max(0, scrollY / total)) : 0})`;
+  $('stage-label').textContent = chapters[currentChapter][1];
+  $('stage-prev').disabled = currentChapter === 0;
+  $('stage-next').disabled = currentChapter === chapters.length - 1;
+}
+function scheduleReading() {
+  if (!scheduled) { scheduled = true; requestAnimationFrame(updateReading); }
+}
+function goChapter(direction) {
+  updateReading();
+  const next = Math.max(0, Math.min(chapters.length - 1, currentChapter + direction));
+  $(chapters[next][0]).scrollIntoView({ behavior: 'instant', block: 'start' });
+  updateReading();
+}
+function setPresentation(active) {
+  updateReading();
+  const anchorId = chapters[currentChapter][0];
+  document.body.classList.toggle('focus', active);
+  $('present').textContent = active ? '退出展示' : '展示模式';
   $('present').setAttribute('aria-pressed', String(active));
+  $('stage-controls').hidden = !active;
+  if (active) $(anchorId).scrollIntoView({ behavior: 'instant', block: 'start' });
+  updateReading();
+}
+$('present').addEventListener('click', () => setPresentation(!document.body.classList.contains('focus')));
+$('stage-prev').addEventListener('click', () => goChapter(-1));
+$('stage-next').addEventListener('click', () => goChapter(1));
+document.addEventListener('keydown', event => {
+  if (!document.body.classList.contains('focus') || event.altKey || event.ctrlKey || event.metaKey || event.target.closest('input, textarea, select, video, iframe, summary, [contenteditable]')) return;
+  if (event.key === 'Escape') { setPresentation(false); $('present').focus(); }
+  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+    event.preventDefault();
+    goChapter(event.key === 'ArrowRight' ? 1 : -1);
+  }
 });
+addEventListener('scroll', scheduleReading, { passive: true });
+addEventListener('resize', scheduleReading);
+document.addEventListener('toggle', scheduleReading, true);
+addEventListener('load', updateReading);
+updateReading();
 
 // Keep external media optional, attributed and under the reader's control.
 document.querySelectorAll('video').forEach(video => {
