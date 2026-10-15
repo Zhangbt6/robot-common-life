@@ -1,42 +1,102 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="学会行动，如何共处？从机器自主到人机共同生活。一场从机器人研究出发，面向社会科学的跨学科分享。">
-<title>学会行动，如何共处？ · 机器人与共同生活</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="我们在创造谁？机器人的认知、成长与共处。从世界模型、自我改进和社会具身研究出发，重新理解人类自己。">
+  <title>我们在创造谁？ · 机器人的认知、成长与共处</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="narrative.css">
 </head>
 <body>
-<header><a class="brand" href="#home">行动与共处 <span>FIELD NOTES / 01</span></a><nav aria-label="主导航"><a href="#question">起点</a><a href="#stories">研究故事</a><a href="#together">共同生活</a><a href="#studio">备讲台</a></nav><button id="present" class="small">专注阅读</button></header>
+<a class="skip-link" href="#prologue">跳到正文</a>
+<header>
+  <a class="brand" href="#home">我们在创造谁<span>ROBOTICS / A MIRROR OF OURSELVES</span></a>
+  <nav aria-label="主导航"><a href="#prediction">预测</a><a href="#growth">成长</a><a href="#social">共处</a><a href="#return">回望</a><a href="#studio">备讲</a></nav>
+  <button id="present" class="small" aria-pressed="false">专注阅读</button>
+</header>
 <main>
 <section id="home" class="hero">
-<div class="eyebrow">机器人研究 × 社会科学 · 分享构思 / 2026.11</div>
-<h1>学会行动，<br>如何<span class="accent">共处</span>？</h1>
-<div class="hero-bottom"><div><p class="subtitle">从机器自主到人机共同生活</p><p class="intro">一个正在让机器人学会行动的研究者，<br>带着真实实验中的问题，走向关于共同生活的讨论。</p><a class="text-link" href="#question">从一个抽屉开始 <span>↘</span></a></div><div class="orbit" aria-label="行动需要同时面对身体、任务与他人的要求"><span class="orbit-label l1">身体 / BODY</span><span class="orbit-label l2">任务 / TASK</span><span class="orbit-label l3">他人 / OTHERS</span><div class="orbit-core">行动<br><small>ACTION</small></div></div></div>
-<div class="hero-foot"><span>一场关于能力、选择与边界的分享</span><span>建议 52 分钟分享 + 8 分钟对话</span></div>
+  <div class="eyebrow">机器人研究 × 认知与社会 · 分享构思 / 2026.11</div>
+  <h1>我们在<br>创造<span class="accent">谁</span>？</h1>
+  <div class="hero-bottom">
+    <div><p class="subtitle">机器人的认知、成长与共处</p><p class="intro">我们把经验写进机器，给它身体，让它学习。<br>当它开始行动，镜子里的身影会怎样回应我们？</p><a class="text-link" href="#prologue">从一个大胆的命题开始 <span>↘</span></a></div>
+    <div class="mirror-art" aria-label="人类经验进入机器，机器的行动反过来改变人的经验"><span>人的经验</span><div class="mirror-line"></div><span>机器的经历</span><div class="mirror-reflection">我 <span>↔</span> 它</div><small>延伸 · 差异 · 相互塑造</small></div>
+  </div>
+  <div class="act-map"><a href="#prediction"><small>ACT I / 认知</small><b>把未来放进模型</b><span>它能预见多少？ ↗</span></a><a href="#growth"><small>ACT II / 成长</small><b>把成长放进世界</b><span>它如何超出已知？ ↗</span></a><a href="#social"><small>ACT III / 共处</small><b>把自己放进关系</b><span>它将成为谁的“我们”？ ↗</span></a></div>
+  <div class="hero-foot"><span>从人类的延伸，到与人相遇的行动者</span><span>52 分钟分享 + 8 分钟对话 · 叙事第二版</span></div>
 </section>
-<section id="question"><div class="section-heading"><span class="eyebrow">01 / 一个具体的问题</span><span class="muted">从实验走进生活</span></div><h2>抽屉打开了。<br>机器人就做对了吗？</h2>
-<div class="split"><div><p class="lead">在实验室里，我们看它是否抓稳、是否失衡、动作是否准确。把同一个动作放进生活，我们还会问：这是谁的抽屉？谁允许它打开？有人反对怎么办？</p><p class="muted">以下是生活情境的思想实验，不代表空中机器人已适合家庭部署。</p><div class="scenario-controls" role="group" aria-label="选择授权情境"><button class="active" data-case="clear" aria-pressed="true">明确授权</button><button data-case="vague" aria-pressed="false">指令含糊</button><button data-case="conflict" aria-pressed="false">有人反对</button></div><div class="scenario-result" aria-live="polite"><span class="eyebrow" id="case-label">情境 A</span><h3 id="case-title">“请打开我桌子左侧的抽屉。”</h3><p id="case-text">在任务、授权与安全条件均清楚时执行；让在场的人看懂它准备做什么，并保留中止的机会。</p><small>讨论用行为设想，具体处理仍取决于情境与参与者。</small></div></div>
-<div class="drawer-art" aria-hidden="true"><div class="drawing-caption">THE SAME ACTION.<br>DIFFERENT RELATIONS.</div><div class="cabinet"><div class="drawer top"><i></i></div><div class="drawer bottom"><i></i></div></div><span class="art-note">拉开的不只是一个抽屉，<br>也是一个关于边界的问题。</span></div></div>
-<div class="levels"><article><span>01</span><h3>做得到</h3><p>身体与环境</p><small>稳定、接触、避障与行动后果</small></article><article><span>02</span><h3>做得对</h3><p>目标与任务</p><small>是否理解要求，是否完成正确的事</small></article><article><span>03</span><h3>做得合宜</h3><p>关系与规范</p><small>授权、意愿、分歧与协调</small></article></div><p class="caption">三个同时存在的判断维度；它们并不是技术发展的三个阶段。</p>
+<section id="prologue">
+  <div class="section-heading"><span class="eyebrow">序 / 一个有待展开的命题</span><span class="muted">先留下判断，结尾再回来</span></div>
+  <h2>“机器人，<br>就是我们自己。”</h2>
+  <div class="split"><div><span class="tag">讲者命题</span><p class="lead">它学我们的语言，模仿我们的动作，从我们的记录中获得经验。它身上处处是人的影子。那么，我们究竟在制造工具，延伸自己，还是孕育一个不同于自己的行动者？</p><p>这句话先作为全场的挑战：相似的能力，是否意味着相同的存在？如果身体和经历改变了，“我们自己”还能保持原来的样子吗？</p></div><div class="opening-note"><span class="eyebrow">贯穿全场的故事</span><h3>我们给它经验。<br>它获得自己的经历。<br>然后，它走向我们。</h3><p>认知科学贯穿这三幕：预测怎样支持行动，经验怎样改变能力，关系怎样塑造行为。这里讨论的是可比较的问题，不预设人脑与机器人具有相同机制。</p></div></div>
+  <p class="bridge">一只伸向抽屉的机械臂，将在三幕中出现三次。第一次，我们看它预判后果；第二次，看它获得经验；第三次，看它面对另一个人的意愿。</p>
 </section>
-<section class="dark" id="stories"><div class="section-heading"><span class="eyebrow">02 / 三个研究故事</span><span>从具体困难里，长出更大的问题</span></div><h2>身体、协作、经历。</h2><p class="lead narrow">每个故事都从一个工程问题出发，再追问：当这个动作发生在人的生活里，什么会改变？</p>
-<article class="story"><div class="story-number">I</div><div><span class="eyebrow">空中操作与抗扰</span><h3>伸出手之前，先稳住身体。</h3><p>悬在空中的机器人拉抽屉时，抽屉也会反过来拉它。机械臂运动、机体姿态与外部扰动彼此影响，完成动作需要持续协调。</p><blockquote>智能不仅体现为给出答案，也体现为承受行动的后果。</blockquote><details><summary>展开讲述线索与素材建议</summary><p>先展示一次接触或失衡，再解释机体与机械臂为什么要共同协调。用一张力与运动关系图说明困难，最后回到人在场时的物品、安全感与行动空间。正式展示前，核对手稿与实验视频；标注实机 / 仿真、遥操作 / 自主执行。</p></details></div></article>
-<article class="story"><div class="story-number">II</div><div><span class="eyebrow">遥操作与人机协作</span><h3>机器更自主，人能否更自由？</h3><p>人提出操作要求，机器人承担部分复杂的身体协调与执行。人的作用可以从逐个控制关节，转向决定目标、判断情境与处理例外。</p><blockquote>机器承担了哪些负担，人获得了哪些选择？</blockquote><details><summary>展开讲述线索与素材建议</summary><p>用“人的输入—机器人协调—任务执行”三步图解释协作。具体输入应按实际系统标注，不把末端位姿等操作量说成完整社会意图。再引入一个思想实验：辅助取物是让使用者更能自主生活，还是让系统替他决定生活？</p></details></div></article>
-<article class="story"><div class="story-number">III</div><div><span class="eyebrow">AirSpark 与仿真学习</span><h3>怎样的经历，塑造怎样的能力？</h3><p>把仿真理解为机器人练习场：组织任务，记录失败，改变条件，再检验策略是否真正进步。熟悉环境里的成功，不等于面对新情境的可靠。</p><blockquote>谁来定义“做得好”，哪些人的经验被纳入评价？</blockquote><details><summary>展开讲述线索与素材建议</summary><p>以一次失败—调整—再评估的过程代替功能清单。现有工程基础、在建训练闭环与未来社会情境实验应分别说明。社会情境评估是研究设想，不是宣称 AirSpark 已完成的能力。</p></details></div></article>
-<p class="source-note">研究线索整理自提供的报告草稿；本页未核验论文原文与实验记录，不新增性能数字或完成状态。</p>
+<section id="prediction">
+  <div class="section-heading"><span class="eyebrow">第一幕 / 预测 · 05—18 分钟</span><span class="muted">世界模型与人的直觉</span></div>
+  <h2>如果能预演未来，<br>还需要经历世界吗？</h2>
+  <div class="split"><div><p class="lead">杯子尚未落地，我们已经伸手；抽屉尚未移动，机器人需要应对接触后的身体变化。行动常常从“接下来会怎样”开始。</p><p>世界模型将这个问题变成可以研究的机制：给定当前信息和候选动作，预测后续状态，再据此选择行动。未来可以表现为画面，也可以是用于决策的内部表征。</p><p class="citation">认知桥梁：预测加工将预期、输入与误差联系起来，是理解感知与行动的一种理论框架。<a href="https://doi.org/10.1017/S0140525X12000477" target="_blank" rel="noopener noreferrer">Andy Clark，2013 ↗</a></p></div><aside class="own-work"><span class="tag">我的研究 / 接入位置</span><h3>空中操作与抗扰</h3><p>先放自己的接触实验：伸手、接触、受力、调整。解释为什么身体和机械臂必须协调，再问“如何在不完美的判断下仍然可靠地行动”。</p><small>这是问题层面的连接。控制器是否采用预测模型，须依据真实方法说明；不把已有抗扰控制重新命名为世界模型。</small></aside></div>
+  <div class="evidence-grid">
+    <article class="evidence"><span class="tag">研究 / 2025</span><h3>Genie 3</h3><p class="demo-hook">先看：一个可以走进去的生成世界。</p><dl><dt>展示了什么</dt><dd>随交互持续生成环境，支持一定时长的探索。</dd><dt>还未证明什么</dt><dd>任意真实场景的精确复刻与无限时长的一致性；原发布材料明确列出交互时长与动作空间限制。</dd><dt>留给听众的问题</dt><dd>一个世界“看上去真实”，意味着它的后果也可靠吗？</dd></dl><a href="https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/" target="_blank" rel="noopener noreferrer">官方演示与说明 ↗</a></article>
+    <article class="evidence"><span class="tag">研究 / 2025</span><h3>V-JEPA 2</h3><p class="demo-hook">再看：不必画出全部细节，也能帮助行动。</p><dl><dt>展示了什么</dt><dd>动作条件下的表征预测可用于机器人规划；论文演示了图像目标引导的物品抓放。</dd><dt>还未证明什么</dt><dd>对所有物理规律、任务和环境的普遍理解。</dd><dt>留给听众的问题</dt><dd>为了做对一个动作，模型究竟需要知道多少？</dd></dl><a href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/" target="_blank" rel="noopener noreferrer">官方演示 ↗</a> <a href="https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/" target="_blank" rel="noopener noreferrer">论文说明 ↗</a></article>
+  </div>
+  <div class="thought-experiment"><span class="tag">思想实验 / 抽屉第一次出现</span><h3>模型预测里面有杯子。怎样知道它猜对了？</h3><p>设想两种情形：抽屉的可见外观完全相同，内部却不同。现有输入没有提供区分它们的信息。</p><div class="scenario-controls" role="group" aria-label="选择了解抽屉的方法"><button data-drawer="compute" aria-pressed="true" class="active">继续推演</button><button data-drawer="observe" aria-pressed="false">获取新观察</button><button data-drawer="ask" aria-pressed="false">向人询问</button></div><div id="drawer-result" class="response" aria-live="polite">更多计算可以比较可能性，却不能凭空补出缺失的事实。此时应保留多种假设。</div><p class="caption">这是对信息条件的演示，不是正在运行的世界模型。观察与询问也需要相应的安全和授权条件。</p></div>
+  <details class="script"><summary>概念核查：数据、外推与“做梦”的比喻</summary><p>模型可以从有限样本中学到可迁移的规律；能力边界并不等于见过的样本清单。真正需要检验的是：离开训练分布之后，预测是否仍然可靠。</p><p>“模糊背景”可以作为视觉比喻，却不是不确定性的测量。模型可能生成清晰而错误的细节；模糊也可能来自渲染或解码过程。<b>画面的清晰度，不等于知识的确定性。</b></p><p><a href="https://proceedings.mlr.press/v267/kang25g.html" target="_blank" rel="noopener noreferrer">ICML 2025 的受控物理实验</a>发现，被测视频模型的分布外预测存在失败。这是特定研究结果，不是对所有世界模型外推能力的否定。</p></details>
+  <p class="bridge"><b>第一处转折：</b>预测给出可能的未来，观察与行动带来新的证据。于是我们要给机器人一个地方，让它去试。</p>
 </section>
-<section id="together"><div class="section-heading"><span class="eyebrow">03 / 从自主到共处</span><span class="muted">全场的中心命题</span></div><h2>自主的行动，<br>需要共同商定的边界。</h2><p class="lead narrow">自主描述机器在多大程度上能自行执行；共处追问这种行动如何与他人的生活相容。更强的能力，并不会自动给出更合宜的目标。</p>
-<div class="questions"><article><span>01 / 能力与正当性</span><h3>能做的事，都应该做吗？</h3><p>同一个抽屉，一人要求打开，一人要求停止。问题已超出识别把手与规划动作：谁有权授权？分歧怎样处理？</p><strong>让询问、等待与交还决定，成为可评价的能力。</strong></article><article><span>02 / 自主与人的选择</span><h3>机器更主动，人会更被动吗？</h3><p>辅助取物可以减少求助的负担；一个无法拒绝的“贴心”系统，也可能剥夺选择。需要看人能否理解、修改和中止行动。</p><strong>衡量机器的自主，也衡量人的自主是否增加。</strong></article><article><span>03 / 效率与关怀</span><h3>节约下来的时间，去了哪里？</h3><p>机器人可以让照料者有更多时间陪伴，也可能被用于进一步减少人的接触。相似的技术，会因组织安排而带来不同的生活。</p><strong>完成照料任务，与维系关怀关系，需要分别讨论。</strong></article><article><span>04 / 收益与责任</span><h3>提高了谁的效率，留下了谁的负担？</h3><p>社区巡检的效率、居民的安宁与劳动者的安全，未必能被一个指标同时表达。发生问题时，还要追问谁设定目标、谁部署、谁能干预。</p><strong>把受到影响的人，带入任务定义和评价过程。</strong></article></div>
-<aside class="definition"><span class="eyebrow">本次分享中的“社会具身智能”</span><p>一个讨论视角：不仅关注机器人如何在物理环境中完成任务，也关注它如何识别社会情境、表达行动意图、遵循适当规范，并与受其影响的人协调行动。</p><small>这是一条研究问题线索，不意味着当前系统已经具备完整的社会理解能力。</small></aside>
+<section class="dark" id="growth">
+  <div class="section-heading"><span class="eyebrow">第二幕 / 成长 · 18—32 分钟</span><span>仿真世界与自我改进</span></div>
+  <h2>给它一个世界，<br>它会长成什么样？</h2>
+  <div class="split"><div><p class="lead">人并不只靠继承来的知识生活。我们试错、练习、借用他人的经验，再改变下一次行动。机器人能否也从自己的失败中组织下一次学习？</p><p>仿真的吸引力，在于让某些经历可以重复、调整和比较。真实感需要服务于任务：开抽屉时，接触、摩擦和约束可能比墙纸纹理更重要；依赖视觉的任务，又需要认真处理外观差异。</p></div><aside class="own-work"><span class="tag">我的研究 / 接入位置</span><h3>AirSpark：给机器一个练习场</h3><p>展示如何设置任务、记录一次失败、改变条件，再比较结果。把平台讲成“经验如何被组织”的研究，而不只是一组功能。</p><small>已有基础、在建训练闭环与未来设想分开呈现；当前页面没有据此声称 AirSpark 已实现 RSI。</small></aside></div>
+  <div class="learning-loop" aria-label="任务、尝试、反馈、更新与检验形成学习循环"><span>任务与环境</span><b>→</b><span>尝试与失败</span><b>→</b><span>反馈与更新</span><b>→</b><span>独立检验</span><b>↻</b></div>
+  <p class="caption">回到抽屉：面对不同阻力，它只是记下“上次失败了”，还是改变了动作策略，乃至改变下一轮采集经验的方法？</p>
+  <div class="evidence-grid">
+    <article class="evidence"><span class="tag">项目与预印本 / 2026.10</span><h3>AgentGarten</h3><p class="demo-hook">世界规则用程序维护，画面由神经渲染器生成。</p><dl><dt>展示了什么</dt><dd>智能体在可执行世界中交互，每轮记录经验，后续轮次利用这些笔记。</dd><dt>还未证明什么</dt><dd>仅凭跨轮笔记，不能推断模型权重已自主更新。</dd><dt>留给听众的问题</dt><dd>一次经历结束后，究竟有什么被留下？</dd></dl><a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">项目演示 ↗</a> <a href="https://arxiv.org/abs/2610.12374" target="_blank" rel="noopener noreferrer">预印本 ↗</a></article>
+    <article class="evidence"><span class="tag">预印本 / 2026.09，v3 更新于 10.03</span><h3>EmbodiRSI</h3><p class="demo-hook">让当前策略的失败，决定下一轮需要什么经验。</p><dl><dt>展示了什么</dt><dd>在真实—仿真—真实流程中，用执行反馈指导纠错数据与策略更新。</dd><dt>还未证明什么</dt><dd>结果来自三个桌面环境、十四个子任务与有限更新轮次，不是开放世界的无限进化。</dd><dt>留给听众的问题</dt><dd>仿真里变强，怎样获得现实中的证据？</dd></dl><a href="https://arxiv.org/html/2609.38905v3" target="_blank" rel="noopener noreferrer">论文与实验图示 ↗</a></article>
+  </div>
+  <details class="script"><summary>前沿补充：RSI-Anything，以及“自我改进”到底改了什么</summary><p><a href="https://arxiv.org/abs/2610.13912" target="_blank" rel="noopener noreferrer">RSI-Anything（2026.10.09 预印本）</a>用世界模型引导行动和学习数据选择，利用反馈更新策略或工作流程，并有条件地更新预测模型。实验涉及代码、界面与科学任务；不能作为通用实体机器人无限成长的证明。</p><p>备讲时区分三件事：<b>记住经验</b>（笔记与记忆）、<b>改进行为</b>（策略、参数或程序）、<b>改进学习过程</b>（下一次如何获取经验、选择更新）。这些是不同机制，不是所有论文一致采用的 RSI 等级标准。</p><p>“进化”可以是叙事用词；涉及具体方法时使用“学习”“适应”或“递归自我改进”。生物进化、文化传承与参数更新的机制不同。</p></details>
+  <blockquote class="act-quote">想象产生可能，<br>检验让成长值得相信。</blockquote>
+  <p>即使没有新的现实观测，在可验证的规则中搜索，也可能发现未被显式给出的解。问题不在于每次学习都必须加入现实数据，而在于检验与任务之间是否存在可靠联系。</p>
+  <p class="bridge"><b>第二处转折：</b>如果“更好”是打开抽屉，可以评估成功率；如果“更好”是照顾一个人，谁能把他的生活写成一个分数？</p>
 </section>
-<section class="experiment"><span class="eyebrow">04 / 一个可以共同开展的研究</span><h2>让物理任务不变，<br>让人的关系发生变化。</h2><div class="split"><p class="lead">仍然是取一件物品。分别设置明确授权、指令含糊、有人反对三种条件。我们希望系统什么时候执行，什么时候询问，什么时候等待？</p><div><h3>技术与社会科学，从问题定义开始相遇。</h3><p>技术侧研究感知、意图表达、执行与交还控制；社会科学侧参与界定授权、分歧处理、受影响者与评价标准。</p><p>共同观察任务完成、误行动、询问是否合时宜，以及人的理解和可干预性。不要把所有价值压成一个总分。</p><p class="muted">未来研究设想：仿真可帮助控制条件和记录交互；真实接受性与生活影响仍需情境研究与参与者反馈。</p></div></div><blockquote class="closing">人的价值，不应由<br>“还有多少任务机器做不了”来定义。</blockquote><p class="lead">我们希望把机器人带入怎样的生活？<br>让人有更多选择、更少危险，也有更有尊严的共同生活。</p></section>
-<section id="studio"><div class="section-heading"><span class="eyebrow">05 / 备讲台</span><span class="muted">可复制 · 可展开 · 可记录</span></div><h2>把思路，变成一场分享。</h2>
-<div class="studio-grid"><div><h3>主题备选</h3><div id="titles" class="title-options"></div><p id="title-reason" class="muted"></p><div class="poster"><span class="eyebrow">海报提交稿</span><h3 id="poster-title"></h3><p id="abstract"></p><small id="count"></small><button id="copy" class="solid">复制主题与简介</button><span id="copy-status" role="status"></span></div></div><div><h3>60 分钟的叙事节奏</h3><ol class="timeline"><li><time>00—05</time><div><b>一个抽屉</b><p>打开了，就做对了吗？邀请听众先作判断。</p></div></li><li><time>05—12</time><div><b>当智能拥有身体</b><p>说明身体、任务、社会情境三个判断维度。</p></div></li><li><time>12—30</time><div><b>三个研究故事</b><p>每段约六分钟：困难、尝试、证据、追问。</p></div></li><li><time>30—47</time><div><b>四个共同生活的问题</b><p>围绕具体冲突，讨论选择、关怀与责任。</p></div></li><li><time>47—52</time><div><b>共同设计一个实验</b><p>提出可研究的问题，回到开场的抽屉。</p></div></li><li><time>52—60</time><div><b>留给现场</b><p>谁的意见，还没有进入我们的设计？</p></div></li></ol></div></div>
-<details class="script"><summary>开场与结尾 · 可直接用于试讲</summary><div class="split"><div><h3>开场</h3><p>大家看到，这个机器人把抽屉打开了。为了完成这个动作，我们需要让它抓得稳、身体不失衡，还要应对接触时的扰动。这些都是我在研究中关心的问题。</p><p>现在，我们暂时把同一个动作放到生活里：这是谁的抽屉？谁让它打开？如果旁边的人说“不要动”，它该怎么办？</p><p>我今天想和大家讨论的，就是从“把事情做成”到“把事情做得合宜”，还有哪些问题需要我们共同回答。</p></div><div><h3>结尾</h3><p>回到最初的抽屉。打开它，需要感知、控制与学习；判断该不该打开，需要理解情境、尊重选择，并有处理分歧的安排。</p><p>在实验室里，我们努力让机器人飞得更稳、抓得更准、学得更快。当它走进生活，我们还要问：它替谁工作，听谁安排，谁能说“不”，谁对后果负责？</p><p>我希望机器获得的行动能力，最终能成为人的生活能力。从学会行动到学会共处，这段路，需要研究机器的人，也需要理解社会的人。</p></div></div></details>
-<details class="script"><summary>素材与论证准备 · 正式报告前核对</summary><ul><li>抽屉交互短视频：注明实机或仿真、遥操作或自主执行；只展示获准公开的素材。</li><li>一次失败或扰动后的恢复：用它解释困难与边界，避免只拼接成功镜头。</li><li>一张人的输入与机器人执行的示意图：准确标注实际控制量。</li><li>AirSpark 的当前能力与研究设想对照：依据最新实验记录更新。</li><li>为引用的学术概念补充核验后的原始文献；当前网页内容以报告草稿与讨论设想为主。</li><li>约 24 页课件：开场 2 页、身体 3 页、故事 9 页、共处 6 页、展望与讨论 4 页。</li></ul></details>
-<div class="notes"><label for="notes"><h3>我的备讲笔记</h3></label><p class="muted">保存在当前浏览器，不上传。可导出，供下次继续修改。</p><textarea id="notes" rows="6" placeholder="记录想保留的题目、需要补充的视频、老师可能追问的问题……"></textarea><div class="notes-footer"><span id="save-status" role="status"></span><button id="export">导出备讲笔记</button><button id="print">打印 / 保存 PDF</button></div></div>
+<section id="social">
+  <div class="section-heading"><span class="eyebrow">第三幕 / 共处 · 32—45 分钟</span><span class="muted">社会具身：关系进入了智能</span></div>
+  <h2>当它开始回应我，<br>它还是一面镜子吗？</h2>
+  <p class="lead narrow">一个机器人对我微笑，记住我的习惯，在我开口前伸出手。它的身体表达影响我的判断，我的回应又成为它下一步行动的条件。研究对象开始从单个机器，变成人与机器之间的关系。</p>
+  <div class="evidence-grid">
+    <article class="evidence"><span class="tag">同行评审研究 / 2024 与 2026</span><h3>Emo：一个笑容的时机</h3><p class="demo-hook">从预测并同步表情，到学习与语音配合的唇部动作。</p><dl><dt>展示了什么</dt><dd>2024 年研究展示面部共表达；2026 年另一项研究展示学习唇部运动。它们是两项不同工作。</dd><dt>还未证明什么</dt><dd>逼真的表情和口型，并不能单独证明主观感受或完整社会理解。</dd><dt>留给听众的问题</dt><dd>一个准确的回应，为什么会让人感到“被理解”？</dd></dl><a href="https://www.engineering.columbia.edu/about/news/robot-can-you-say-cheese" target="_blank" rel="noopener noreferrer">表情演示 / 2024 ↗</a><br><a href="https://www.engineering.columbia.edu/about/news/robot-learns-lip-sync" target="_blank" rel="noopener noreferrer">唇形演示 / 2026 ↗</a></article>
+    <article class="evidence"><span class="tag">研究项目 / 情感交互</span><h3>HERA：让交互留下痕迹</h3><p class="demo-hook">从即时反应，走向受近期交互历史影响的状态。</p><dl><dt>展示了什么</dt><dd>研究用动态情感状态组织机器人对触摸的反应，近期刺激可持续影响后续状态。</dd><dt>还未证明什么</dt><dd>这不是完整的自传式记忆，也不证明机器人具有情绪体验。</dd><dt>留给听众的问题</dt><dd>记忆怎样让互动具有连续性？谁决定什么值得被记住？</dd></dl><a href="https://is.mpg.de/hi/projects/haptic-empathetic-robot-animal-hera" target="_blank" rel="noopener noreferrer">研究机构项目页 ↗</a><p class="caption">本次核查可检索项目摘要，项目页全文访问受限；正式选片前复核原文与演示。</p></article>
+  </div>
+  <div class="relationship"><span class="tag">思想实验 / 抽屉第三次出现</span><h3>它记住我的习惯，准确预测了我的需求。<br>它还需要问我吗？</h3><div class="scenario-controls" role="group" aria-label="选择互动方式"><button data-social="automatic" aria-pressed="false">直接替我完成</button><button data-social="confirm" aria-pressed="false">每次都先询问</button><button data-social="agreement" aria-pressed="false">事先约定，随时可改</button></div><div id="social-result" class="response" aria-live="polite">先作判断，再展开理由。这里没有一项能脱离情境成为通用答案。</div><p>预测讨论“可能想要什么”；授权讨论“愿不愿意让它这样做”。两者相关，却不能相互替代。</p></div>
+  <details class="script"><summary>从一个人到一个社会：模拟了公众，是否就代表了公众？</summary><p><a href="https://arxiv.org/abs/2304.03442" target="_blank" rel="noopener noreferrer">Generative Agents（2023）</a>将记忆、反思与规划用于一个有 25 个智能体的模拟小镇，产生可观察的交互与协调行为。这个经典案例适合说明“人工社会可以被研究”，而不是当作最新进展或真实民意的替身。</p><p>设想我们让模拟居民评议一项公共服务，模型显示“大家满意”。这时应问：谁进入了样本，谁没有？哪些偏好被压缩了？真实居民是否有表达、反对和修正规则的机会？</p><p><b>被模型预测，不等于被社会意义上的代表。</b>群体分工解决任务协调，公共治理还涉及利益冲突、参与、正当性与责任；两类问题需要共同研究。</p></details>
+  <p class="bridge"><b>第三处转折：</b>我们原以为在复制“人的能力”，却发现选择哪些经验、鼓励哪些行为，已经在表达一种“人应该怎样生活”的想象。</p>
 </section>
-</main><footer><span>行动与共处 / A SHARED WORLD</span><p>从真实研究出发，向共同生活提问。</p><a href="#home">回到开篇 ↑</a></footer>
+<section id="return" class="experiment">
+  <span class="eyebrow">回望 / 45—52 分钟</span>
+  <h2>它来自我们。<br>但它会成为谁？</h2>
+  <div class="split"><div><span class="tag">讲者立场 / 命题的修正</span><p class="lead">“机器人就是我们自己”最有力量的地方，是让我们看见：它并不是从人类历史之外降临的东西。我们的语言、技能、偏好与偏见，都可能在它身上留下痕迹。</p><p>但来自我们，不等于复制我们。不同的身体、感知方式与交互经历，会带来不同的能力与限制。它既可以延伸人的行动，也可能成为我们需要学习如何相处的人工行动者。</p></div><aside class="own-work"><span class="tag">我的研究 / 遥操作收束全场</span><h3>这次行动，发生在谁身上？</h3><p>回放开场的空中操作视频，再补上操作者的画面。目标由人提出，协调由系统承担，动作由远端身体完成。此时，“智能在哪里”的问题，开始指向整个人机系统。</p><small>这是理解能力延伸的案例，不是机器具有人的身份或意识的证明。视频需如实标明控制方式。</small></aside></div>
+  <div class="inheritance"><div><small>生物遗传</small><h3>DNA</h3><p>跨代传递生物性状</p></div><span>＋</span><div><small>社会传承</small><h3>文化</h3><p>语言、文字、教育与实践</p></div><span>＋</span><div><small>技术外化</small><h3>模型与机器</h3><p>部分经验转化为可执行能力</p></div></div>
+  <p class="caption">这是讲述“传承如何扩展”的概念框架，不是三种机制等价的进化定律，也不意味着后一种取代前一种。</p>
+  <blockquote class="closing">我们把自己写进机器，<br>又在与机器的相遇中，<br>重新认识自己。</blockquote>
+  <p class="lead narrow">我愿意把机器人理解为人类经验的一种可行动的延伸。它带着我们的影子，却会遇见不同的世界。于是问题不只在于它像不像人，还在于：我们正在把哪些人的经验，带向怎样的未来？</p>
+  <details class="script"><summary>讨论留白：工具、新物种，还是另一种关系？</summary><p>“工具”描述用途与关系，“物种”是生物学分类；二者不是同一坐标上的两端。一个系统是否有生命、主观体验、道德地位和法律责任，应分别讨论。</p><p>硅基计算硬件不等于已经成立的硅基生命；学习人类数据也不意味着继承了某个具体人的身份。我们仍然可以严肃讨论文化与能力的延续，而不预先回答这些尚未解决的问题。</p><p><b>留给现场：</b>如果一个机器人与你共同经历十年，形成独特的记忆和互动习惯，你愿意怎样描述这段关系？哪些证据会改变你的判断？</p></details>
+</section>
+<section id="studio">
+  <details class="workbench">
+    <summary><span class="eyebrow">备讲台 / 展开准备材料</span><strong>主题、百字简介、24 页故事板与讲稿</strong></summary>
+    <div class="workbench-content">
+      <div class="studio-grid"><div><h3>主题选择</h3><div id="titles" class="title-options"></div><p id="title-reason" class="muted"></p><div class="poster"><span class="eyebrow">海报提交稿</span><h3 id="poster-title">我们在创造谁？——机器人的认知、成长与共处</h3><p id="abstract"></p><small id="count"></small><button id="copy" class="solid">复制主题与简介</button><span id="copy-status" role="status"></span></div></div><div><h3>60 分钟叙事节奏</h3><ol class="timeline"><li><time>00—05</time><div><b>提出命题：机器人就是我们自己？</b><p>自己的短视频 → 经验从何而来 → 暂不揭晓答案。</p></div></li><li><time>05—18</time><div><b>预测：把未来放进模型</b><p>人的直觉 → 世界模型 → 信息缺口 → 必须去经历。</p></div></li><li><time>18—32</time><div><b>成长：把成长放进世界</b><p>AirSpark → 仿真与 RSI → 验证 → 谁定义更好。</p></div></li><li><time>32—45</time><div><b>共处：把自己放进关系</b><p>表情与记忆 → 人的回应 → 预测、授权与代表。</p></div></li><li><time>45—52</time><div><b>回望：从延伸到差异</b><p>遥操作 → DNA、文化与技术 → 修正开场命题。</p></div></li><li><time>52—60</time><div><b>现场对话</b><p>一段共同经历，会怎样改变我们对机器的理解？</p></div></li></ol></div></div>
+      <details class="script"><summary>24 页故事板 · 每页只推进一个问题</summary><ol class="slide-plan">
+        <li>标题与命题：机器人就是我们自己？</li><li>自己的空中操作短片：它的能力从哪里来？</li><li>全场路线：经验 → 经历 → 关系。</li><li>人拿杯子的直觉：行动之前已经在预期。</li><li>Genie 3：看得见的未来。</li><li>V-JEPA 2：为行动保留有用的未来。</li><li>自己的抗扰实验：判断并不完美，身体仍要行动。</li><li>关闭的抽屉：算不出，还是没观察到？</li><li>转折：预测的边界，把我们带向探索。</li><li>AirSpark：怎样组织一次可比较的经历？</li><li>AgentGarten：规则、画面与跨轮笔记。</li><li>EmbodiRSI：从当前失败到下一轮学习。</li><li>拆开成长：记住、学会、改变学习方法。</li><li>评分上升：怎样知道进步是真的？</li><li>转折：面对人的生活，谁定义“更好”？</li><li>Emo：一个回应的时机为何重要？</li><li>HERA：让交互历史影响下一次反应。</li><li>预测了我的需要，是否还需要问我？</li><li>Generative Agents：模拟公众与代表公众。</li><li>转折：“我们”到底包括哪些人？</li><li>回放遥操作，显示人机协作的完整画面。</li><li>DNA、文化与模型：延续之中有哪些不同？</li><li>修正命题：来自我们、延伸我们，也不同于我们。</li><li>共同经历十年后，你如何描述它？</li>
+      </ol></details>
+      <details class="script"><summary>开场与结尾 · 第一人称试讲稿</summary><div class="split"><div><h3>开场</h3><p>今天我想先说一句可能让大家不太同意的话：机器人，就是我们自己。</p><p>我并不是说它已经是一个人。我是说，每当我试着让机器人获得一种能力，就会遇到一个关于人的问题。让它预测，我会想到我们如何拥有直觉；让它学习，我会想到经验怎样改变一个人；让它与人互动，我又会想到我们如何在关系中成为自己。</p><p>所以今天，我想从自己的机器人实验出发，走过预测、成长与共处三个场景，再回头看看这句话究竟能成立到哪里。</p></div><div><h3>结尾</h3><p>开始时我说，机器人就是我们自己。现在我想把这句话说得更完整：我们把自己的一部分写进了机器，但它不会因此成为我们的完整复制。</p><p>它从我们的经验出发，又以不同的身体获得自己的经历。当它回到我们的生活，改变的不仅是它的能力，也可能是我们行动、学习和相处的方式。</p><p>所以，我们在创造谁？我们正在创造一种能行动的人类经验的延伸；而在这个过程中，我们也在选择，怎样理解自己，怎样与不同于自己的存在共同生活。</p></div></div></details>
+      <details class="script"><summary>前沿素材的取舍与核查记录 · 2026-10-15</summary><p>正文研究卡片均链接原始论文或作者机构。近期预印本与经典工作分开标注。公开页面提供演示入口，不把链接说成已剪辑的演讲视频。</p><ul><li>主讲外部短片建议选四段：Genie 3、AgentGarten、EmbodiRSI 实验材料、Emo；V-JEPA 2 与 HERA 可用图示讲解，Generative Agents 留作补充。</li><li>RSI-Anything 已核查摘要及正文，保留为备选，避免第二幕成为方法罗列。</li><li>HERA 项目摘要可检索，机构页全文访问受限；尚不能替你确认具体“情感记忆模块”就是这一项目。</li><li>自己的实验资料尚未导入。每段正式素材标明出处、实机 / 仿真、遥操作 / 自主；控制方法和 AirSpark 完成状态以你提供的实际记录为准。</li><li>“第三种传承方式”“人类经验的延伸”作为讲者解释框架呈现，不包装成已经确立的生物学或意识结论。</li></ul></details>
+      <div class="notes"><h3><label for="notes">我的备讲笔记</label></h3><p class="muted">沿用上一版笔记。仅保存在当前浏览器，可导出。</p><textarea id="notes" rows="6" placeholder="哪一处转折还不成立？哪段实验能把问题讲清楚？现场最想留下什么分歧？"></textarea><div class="notes-footer"><span id="save-status" role="status"></span><button id="export">导出备讲笔记</button><button id="print">打印 / 保存 PDF</button></div></div>
+    </div>
+  </details>
+</section>
+</main>
+<footer><span>我们在创造谁 / WHO ARE WE CREATING?</span><p>经验进入机器，问题回到人。</p><a href="#home">回到开篇 ↑</a></footer>
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>

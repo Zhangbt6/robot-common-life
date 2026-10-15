@@ -1,0 +1,45 @@
+/* Narrative edition: preserve the paper, ink and warm accent of the first site. */
+.skip-link{position:absolute;left:16px;top:-100px;background:var(--paper);padding:10px;z-index:30}
+.skip-link:focus{top:10px}
+.mirror-art{display:grid;grid-template-columns:1fr 1px 1fr;position:relative;min-height:235px;align-items:start;text-align:center;gap:16px;max-width:420px;width:100%;justify-self:center;padding:20px}
+.mirror-art>span{font-size:11px;letter-spacing:2px}
+.mirror-line{height:175px;background:var(--orange);transform:rotate(12deg)}
+.mirror-reflection{position:absolute;inset:50px 0 auto;font:64px/1.8 "SimSun",serif;letter-spacing:10px}
+.mirror-reflection span{font:24px/1 sans-serif;color:var(--orange);display:inline-block;margin:0 20px}
+.mirror-art>small{position:absolute;bottom:0;width:100%;font-size:11px;letter-spacing:3px}
+.act-map{display:grid;grid-template-columns:repeat(3,1fr);margin-top:55px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.act-map a{display:flex;flex-direction:column;gap:9px;padding:25px 22px;border-right:1px solid var(--line)}
+.act-map a:last-child{border:0}.act-map a:hover{background:var(--green)}
+.act-map small{font-size:10px;letter-spacing:2px;color:var(--orange)}
+.act-map b{font-size:23px;font-weight:500;font-family:"SimSun",serif}.act-map span{font-size:12px;color:var(--muted)}
+.hero-foot{margin-top:20px;border-top:0}
+.tag{display:inline-block;font-size:10px;letter-spacing:1px;color:var(--orange);border-bottom:1px solid currentColor;margin-bottom:18px}
+.opening-note,.own-work{padding:30px;background:var(--green)}
+.opening-note h3{font:30px/1.7 "SimSun",serif}.opening-note p,.own-work p{font-size:15px}
+.own-work small{display:block;font-size:12px;color:var(--muted)}
+.citation{font-size:12px;color:var(--muted);margin-top:25px}
+.citation a,.evidence a,.script a{text-decoration:underline;text-underline-offset:4px}
+.bridge{border-left:2px solid var(--orange);padding:15px 22px;margin:40px 0 0;font-size:18px;line-height:2;background:#eadbc530}
+.bridge b{font-weight:500;color:var(--orange)}
+.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin:40px 0}
+.evidence{padding:28px;border:1px solid var(--line);min-width:0}
+.evidence h3{font:32px/1.4 Georgia,"SimSun",serif}.demo-hook{font-size:15px}
+.evidence dl{margin:24px 0}.evidence dt{font-size:11px;letter-spacing:1px;color:var(--orange);margin-top:15px}
+.evidence dd{margin:4px 0 0;font-size:14px;line-height:1.9}.evidence a{font-size:12px}
+.thought-experiment,.relationship{padding:30px;background:#e9e7dc;margin:35px 0}
+.thought-experiment h3,.relationship h3{font-size:24px}.thought-experiment p,.relationship p{font-size:15px}
+.response{padding:22px 0;margin-top:18px;border-top:1px solid var(--line);font-size:17px;min-height:105px}
+.dark .own-work{background:#33473e}.dark .own-work small,.dark .caption{color:#c7d2c8}
+.dark .tag,.dark .evidence dt,.dark .bridge b{color:#efbd8f}.dark .evidence,.dark .script{border-color:#5d7065}
+.dark .bridge{border-color:#efbd8f;background:#ffffff05}.dark .bridge,.dark .script{color:#e6ece4}
+.learning-loop{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin:45px 0 20px}
+.learning-loop span{padding:16px 20px;border:1px solid #7c907f}.learning-loop b{font-weight:normal;color:#e6bc8e}
+.act-quote{font:clamp(32px,4vw,55px)/1.5 "SimSun",serif;margin:40px 0;color:#efbd8f}
+.inheritance{display:grid;grid-template-columns:1fr 30px 1fr 30px 1fr;align-items:center;gap:20px;margin-top:45px;border-block:1px solid var(--line);padding:30px 0}
+.inheritance>span{font-size:24px;color:var(--orange)}.inheritance small{font-size:11px}.inheritance h3{font:29px/1.4 "SimSun",serif;margin:12px 0}.inheritance p{font-size:12px;margin:0}
+.script:first-of-type{margin-top:25px}.script>p:first-of-type{margin-top:20px}
+.workbench{border-block:1px solid var(--line);padding:25px 0}.workbench>summary{padding:12px 0}.workbench>summary strong{display:block;font-size:25px;font-weight:500;margin-top:12px}.workbench-content{padding-top:38px}
+.slide-plan{columns:2;column-gap:45px;padding-left:25px}.slide-plan li{break-inside:avoid;padding:7px 0;font-size:14px}
+.focus .own-work,.focus .caption,.focus .evidence dl{display:none}
+@media(max-width:760px){header{flex-wrap:wrap;gap:10px}header .brand{font-size:14px}.brand span{font-size:7px;letter-spacing:1px}nav{gap:15px}.hero h1{font-size:70px}.mirror-art{min-height:200px}.mirror-line{height:140px}.act-map{grid-template-columns:1fr;margin-top:35px}.act-map a{border-right:0;border-bottom:1px solid var(--line);padding:20px 0}.act-map b{font-size:25px}.evidence-grid{grid-template-columns:1fr;gap:20px}.evidence{padding:24px}.own-work,.opening-note,.thought-experiment,.relationship{padding:24px}.learning-loop{gap:10px}.learning-loop span{font-size:12px;padding:12px}.inheritance{grid-template-columns:1fr;gap:15px}.inheritance>span{font-size:18px}.slide-plan{columns:1}.bridge{font-size:16px}.workbench>summary strong{font-size:22px}}
+@media print{.act-map{display:none}.mirror-art{display:none}.evidence-grid{gap:20px}.evidence,.own-work,.thought-experiment,.relationship{break-inside:avoid}.dark .own-work,.dark .bridge{background:white}.dark .tag,.dark .evidence dt,.dark .bridge b,.dark .own-work small,.dark .caption,.act-quote{color:#333}.workbench-content{padding-top:20px}.focus .own-work,.focus .caption,.focus .evidence dl{display:block}a{overflow-wrap:anywhere}.slide-plan{columns:2}}
