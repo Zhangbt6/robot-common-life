@@ -1,136 +1,387 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。">
-  <title>硅基的我们？ · 从自主行动到社会共处</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="narrative.css">
-  <link rel="stylesheet" href="edition.css">
-  <meta name="theme-color" content="#243c34">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。">
+<meta name="theme-color" content="#EEF0F0">
+<title>硅基的我们？——从自主行动到社会共处</title>
+<link rel="preload" href="fonts/zhuque-fangsong-subset.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
 </head>
-<body class="talk-edition">
-<a class="skip-link" href="#prologue">跳到正文</a>
-<header>
-  <a class="brand" href="#home">硅基的我们？<span>ROBOTICS / ACTION & SOCIAL LIFE</span></a>
-  <nav aria-label="主导航"><a href="#prologue">自主</a><a href="#prediction">预测</a><a href="#growth">探索</a><a href="#embodiment">身体</a><a href="#social">共处</a><a href="#return">回望</a><a href="#studio">备讲</a></nav>
-  <button id="present" class="small" aria-pressed="false">展示模式</button>
+<body>
+<a class="skip-link" href="#opening">跳到正文</a>
+<div class="progress" aria-hidden="true"><span id="reading-progress"></span></div>
+<header class="masthead">
+  <a class="brand" href="#home">硅基的我们？</a>
+  <nav aria-label="分享段落">
+    <a href="#opening">开场</a><a href="#learn">向人学习</a><a href="#society">两道坎</a><a href="#governance">治理</a><a href="#closing">结尾</a><a href="#discussion">交流</a><a href="#studio">备讲台</a>
+  </nav>
+  <button id="present" type="button" aria-pressed="false">展示模式</button>
 </header>
-<div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
-<main>
-<section id="home" class="hero">
-  <div class="cover-meta"><span>机器人研究 · 跨学科交流</span><span>2026 / 11</span></div>
-  <div class="cover-grid">
-    <div class="cover-copy"><p class="cover-kicker">行动、经验与共同生活</p><h1>硅基的<br><span class="accent">我们</span><span class="question-mark">？</span></h1><p class="subtitle">从自主行动到社会共处</p><p id="hero-abstract" class="cover-abstract">本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。</p><div class="cover-actions"><a class="primary-link" href="#prologue">开始阅读 <span aria-hidden="true">↘</span></a><a class="quiet-link" href="#demo-index">浏览研究演示 <span aria-hidden="true">↗</span></a></div></div>
-    <div class="cover-image"><figure class="hero-photo"><img src="https://www.engineering.columbia.edu/sites/default/files/styles/wide/public/2024-06/yuhang-hua-of-creative-machines-lab-face-to-face-with-emo.png?itok=L2bTZtqT" alt="研究者与 Emo 机器人面对面进行表情互动" width="960" height="540" fetchpriority="high"><figcaption>一次面对面的互动。图片：Creative Machines Lab / Columbia Engineering · <a href="https://www.engineering.columbia.edu/about/news/robot-can-you-say-cheese" target="_blank" rel="noopener noreferrer">出处 ↗</a></figcaption></figure><div class="cover-image-note"><span>从一次面对面开始</span><p>动作被理解，回应又成为下一次行动的起点。</p></div></div>
-  </div>
-  <div class="chapter-heading"><span>沿着六个问题展开</span><span>53 分钟分享 · 7 分钟交流</span></div><ol class="chapter-map" aria-label="报告章节导览"><li><a href="#prologue"><span class="chapter-number">01</span><strong>自主行动</strong><span class="chapter-question">让机器自己做</span><small>00—05 分钟</small></a></li><li><a href="#prediction"><span class="chapter-number">02</span><strong>预测与边界</strong><span class="chapter-question">下一步会发生什么</span><small>05—15 分钟</small></a></li><li><a href="#growth"><span class="chapter-number">03</span><strong>探索与成长</strong><span class="chapter-question">从经历中改进</span><small>15—25 分钟</small></a></li><li><a href="#embodiment"><span class="chapter-number">04</span><strong>身体与互动</strong><span class="chapter-question">动作怎样被理解</span><small>25—31 分钟</small></a></li><li><a href="#social"><span class="chapter-number">05</span><strong>社会共处</strong><span class="chapter-question">走进共同生活</span><small>31—46 分钟</small></a></li><li><a href="#return"><span class="chapter-number">06</span><strong>回望我们</strong><span class="chapter-question">经验的另一种延伸</span><small>46—53 分钟</small></a></li></ol>
-</section>
-<section id="demo-index" class="demo-index" aria-labelledby="demo-index-title"><div><span class="eyebrow">研究演示索引</span><h2 id="demo-index-title">让讨论从看得见的行动开始。</h2></div><div class="demo-links"><a href="#demo-gemini"><small>自主</small>Gemini Robotics <span>↗</span></a><a href="#demo-genie"><small>预测</small>Genie 3 <span>↗</span></a><a href="#demo-agentgarten"><small>探索</small>AgentGarten <span>↗</span></a><a href="#demo-dexumi"><small>手</small>DexUMI <span>↗</span></a><a href="#demo-asap"><small>身体</small>ASAP <span>↗</span></a><a href="#demo-emo"><small>互动</small>Emo <span>↗</span></a></div></section>
-<section id="prologue">
-  <div class="section-heading"><span class="eyebrow">开篇 / 自主机器人 · 00—05 分钟</span><span class="muted">先看研究正在解决什么</span></div>
-  <h2>让机器人自己做，<br>究竟要学会什么？</h2>
-  <div class="split"><div><p class="lead">一句“把桌子收拾好”，对人来说很平常。对机器人，却要拆成一连串问题：看到了什么，目标是什么，先做哪一步，接触后会怎样，失败了又如何调整？</p><p>自主机器人研究，关心的是怎样把感知、判断与身体行动接起来。这里的“自主”与任务、环境和人的参与方式有关；一次成功演示，只能回答其中一部分问题。</p><p>我想沿着这些具体困难，分享几项近期关注的工作，适当穿插自己的实验。前半场看它怎样面对还不会的事，后半场把人的回应、不同角色与共同规则放进来：<b>能把事情做成之后，怎样做才合适？</b></p></div><div class="opening-note"><span class="eyebrow">从一次行动看完整过程</span><h3>观察 → 判断 → 行动<br>新的反馈 → 下一步</h3><p>遥操作：人直接参与动作控制。<br>共享控制：人和系统分担不同环节。<br>自主执行：系统在约定任务内自行选择并执行动作。</p><p class="caption">这是本次分享的简化说明，不是统一的自治等级标准。人的目标设定、训练和监督仍需如实交代。</p></div></div>
-  <article id="demo-gemini" class="evidence opening-demo"><div><span class="tag">开篇研究案例 / 2025 技术报告</span><h3>Gemini Robotics 1.5</h3><p>把高层任务推理与动作生成连接起来，展示多步任务和跨机器人身体的技能迁移。观看时先分辨：人给了什么目标，系统作了什么判断，身体实际完成了什么。</p><p class="caption">用来说明自主机器人的研究问题，不将单段精选演示当作日常环境中的可靠性评估。</p><a href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer">官方图文、视频与报告 ↗</a></div><figure class="research-media"><a href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://lh3.googleusercontent.com/gWwpRQKqcoVvkXtc-b2pdCCMu82CgDbQB7U6nCGFSKWF9R1AsgLukMkBXW4Ft55LiuLW5W0M9grV6nFlsyNDSj1qK7nuSRBYk4_NZrUzETEYaWgh=w1440-h810-n-nu" alt="Gemini Robotics 1.5 在不同机器人身体上执行操作任务的官方示意图"></a><figcaption>图：Google DeepMind · 点击进入官方演示。</figcaption></figure></article>
-  <p class="bridge"><b>进入预测：</b>要决定下一步怎么做，一个自然的问题是：如果我这样行动，接下来会发生什么？</p>
-</section>
-<section id="prediction">
-  <div class="section-heading"><span class="eyebrow">第一幕 / 预测与边界 · 05—15 分钟</span><span class="muted">世界模型与人的直觉</span></div>
-  <h2>机器人怎样判断，<br>下一步会发生什么？</h2>
-  <div class="split"><div><p class="lead">杯子尚未落地，我们已经伸手；抽屉尚未移动，机器人需要应对接触后的身体变化。行动常常从“接下来会怎样”开始。</p><p>世界模型将这个问题变成可以研究的机制：给定当前信息和候选动作，预测后续状态，再据此选择行动。未来可以表现为画面，也可以是用于决策的内部表征。</p><p class="citation">认知桥梁：预测加工将预期、输入与误差联系起来，是理解感知与行动的一种理论框架。<a href="https://doi.org/10.1017/S0140525X12000477" target="_blank" rel="noopener noreferrer">Andy Clark，2013 ↗</a></p></div><details class="own-work"><summary><span class="tag">我的研究 / 接入位置</span><strong>空中操作与抗扰</strong><span class="own-expand">展开研究接入笔记</span></summary><div class="own-content"><p>在这里短插一段自己的接触实验：伸手、接触、受力、调整。用一个现象说明，预测不完美时，身体仍要根据反馈行动。</p><small>这是问题层面的连接。控制器是否采用预测模型，须依据真实方法说明；不把已有抗扰控制重新命名为世界模型。</small></div></details></div>
-  <div class="evidence-grid">
-    <article id="demo-genie" class="evidence"><span class="tag">研究 / 2025</span><h3>Genie 3</h3><figure class="research-media"><video controls muted playsinline preload="none" poster="https://lh3.googleusercontent.com/BirHhzrtzHQtXvNG0dXcj9QFA7vGUNWQYbeQiMiY7RL8a7-xGrLDGybf9YZZ1nML7lRVZh4KYARz0PFO8xBAfe7FAatH6xVlRnakHtnESHlpzEBTEA%3Dw1440-h810-n-nu" aria-label="Genie 3 官方交互世界演示"><source src="https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/genie-3-vid-1.mp4" type="video/mp4"></video><figcaption><b>观看线索：</b>移动视角后，场景怎样继续生成？这里播放的是生成环境的录屏。<br>来源：Google DeepMind · <a href="https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/" target="_blank" rel="noopener noreferrer">原始演示 ↗</a></figcaption><p class="media-status" role="status"></p></figure><p class="demo-hook">先看：一个可以走进去的生成世界。</p><p class="study-context"><b>研究展示：</b>随交互持续生成环境，支持一定时长的探索。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>任意真实场景的精确复刻与无限时长的一致性；原发布材料明确列出交互时长与动作空间限制。</dd><dt>留给听众的问题</dt><dd>一个世界“看上去真实”，意味着它的后果也可靠吗？</dd></dl></details><a href="https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/" target="_blank" rel="noopener noreferrer">官方演示与说明 ↗</a></article>
-    <article class="evidence"><span class="tag">研究 / 2025</span><h3>V-JEPA 2</h3><p class="demo-hook">再看：不必画出全部细节，也能帮助行动。</p><p class="study-context"><b>研究展示：</b>动作条件模型 V-JEPA 2-AC 用表征预测支持规划，在新环境中演示抓放；它此前使用过 DROID 约 62 小时的机器人交互数据。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>新环境零样本部署不等于从未用机器人数据训练，也不意味着对所有物理规律、任务和环境的普遍理解。</dd><dt>留给听众的问题</dt><dd>为了做对一个动作，模型究竟需要知道多少？</dd></dl></details><a href="https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/" target="_blank" rel="noopener noreferrer">官方演示 ↗</a> <a href="https://ai.meta.com/research/publications/v-jepa-2-self-supervised-video-models-enable-understanding-prediction-and-planning/" target="_blank" rel="noopener noreferrer">论文说明 ↗</a></article>
-  </div>
-  <div class="boundary-note"><span class="tag">这一幕真正的转折 / 三种不同的“未知”</span><h3>从已知推向未知，<br>不等于所有未知都能可靠推演。</h3><div class="social-path"><article><small>新组合</small><h3>没见过这个场景</h3><p>已有规律可能支持新对象、新位置和新组合。模型的能力不止于复述训练样本。</p></article><article><small>新条件</small><h3>经验还能适用吗？</h3><p>换了材料、接触方式或运动范围，原先学到的关系可能失效，需要检验外推。</p></article><article><small>缺失事实</small><h3>输入里没有答案</h3><p>两个抽屉外观完全相同，里面却不同。仅增加计算，无法确定这一次的隐藏事实。</p></article></div><p><b>我想追问的边界：</b>模型凭什么作出这次判断？什么时候应该继续推演，什么时候应该获取新证据？</p></div>
-  <div class="thought-experiment"><span class="tag">思想实验 / 抽屉第一次出现</span><h3>模型预测里面有杯子。怎样知道它猜对了？</h3><p>设想两种情形：抽屉的可见外观完全相同，内部却不同。现有输入没有提供区分它们的信息。</p><div class="scenario-controls" role="group" aria-label="选择了解抽屉的方法"><button data-drawer="compute" aria-pressed="true" class="active">继续推演</button><button data-drawer="observe" aria-pressed="false">获取新观察</button><button data-drawer="ask" aria-pressed="false">向人询问</button></div><div id="drawer-result" class="response" aria-live="polite">更多计算可以比较可能性，却不能凭空补出缺失的事实。此时应保留多种假设。</div><p class="caption">这是对信息条件的演示，不是正在运行的世界模型。观察与询问也需要相应的安全和授权条件。</p></div>
-  <details class="script"><summary>概念核查：数据、外推与“做梦”的比喻</summary><p>模型可以从有限样本中学到可迁移的规律；能力边界并不等于见过的样本清单。真正需要检验的是：离开训练分布之后，预测是否仍然可靠。</p><p>“模糊背景”可以作为视觉比喻，却不是不确定性的测量。模型可能生成清晰而错误的细节；模糊也可能来自渲染或解码过程。<b>画面的清晰度，不等于知识的确定性。</b></p><p><a href="https://proceedings.mlr.press/v267/kang25g.html" target="_blank" rel="noopener noreferrer">ICML 2025 的受控物理实验</a>发现，被测视频模型的分布外预测存在失败。这是特定研究结果，不是对所有世界模型外推能力的否定。</p></details>
-  <p class="bridge"><b>第一处转折：</b>模型能利用已有规律寻找新的可能，但预测是否成立仍需检验。于是问题从“它能想象什么”，转向“它能经历什么，又能从经历中改变什么”。</p>
-</section>
-<section class="dark" id="growth">
-  <div class="section-heading"><span class="eyebrow">第二幕 / 探索与自我改进 · 15—25 分钟</span><span>模拟世界、反馈与能力边界</span></div>
-  <h2>能否让下一次尝试，<br>超出上一次的能力？</h2>
-  <div class="split"><div><p class="lead">如果一个系统总是在同一套经验上推演，它怎样发现自己的薄弱之处？机器人研究正在尝试把执行、反馈与更新接成循环，让当前的失败影响下一轮练习。</p><p>仿真的吸引力，在于让某些经历可以重复、调整和比较。真实感需要服务于任务：开抽屉时，接触、摩擦和约束可能比墙纸纹理更重要；依赖视觉的任务，又需要认真处理外观差异。</p></div><details class="own-work"><summary><span class="tag">我的研究 / 接入位置</span><strong>AirSpark：给机器一个练习场</strong><span class="own-expand">展开研究接入笔记</span></summary><div class="own-content"><p>在解释“练习场”时短插自己的平台工作：任务如何设置、失败如何记录、实验怎样比较。它是理解研究问题的例子，不承担整幕的主线。</p><small>已有基础、在建训练闭环与未来设想分开呈现；当前页面没有据此声称 AirSpark 已实现 RSI。</small></div></details></div>
-  <div class="concept-triad"><article><small>推演的机制</small><h3>世界模型</h3><p>根据当前信息，预测动作可能带来的变化。</p></article><article><small>经历的场所</small><h3>模拟环境</h3><p>提供状态、规则和反馈，让行动可以反复尝试。</p></article><article><small>能力的改变</small><h3>自我改进</h3><p>用执行结果改变策略，或改变下一轮获取经验的方法。</p></article></div><p class="caption">三者可以结合，但不是同一概念。生成画面、可执行环境与学习算法，需要分别看它们负责什么。</p>
-  <div class="learning-loop" aria-label="任务、尝试、反馈、更新与检验形成学习循环"><span>任务与环境</span><b>→</b><span>尝试与失败</span><b>→</b><span>反馈与更新</span><b>→</b><span>独立检验</span><b>↻</b></div>
-  <p class="caption">回到抽屉：面对不同阻力，它只是记下“上次失败了”，还是改变了动作策略，乃至改变下一轮采集经验的方法？</p>
-  <div class="evidence-grid">
-    <article id="demo-agentgarten" class="evidence"><span class="tag">项目与预印本 / 2026.10</span><h3>AgentGarten</h3><figure class="research-media"><video controls muted playsinline preload="none" poster="https://mirros-lab.github.io/agent-garten/media/layers.jpg" aria-label="AgentGarten 几何与渲染图层演示"><source src="https://mirros-lab.github.io/agent-garten/media/layers.mp4" type="video/mp4"></video><figcaption><b>观看线索：</b>对比几何信息与生成画面，区分世界规则和视觉呈现。<br>来源：MirroS Team · <a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">原始项目 ↗</a></figcaption><p class="media-status" role="status"></p></figure><p class="demo-hook">世界规则用程序维护，画面由神经渲染器生成。</p><p class="study-context"><b>研究展示：</b>智能体在可执行世界中交互，每轮记录经验，后续轮次利用这些笔记。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>仅凭跨轮笔记，不能推断模型权重已自主更新。</dd><dt>留给听众的问题</dt><dd>一次经历结束后，究竟有什么被留下？</dd></dl></details><a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">项目演示 ↗</a> <a href="https://arxiv.org/abs/2610.12374" target="_blank" rel="noopener noreferrer">预印本 ↗</a></article>
-    <article class="evidence"><span class="tag">预印本 / 2026.09，v3 更新于 10.03</span><h3>EmbodiRSI</h3><p class="demo-hook">让当前策略的失败，决定下一轮需要什么经验。</p><p class="study-context"><b>研究展示：</b>在任务特定的真实—仿真—真实流程中，用执行反馈指导经验采集与策略更新；实机适应另使用每个子任务 10 条人工在环纠正轨迹。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>结果限于三个桌面环境、十四个子任务及两轮 RSI 更新；最终测试不使用人工纠正。训练仍有人参与，更长更新链和新工作空间泛化仍待检验。</dd><dt>留给听众的问题</dt><dd>仿真里变强，怎样获得现实中的证据？</dd></dl></details><a href="https://arxiv.org/html/2609.38905v3" target="_blank" rel="noopener noreferrer">论文与实验图示 ↗</a></article>
-  </div>
-<details class="script media-more"><summary>再看一个试错片段，以及环境如何把反馈传给智能体</summary><div class="evidence-grid"><figure class="research-media"><video controls muted playsinline preload="none" poster="https://mirros-lab.github.io/agent-garten/media/hns/ramp-retry.jpg" aria-label="AgentGarten 移动斜坡并重新尝试的演示"><source src="https://mirros-lab.github.io/agent-garten/media/hns/ramp-retry.mp4" type="video/mp4"></video><figcaption>移动斜坡，再尝试进入。观察动作如何调整；仅凭短片不能判断内部采用了哪种学习机制。<br>视频：MirroS Team · <a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">出处 ↗</a></figcaption><p class="media-status" role="status"></p></figure><figure class="research-media diagram"><a href="https://mirros-lab.github.io/agent-garten/assets/img/architecture.png" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://mirros-lab.github.io/agent-garten/assets/img/architecture.png" alt="AgentGarten 架构：动作进入程序环境，几何信息经神经渲染后成为下一帧观察"></a><figcaption>动作、世界状态与视觉观察的反馈路径。点击查看大图。<br>图：MirroS Team · <a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">项目说明 ↗</a></figcaption></figure></div></details>
-  <details class="script"><summary>前沿补充：RSI-Anything，以及“自我改进”到底改了什么</summary><p><a href="https://arxiv.org/abs/2610.13912" target="_blank" rel="noopener noreferrer">RSI-Anything（2026.10.09 预印本）</a>用世界模型引导行动和学习数据选择，利用反馈更新策略或工作流程，并有条件地更新预测模型。实验涉及代码、界面与科学任务；不能作为通用实体机器人无限成长的证明。</p><p>备讲时区分三件事：<b>记住经验</b>（笔记与记忆）、<b>改进行为</b>（策略、参数或程序）、<b>改进学习过程</b>（下一次如何获取经验、选择更新）。这些是不同机制，不是所有论文一致采用的 RSI 等级标准。</p><p>“进化”可以是叙事用词；涉及具体方法时使用“学习”“适应”或“递归自我改进”。生物进化、文化传承与参数更新的机制不同。</p></details>
-  <blockquote class="act-quote">练习可以拓展能力，<br>也可能放大环境的偏差。</blockquote>
-  <p>在可靠规则下搜索，可以找到没有被逐项示范过的解；但模拟环境漏掉的接触、材料或人的反应，也可能被学习过程一起忽略。关注的重点是：反馈来自哪里，提升通过什么独立检验，换一个条件是否仍然成立。</p>
-  <p class="bridge"><b>走向身体：</b>练出来的能力，最终要通过一双手、一张脸、一个身体进入真实世界。换一种身体，经验怎样转化成动作？这些动作遇到人之后，又会发生什么？</p>
-</section>
-<section id="embodiment">
-  <div class="section-heading"><span class="eyebrow">第三幕 / 从身体到互动 · 25—31 分钟</span><span class="muted">手的适配 · 全身协调 · 面部回应</span></div>
-  <h2>动作被看见之后，<br>互动怎样开始？</h2>
-  <p class="lead narrow">人的操作经验需要适配机器的手，学来的运动需要适配真实身体。到了面对面的回应，身体还使动作成为别人能够理解、回应，也可能误解的信号。这里用三个短片，连接行动能力与社会互动。</p>
-  <div class="body-route"><span>手：经验怎样适配</span><span>身体：动作怎样实现</span><span>脸：回应怎样被理解</span></div>
-  <div class="evidence-grid body-grid">
-    <article id="demo-dexumi" class="evidence"><span class="tag">灵巧操作 / CoRL 2025</span><h3>DexUMI：把手上的经验教给机器</h3><figure class="research-media"><video controls muted playsinline preload="metadata" aria-label="DexUMI 灵巧手使用镊子转移茶叶的实机演示"><source src="https://dex-umi.github.io/static/videos/xhand_tea.mp4" type="video/mp4"></video><figcaption>观看多指怎样配合工具。身体结构不同，人的示范需要经过适配，才能成为可执行的机器人动作。<br>视频：DexUMI 作者团队 · <a href="https://dex-umi.github.io/" target="_blank" rel="noopener noreferrer">原始演示 ↗</a></figcaption><p class="media-status" role="status"></p></figure><p class="study-context"><b>研究展示：</b>通过可穿戴装置和视觉适配，采集人手操作经验，并在两种灵巧手平台开展实机验证。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>指定任务上的灵巧操作，不等于通用手部能力，也不自动包含社会理解。</dd><dt>引出什么</dt><dd>同样是“递给你”，抓稳物体之后，还需要理解什么？</dd></dl></details><a href="https://arxiv.org/abs/2505.21864" target="_blank" rel="noopener noreferrer">论文 ↗</a></article>
-    <article id="demo-asap" class="evidence"><span class="tag">全身运动 / RSS 2025</span><h3>ASAP：让身体接得住学来的动作</h3><figure class="research-media"><video controls muted playsinline preload="metadata" aria-label="ASAP 人形机器人全身动作的实机演示"><source src="https://agile.human2humanoid.com/static/videos/ASAP-Motion-CR7_level1-1080P.mp4" type="video/mp4"></video><figcaption>观察平衡、重心与全身协调。这段展示运动技能；动作选择和社会情境理解要另作评价。<br>视频：ASAP 作者团队 · <a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">原始演示 ↗</a></figcaption><p class="media-status" role="status"></p></figure><p class="study-context"><b>研究展示：</b>把人类动作适配到人形机器人，用真实反馈校正仿真差异，再改进动作策略。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>敏捷动作不等于在拥挤空间中自主判断何时靠近、让路或停止。</dd><dt>引出什么</dt><dd>同一个大幅度动作，在舞台和服务大厅里意味着什么？</dd></dl></details><a href="https://agile.human2humanoid.com/static/asap.pdf" target="_blank" rel="noopener noreferrer">论文 ↗</a></article>
-    <article id="demo-emo" class="evidence"><span class="tag">同行评审研究 / 2024 与 2026</span><h3>Emo：一个笑容的时机</h3><figure class="research-media"><div class="video-embed" data-youtube="pWTTzR_wXuQ"><img loading="lazy" src="https://www.engineering.columbia.edu/sites/default/files/styles/wide/public/2024-06/yuhang-hua-of-creative-machines-lab-face-to-face-with-emo.png?itok=L2bTZtqT" alt="Emo 与研究者互动的官方演示封面"><button class="load-video" type="button">▶ 播放 Emo 官方演示</button></div><figcaption><b>观看线索：</b>留意人的表情变化与机器响应的时机。<br>视频：Yuhang Hu / Columbia Engineering · <a href="https://www.youtube.com/watch?v=pWTTzR_wXuQ" target="_blank" rel="noopener noreferrer">在 YouTube 打开 ↗</a><br>点击后加载 YouTube 播放器；若当前网络无法播放，可查看下方研究原文。</figcaption><p class="media-status" role="status"></p></figure><p class="demo-hook">从预测并同步表情，到学习与语音配合的唇部动作。</p><p class="study-context"><b>研究展示：</b>2024 年研究展示面部共表达；2026 年另一项研究展示学习唇部运动。它们是两项不同工作。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>逼真的表情和口型，并不能单独证明主观感受或完整社会理解。</dd><dt>留给听众的问题</dt><dd>一个准确的回应，为什么会让人感到“被理解”？</dd></dl></details><a href="https://www.engineering.columbia.edu/about/news/robot-can-you-say-cheese" target="_blank" rel="noopener noreferrer">表情演示 / 2024 ↗</a><br><a href="https://www.engineering.columbia.edu/about/news/robot-learns-lip-sync" target="_blank" rel="noopener noreferrer">唇形演示 / 2026 ↗</a></article>
-  </div>
-  <details class="script"><summary>备讲辨析：类人身体、仿生设计与社会能力</summary><p>类人设计强调某些结构或动作与人的相似；仿生研究还可能借鉴动物、材料与生物机制。这里选取手、脸与全身动作作为观察窗口，不把所有机器人研究都归入仿生。</p><p>灵巧手与全身控制主要展示物理能力；面部共表达开始直接连接人的互动。它们之间是叙事上的递进，不能用“动作像人”推断“理解像人”。社会机器人也不必具有完整的人形身体。</p></details>
-  <p class="bridge"><b>走向社会具身：</b>刚才关心的是动作是否准确。看到一个面部回应之后，还要问：人怎样理解这个动作？这种理解又怎样改变下一次互动？研究对象由单个机器，扩展为人与机器共同参与的情境。</p>
-</section>
-<section id="social">
-  <div class="section-heading"><span class="eyebrow">第四幕 / 社会具身与共处 · 31—46 分钟</span><span class="muted">社会具身：行为、关系与规则</span></div>
-  <h2>同一个动作，<br>在不同关系里意味着什么？</h2>
-  <p class="lead narrow">机器人靠近半步，是准备帮忙，还是打扰？替人开抽屉，是配合，还是越界？动作的物理结果可能相同，意义却取决于在场的人、彼此的关系与共同遵守的规则。人的回应又会改变机器人下一步的行动。</p>
-  <div class="social-lens"><span class="tag">社会具身智能 / 本次分享的交叉视角</span><p>把身体行动、人的解释与社会情境放在一起研究：机器人怎样影响人的行为，人又怎样通过回应、协商和规则塑造机器人。这里把“社会具身行为研究”作为一个交叉问题视角，连接人机交互、社会机器人与社会科学。</p></div>
-  <div class="social-path" aria-label="从行为到关系，再到规则的三个研究层面">
-    <article><small>01 / 行为</small><h3>怎么靠近，何时停下？</h3><p>速度、距离、视线与动作预告，怎样影响人的理解和下一步回应？</p><b>观察：人的让路、停顿与反馈。</b></article>
-    <article><small>02 / 关系</small><h3>为谁服务，向谁求助？</h3><p>使用者、工作人员与旁观者的期待可能不同，机器人如何辨认角色、处理分歧？</p><b>讨论：谁获益，谁多了一份负担。</b></article>
-    <article><small>03 / 规则</small><h3>规则怎样形成、怎样改？</h3><p>一次配合形成的习惯，能否用于所有人？不同群体怎样参与设计和修正？</p><b>检验：谁能表达意见，意见怎样改变系统。</b></article>
-  </div>
-  <div class="split social-example"><div><span class="tag">先看一个朴素的研究问题 / 经典工作</span><h3>会走路，也要会让路、会求助。</h3><p>CMU 的社会导航研究把个人空间等约定纳入路径规划，并观察人如何解释机器人的行为。CoBot 则在运送和引导任务中，主动向人寻求帮助。身体能力的限制，反而使协作成为完成任务的一部分。</p><p class="citation"><a href="https://publications.ri.cmu.edu/social-robot-navigation" target="_blank" rel="noopener noreferrer">Social Robot Navigation，2010 ↗</a> · <a href="https://www.cs.cmu.edu/~coral/projects/cobot/humanrobot.html" target="_blank" rel="noopener noreferrer">CoBot：人机互助与演示 ↗</a></p></div><details class="own-work"><summary><span class="tag">连接自己的研究 / 问题，不是已有结论</span><strong>遥操作里的协作，能给我们什么启发？</strong><span class="own-expand">展开研究接入笔记</span></summary><div class="own-content"><p>机器人怎样让操作者看懂它的状态？什么时候交还控制？如果现场还有其他人，他们怎样表达不方便或不同意？可以从这些具体问题走向社会具身研究。</p></div></details></div>
-  <p class="bridge">从身体表达走向持续互动：一次回应之后，系统保留了什么？人的期待又怎样改变？</p>
-  <div class="evidence-grid">
 
-    <article class="evidence"><span class="tag">期刊研究 / 触觉与情感状态 · 2026</span><h3>HERA：让交互留下痕迹</h3><p class="demo-hook">从即时反应，走向受近期交互历史影响的状态。</p><p class="study-context"><b>研究展示：</b>研究用动态情感状态组织机器人对触摸的反应，近期刺激可持续影响后续状态。</p><details class="evidence-notes"><summary>研究边界与讨论线索</summary><dl><dt>还未证明什么</dt><dd>这不是完整的自传式记忆，也不证明机器人具有情绪体验。</dd><dt>留给听众的问题</dt><dd>状态如何使回应具有连续性？如果进一步加入个人记忆，又需要哪些研究？</dd></dl></details><a href="https://is.mpg.de/hi/projects/haptic-empathetic-robot-animal-hera" target="_blank" rel="noopener noreferrer">研究机构项目页 ↗</a> · <a href="https://doi.org/10.1109/TAFFC.2025.3647658" target="_blank" rel="noopener noreferrer">具名期刊论文 ↗</a><p class="caption">Burns、Richardson 等，IEEE Transactions on Affective Computing，2026。机构论文摘要与书目信息已核对；情感状态与个人记忆分开讲。</p></article>
-    <article class="evidence"><span class="tag">交叉研究切口 / 本次分享的提问</span><h3>记住一个人，和被一个人信任</h3><p>可以把互动历史保存下来，再用来调整回应。但还要观察：系统记住了什么，是否准确，人是否知道并能修正，熟悉感又会不会改变人的期待。</p><dl><dt>可研究的行为</dt><dd>重复相遇、纠正误解、解释动作、表达偏好，以及人何时选择依赖或拒绝。</dd><dt>可连接的方法</dt><dd>机器人行为实验与长期观察、访谈、参与式设计相互补充。</dd><dt>带给现场的问题</dt><dd>关系能否只用“满意度更高”来描述？哪些差异会被平均分遮住？</dd></dl></article>
+<main>
+<section id="home" class="cover" aria-labelledby="title">
+  <div class="elements" aria-label="元素周期表第 14 族：碳与硅">
+    <div class="element carbon"><span class="z">6</span><span class="sym">C</span><span class="cn">碳</span><span class="mass">12.011</span></div>
+    <div class="element silicon"><span class="z">14</span><span class="sym">Si</span><span class="cn">硅</span><span class="mass">28.085</span></div>
+    <p class="group-note">碳和硅在元素周期表的同一列。人由碳构成，机器人的芯片由硅构成。</p>
   </div>
-  <div class="relationship"><span class="tag">思想实验 / 从物理任务回到共同使用</span><h3>共享办公室的抽屉，它已经会打开了。<br>这次，还需要问谁？</h3><div class="scenario-controls" role="group" aria-label="选择互动方式"><button data-social="automatic" aria-pressed="false">直接替我完成</button><button data-social="confirm" aria-pressed="false">每次都先询问</button><button data-social="agreement" aria-pressed="false">事先约定，随时可改</button></div><div id="social-result" class="response" aria-live="polite">先作判断，再展开理由。这里没有一项能脱离情境成为通用答案。</div><p>预测讨论“可能想要什么”；授权讨论“愿不愿意让它这样做”。两者相关，却不能相互替代。</p></div>
-  <div class="relationship public-scenario"><span class="tag">一起讨论 / 服务大厅的假设场景 · 约 6 分钟</span><h3>它带对了路，事情就办好了吗？</h3><p>机器人准确理解了一位访客的目的地，也能安全地带他到达窗口。先只看这些条件：你会怎样评价这次服务？还想知道什么？</p>
-    <p class="discussion-pause"><b>先留半分钟想一想。</b>可以先说出自己的判断，再展开下面的情境；这里没有预设的标准答案。</p>
-    <details class="script"><summary>补充情境：还有谁受到影响？</summary><p>最近的路线穿过等候队伍，沿途的人需要让路；有人不愿被摄像头持续记录；工作人员需要处理机器人无法解决的例外。这些信息会改变刚才的判断吗？</p><div class="scenario-controls" role="group" aria-label="从不同参与者的角度看公共服务机器人"><button data-public="visitor" aria-pressed="false">使用者</button><button data-public="bystander" aria-pressed="false">旁观者</button><button data-public="staff" aria-pressed="false">工作人员</button></div><div id="public-result" class="response" aria-live="polite">选一个位置补充问题，也可以提出这三个位置之外的人与处境。</div></details>
-    <details class="script"><summary>再往前一步：我们会怎样重新定义这个任务？</summary><p>如果目标只是“最快送达”，刚才哪些经历会被漏掉？现在请为任务补上一条条件，再想想：发生分歧时，谁来协商；规则试行后，又依据谁的反馈修改？</p><div class="social-path"><article><small>了解情境</small><h3>先听见不同经历</h3><p>访谈、现场观察与共同设计，帮助发现设计者尚未想到的需要和负担。</p></article><article><small>比较行动</small><h3>再看行为的影响</h3><p>在适当条件下比较路线、速度、预告和求助方式，观察人的回应及工作人员的负担。</p></article><article><small>修改规则</small><h3>让反馈改变服务</h3><p>把使用者与旁观者的意见带回设计，讨论例外处理、解释与修正的方式。</p></article></div><p>这些讨论会改变任务如何被定义、完成情况如何被评价，也为机器人与社会科学的合作提供具体入口。</p></details><p class="caption">这是尚未实施的研究设想。按钮用于换位思考，不采集意见，也不代表公众调查；具体研究条件和评价方式需要与参与者共同确定。</p></div>
-  <details class="script"><summary>从一个人到一个社会：模拟了公众，是否就代表了公众？</summary><p><a href="https://arxiv.org/abs/2304.03442" target="_blank" rel="noopener noreferrer">Generative Agents（2023）</a>将记忆、反思与规划用于一个有 25 个智能体的模拟小镇，产生可观察的交互与协调行为。这个经典案例适合说明“人工社会可以被研究”，而不是当作最新进展或真实民意的替身。</p><p>设想我们让模拟居民评议一项公共服务，模型显示“大家满意”。这时应问：谁进入了样本，谁没有？哪些偏好被压缩了？真实居民是否有表达、反对和修正规则的机会？</p><p><b>被模型预测，不等于被社会意义上的代表。</b>群体分工解决任务协调，公共治理还涉及利益冲突、参与、正当性与责任；两类问题需要共同研究。</p></details>
-  <p class="bridge"><b>走向结尾：</b>从动作示范，到互动习惯，再到共同商议的规则，我们为机器人设计和学习的内容越来越带有人的痕迹。接下来，我想从这些具体研究退后一步，分享一个仍可继续讨论的理解。</p>
+  <div>
+    <h1 id="title">硅基的<br>我们？</h1>
+    <p class="subtitle">从自主行动到社会共处</p>
+    <p id="hero-abstract" class="abstract">本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。</p>
+    <p class="format">政务学院分享，主讲约 30 分钟，交流约 15 分钟。</p>
+    <div class="actions"><a class="button primary" href="#opening">从开场读起</a><a class="button" href="#studio">打开备讲台</a></div>
+  </div>
 </section>
-<section id="return" class="experiment">
-  <span class="eyebrow">结尾 / 社会具身之后，回望我们自己 · 46—53 分钟</span>
-  <h2>当人的经验，<br>有了另一种身体。</h2>
-  <div class="split"><div><span class="tag">由研究引出的一种理解</span><p class="lead">沿着这些研究走下来，我逐渐觉得：机器人走向社会，也意味着人和机器在互动中，重新安排彼此的角色、规则与边界。</p><p>我们教给机器的，从如何拿起杯子，延伸到何时靠近、怎样回应、如何与人相处。机器人身上也许延续着人的部分经验，但不同的身体、传感器和经历，又会让这些经验形成不同的行为。</p><p>这也是我想把“硅基的我们？”留到这里讨论的原因：它可以与我们不同，同时也承载着人的经验与相处方式。</p></div><details class="own-work"><summary><span class="tag">我的研究 / 遥操作收束全场</span><strong>这次行动，发生在谁身上？</strong><span class="own-expand">展开研究接入笔记</span></summary><div class="own-content"><p>在这里短插遥操作片段，同时呈现操作者与机器的画面。目标由人提出，协调由系统承担，动作由远端身体完成。此时，“智能在哪里”的问题，开始指向整个人机系统。</p><small>用自己的实验帮助理解能力如何延伸。素材尚待导入，正式视频需标明遥操作、共享控制或自主执行。</small></div></details></div>
-  <details class="script"><summary>一个延伸的联想：经验怎样被保存和传递？</summary>
-  <div class="inheritance"><div><small>生物遗传</small><h3>DNA</h3><p>跨代传递生物性状</p></div><span>＋</span><div><small>社会传承</small><h3>文化</h3><p>语言、文字、教育与实践</p></div><span>＋</span><div><small>技术外化</small><h3>模型与机器</h3><p>部分经验转化为可执行能力</p></div></div>
-  <p class="caption">这是讲述“传承如何扩展”的概念框架，不是三种机制等价的进化定律，也不意味着后一种取代前一种。</p></details>
-  <blockquote class="closing">它与我们不同，<br>也带着我们的经验，<br>进入共同的生活。</blockquote>
-  <p class="lead narrow">如果把这看作人的一种延伸，那么这个“我们”里，有谁的经验，又遗漏了谁的处境？我想把这个理解留在这里，听听大家从各自研究与生活出发的看法。</p>
-  <details class="script"><summary>备讲注：结尾的猜想，怎样保留分寸？</summary><p>“工具”描述用途与关系，“物种”是生物学分类；二者不是同一坐标上的两端。一个系统是否有生命、主观体验、道德地位和法律责任，应分别讨论。</p><p>硅基计算硬件不等于已经成立的硅基生命；学习人类数据也不意味着继承了某个具体人的身份。我们仍然可以严肃讨论文化与能力的延续，而不预先回答这些尚未解决的问题。</p><p><b>留给现场：</b>如果一个机器人与你共同经历十年，形成独特的记忆和互动习惯，你愿意怎样描述这段关系？哪些证据会改变你的判断？</p></details>
+
+<section id="route" class="route" aria-labelledby="route-title">
+  <h2 id="route-title" class="visually-hidden">分享路线</h2>
+  <ol>
+    <li><a href="#opening"><span class="t">0–3 分钟</span><b>开场</b><span>这个笑容从哪里来</span></a></li>
+    <li><a href="#learn"><span class="t">3–12 分钟</span><b>向人类学习</b><span>动作、知识、情绪，再自己练</span></a></li>
+    <li><a href="#society"><span class="t">12–24 分钟</span><b>走进社会的两道坎</b><span>身体撑不住，读不懂人</span></a></li>
+    <li><a href="#governance"><span class="t">24–28 分钟</span><b>留给治理的问题</b><span>基础设施、公共空间、数据</span></a></li>
+    <li><a href="#closing"><span class="t">28–30 分钟</span><b>结尾</b><span>是机器人，也是我们自己</span></a></li>
+    <li class="talk"><a href="#discussion"><span class="t">30–45 分钟</span><b>交流</b><span>政务大厅里的引导机器人</span></a></li>
+  </ol>
+  <p class="legend"><i></i>紫色竖线标出暗线：机器人身上的人影子，以及一种新的传承方式。<i class="dash"></i>虚线是交流环节。</p>
 </section>
-<section id="studio">
-  <details class="workbench">
-    <summary><span class="eyebrow">备讲台 / 展开准备材料</span><strong>定稿简介、故事板与讲述笔记</strong></summary>
-    <div class="workbench-content">
-      <div class="studio-grid"><div><h3>已提交的主题与简介</h3><p class="muted">2026.10.16 定稿 · 与海报文案一致</p><div class="poster"><span class="eyebrow">分享简介 / 100 字</span><h3 id="poster-title">硅基的我们？——从自主行动到社会共处</h3><p id="abstract">本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。</p><small id="count"></small><button id="copy" class="solid">复制主题与简介</button><span id="copy-status" role="status"></span></div></div><div><h3>60 分钟叙事节奏</h3><ol class="timeline"><li><time>00—05</time><div><b>自主机器人：自己做，要解决什么？</b><p>公共研究案例 → 观察、判断与动作 → 自主的任务条件。</p></div></li><li><time>05—15</time><div><b>世界模型：预测能走多远？</b><p>人的直觉 → 生成与表征 → 外推与信息缺口 → 新证据。</p></div></li><li><time>15—25</time><div><b>模拟世界：怎样拓展能力？</b><p>练习环境 → 探索与反馈 → 自我改进 → 仿真偏差与检验。</p></div></li><li><time>25—31</time><div><b>身体：经验怎样成为动作？</b><p>DexUMI 手的适配 → ASAP 全身协调 → Emo 面部回应。</p></div></li><li><time>31—46</time><div><b>社会具身：怎样行动才合适？</b><p>互动与记忆 → 服务大厅现场判断 → 多方关系 → 共同修正规则。</p></div></li><li><time>46—53</time><div><b>回望：经验通过另一种身体展开</b><p>遥操作短插 → 不同身体与人的延伸 → 谁的经验被看见。</p></div></li><li><time>53—60</time><div><b>现场对话</b><p>从一个具体公共服务场景讨论，让不同学科补充问题。</p></div></li></ol></div></div>
-      <details class="script"><summary>28 页故事板 · 问题推动研究案例</summary><ol class="slide-plan"><li>从自主行动到社会共处：今天沿什么问题往下讲？</li><li>自主机器人案例：一句目标怎样成为多步动作？</li><li>感知—判断—行动—反馈：人在哪些环节参与？</li><li>人的直觉：行动之前已经在预期。</li><li>Genie 3：可以进入的生成世界。</li><li>V-JEPA 2-AC：不画全细节，也能帮助规划。</li><li>自己的接触实验短插：不完美判断下怎样保持稳定？</li><li>三种未知：新组合、新条件、缺失事实。</li><li>抽屉思想实验：什么时候要获取新证据？</li><li>从推演到经历：给机器人一个练习场。</li><li>世界模型、模拟环境、自我改进各负责什么？</li><li>AgentGarten：程序规则、生成画面与跨轮经验。</li><li>自己的 AirSpark 工作短插：一次失败怎样被记录和比较？</li><li>EmbodiRSI：当前失败怎样影响下一轮经验？</li><li>能力在提升，环境的偏差会不会也被放大？</li><li>转折：学到的能力，通过怎样的身体表现？</li><li>DexUMI：人的手上经验怎样迁移？</li><li>ASAP：模拟与真实身体怎样对齐？</li><li>Emo：面部回应的时机为什么重要？</li><li>从动作到互动：伸手之后，人怎样回应？</li><li>社会具身：行为、关系和情境共同构成问题。</li><li>HERA 与记忆问题：一次互动留下些什么？</li><li>让路与求助：任务完成依赖怎样的协作？</li><li>公共服务：切换使用者、旁观者和工作人员的视角。</li><li>哪些问题需要共同研究：参与、评价、协商与修正？</li><li>社会具身之后：人的相处方式从哪里进入机器？</li><li>自己的遥操作片段：经验通过另一种身体展开。</li><li>结尾留白：与我们不同，也带着我们的经验。</li></ol><p class="caption">自己的研究是三个短插入，按现场素材取舍。正式讲述选每项研究最能说明问题的一段，不把网页上的全部备选逐一播放。</p></details>
-      <details class="script"><summary>开场、关键转折与结尾 · 第一人称试讲稿</summary><div class="split"><div><h3>开场：先讲自主机器人</h3><p>我平时做机器人相关研究，今天想从一个普通的目标开始：让机器人自己把事情做完。看起来只是一句话，背后却要解决感知、判断、动作和反馈的一连串问题。我会结合几项关注的工作，穿插自己的实验，沿着这些困难往下讲。</p><h3>从自主行动到预测</h3><p>机器人要决定下一步做什么，就会遇到一个很像人的问题：如果我这样做，接下来会发生什么？世界模型提供了一种研究这个问题的方式。</p><h3>从预测边界到探索</h3><p>这里我不想说“没见过就一定不会”。模型可能学到规律，也可能处理新组合。但我们仍要分清：它是在可靠地外推，还是没有足够证据却给出了一个答案？这把我们带到下一个问题：能不能让机器人去尝试，再用经历改变自己？</p><h3>从探索到身体</h3><p>模拟环境能组织练习，但练出来的能力最终要落在身体上。一双手、一张脸、一个身体，既决定它能做什么，也决定我们怎样回应它。</p></div><div><h3>从身体到社会具身</h3><p>从手的操作、全身动作，到刚才的面部回应，问题开始变化：动作是否准确之外，人怎样理解这个动作？这种理解又怎样改变下一次互动？到这里，我们需要把机器的行为和人的回应一起研究。</p><h3>从社会共处到个人猜想</h3><p>从动作示范到持续互动，再到协商规则，我们带给机器的，逐渐包括了人的相处方式。由这些研究，我想提出一种仍可继续讨论的理解：机器人走向社会，也意味着人和机器在互动中，重新安排彼此的角色、规则与边界。</p><p>不同的身体又会改变这些经验，带来我们没有预料到的行为。它与我们不同，也可能是人的部分经验与能力的延伸。我更想听大家讨论的是：这个“我们”里，谁的经验进入了设计，谁的处境还没有被看见？</p><p>题目里的问号，就留在这里。大家可以从各自的研究与生活出发，补充或修正这个理解。</p></div></div></details>
-      <details class="script"><summary>主讲与备选：每段演示只承担一个问题</summary><div class="research-table-wrap"><table class="research-table"><thead><tr><th>位置</th><th>主讲素材</th><th>只看什么</th></tr></thead><tbody><tr><td>自主</td><td>Gemini Robotics 1.5 官方案例</td><td>目标怎样连接判断和动作；标明演示条件。</td></tr><tr><td>预测</td><td>Genie 3 + V-JEPA 2-AC</td><td>生成画面与支持规划的预测有什么不同。</td></tr><tr><td>探索</td><td>AgentGarten + EmbodiRSI</td><td>环境怎样反馈；笔记、策略、经验采集分别改变了什么。</td></tr><tr><td>身体</td><td>DexUMI / ASAP / Emo</td><td>手的适配 → 全身协调 → 面部回应；用最后一个短片进入社会互动。</td></tr><tr><td>共处</td><td>HERA / CoBot + 服务大厅思想实验</td><td>人的参与、互动延续和不同角色的期待。</td></tr><tr><td>备选</td><td>Dreamer、RSI-Anything、Generative Agents</td><td>用于回答追问，或替换一段主讲材料。</td></tr></tbody></table></div></details>
-      <details class="script"><summary>自己的研究怎样讲：选一个真实片段讲完整</summary><p>三个接入位置不必全部使用。优先选一个有清楚现象和实验记录的案例，用 60—90 秒讲完一次从观察到调整的过程。</p><ol><li><b>现象：</b>视频里发生了什么？先让听众看到同一个困难。</li><li><b>判断：</b>原来的假设或做法，在哪个条件下不够用？</li><li><b>处理：</b>实际改了什么，有什么记录支持效果；哪些结果仍未确定？</li><li><b>连接：</b>这个具体经历，怎样引出预测、反馈或协作的问题？</li></ol><p class="caption">待讲者补入真实素材与记录。这里提供讲述结构，不代写实验结果；其余个人工作可留作补充。</p></details>
-      <details class="script"><summary>调研结论与证据边界 · 2026-10-15</summary><p>原始论文、项目页与作者机构材料的核查及选材理由，已整理为独立的 <a href="research.html">调研与叙事依据</a>。研究案例按要回答的问题选取，发布年份与预印本状态分别标注。</p><ul><li>世界模型可以泛化；分布外失败与缺失信息是不同问题。正文不采用“没见过就不能预测”的绝对表述。</li><li>模拟环境支持探索，也会限制或误导探索；自我改进需看究竟更新了什么、怎样评价。</li><li>灵巧手、面部和全身技能分别展示不同能力；动作像人不等于社会理解已经成立。</li><li>个人实验素材仍待导入，AirSpark 与控制方法的完成状态以真实记录为准。</li><li>页面内嵌原站媒体，保留作者与出处；远程视频受原站和网络可达性影响。HERA 已补具名期刊论文、DOI 与机构书目，核查范围为摘要和书目信息。</li><li>关于“我们”的结尾是讲者的解释与猜想，不作为生命、意识或身份等价的研究结论。</li></ul></details>
-      <div class="notes"><h3><label for="notes">我的备讲笔记</label></h3><p class="muted">沿用上一版笔记。仅保存在当前浏览器，可导出。</p><textarea id="notes" rows="6" placeholder="哪一处转折还不成立？哪段实验能把问题讲清楚？现场最想留下什么分歧？"></textarea><div class="notes-footer"><span id="save-status" role="status"></span><button id="export">导出备讲笔记</button><button id="print">打印 / 保存 PDF</button></div></div>
+
+<section id="opening" class="part" aria-labelledby="opening-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">序</span><span class="time">开场 · 0–3 分钟</span></div>
+  <div class="content">
+    <h2 id="opening-title">这个笑容，<br>是从哪里学来的？</h2>
+    <div class="media-pair">
+      <figure>
+        <div class="frame"><div class="yt" data-youtube="pWTTzR_wXuQ" data-title="Emo 人机表情互动：Columbia Engineering 官方演示"><img loading="lazy" src="https://www.engineering.columbia.edu/sites/default/files/styles/wide/public/2024-06/yuhang-hua-of-creative-machines-lab-face-to-face-with-emo.png?itok=L2bTZtqT" alt="研究者与 Emo 机器人面对面，Emo 回以微笑"><button class="load-video" type="button">播放 Emo 演示</button></div></div>
+        <figcaption>Emo 在对方笑出来之前，就预判并同步回以微笑。图与视频：Yuhang Hu / Creative Machines Lab, Columbia Engineering，<a href="https://www.youtube.com/watch?v=pWTTzR_wXuQ" target="_blank" rel="noopener noreferrer">在 YouTube 打开</a>。点击播放后才会加载 YouTube。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+      <figure>
+        <div class="frame"><video controls muted playsinline preload="metadata" aria-label="DexUMI 机器灵巧手用镊子夹取茶叶"><source src="https://dex-umi.github.io/static/videos/xhand_tea.mp4" type="video/mp4"></video></div>
+        <figcaption>DexUMI 的机器手用镊子夹茶叶，动作来自人戴着装置做的示范。视频：DexUMI 作者团队，<a href="https://dex-umi.github.io/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
     </div>
-  </details>
+    <p class="lead">答案很简单：都是从人身上学来的。表情学自人的脸，手势学自人的手。</p>
+    <figure class="lineage" aria-labelledby="lineage-cap">
+      <ol>
+        <li><span class="name">DNA</span><span class="bar" style="--w:100%"></span><span class="what"><b>几十亿年</b>，传下的是身体。</span></li>
+        <li><span class="name">文化</span><span class="bar" style="--w:50%"></span><span class="what"><b>几万年</b>，靠语言、文字和教育，传下知识和习惯。</span></li>
+        <li class="si"><span class="name">硅基</span><span class="bar" style="--w:19%"></span><span class="what"><b>几十年</b>，把人的经验直接写进另一种身体。</span></li>
+      </ol>
+      <figcaption id="lineage-cap">三种传承方式，横条长度按时间的对数刻度示意。这是讲者用来组织问题的比喻，三者的机制并不相同。</figcaption>
+    </figure>
+    <div class="undertone"><span class="kicker">暗线</span><p>今天从技术讲起：我们是怎样把自己教给机器的，它又卡在哪里。最后再回到这个问题：它是机器人，还是我们自己？</p></div>
+    <details class="note"><summary>讲者备注</summary><div><p>两段视频各放 5 秒，静音即可。不急着解释技术，只问一句“这是从哪里学来的”。传承图在结尾还会再出现一次。</p><p>Emo：Hu 等，《Human-robot facial coexpression》，Science Robotics，2024 年 3 月。论文报告它能在人笑出来约 839 毫秒前作出预测。表情像人，不代表它有同样的感受，这一点留到第二段。</p></div></details>
+  </div>
+</section>
+
+<section id="learn" class="part" aria-labelledby="learn-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">一</span><span class="time">3–12 分钟</span></div>
+  <div class="content">
+    <h2 id="learn-title">向人类学习</h2>
+    <p class="lead">机器人学会做事，靠的是人把自己的经验交给它。下面按“教什么”分四步，每一步看一个例子。</p>
+    <ol class="teach">
+      <li><b>教动作</b><span>人的身体经验，搬到另一个身体里</span></li>
+      <li><b>教知识</b><span>人类留下的文字和图像，成了它理解世界的起点</span></li>
+      <li><b>教情绪</b><span>学会表情的时机</span></li>
+      <li class="self"><b>自己练</b><span>在我们搭好的环境里，自己反复试</span></li>
+    </ol>
+
+    <div class="demo">
+      <figure>
+        <div class="frame"><video controls muted playsinline preload="metadata" aria-label="ASAP 人形机器人做出足球运动员的庆祝动作"><source src="https://agile.human2humanoid.com/static/videos/ASAP-Motion-CR7_level1-1080P.mp4" type="video/mp4"></video></div>
+        <figcaption>人形机器人学做 C 罗的标志性庆祝动作。视频：ASAP 作者团队，<a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+      <div>
+        <h3><span class="kicker">教动作</span>人的动作，怎样换一个身体做出来</h3>
+        <p>开场的 DexUMI 让人戴着装置示范，把手上的技巧迁移到机器手上。ASAP 把人的全身动作迁移到人形机器人上：先在仿真里练，再用真机数据校正仿真和现实的差距。</p>
+        <p>机器人的身体和人不一样，所以示范不能照搬，要经过适配。</p>
+        <details class="note"><summary>讲者备注</summary><div><p>DexUMI：CoRL 2025，<a href="https://arxiv.org/abs/2505.21864" target="_blank" rel="noopener noreferrer">论文</a>。ASAP：RSS 2025，<a href="https://agile.human2humanoid.com/static/asap.pdf" target="_blank" rel="noopener noreferrer">论文</a>。两项都是在指定任务上的演示，不代表通用能力。</p></div></details>
+      </div>
+    </div>
+
+    <div class="demo flip">
+      <figure>
+        <a class="frame" href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://lh3.googleusercontent.com/gWwpRQKqcoVvkXtc-b2pdCCMu82CgDbQB7U6nCGFSKWF9R1AsgLukMkBXW4Ft55LiuLW5W0M9grV6nFlsyNDSj1qK7nuSRBYk4_NZrUzETEYaWgh=w1440-h810-n-nu" alt="Gemini Robotics 1.5 官方发布图"></a>
+        <figcaption>图：Google DeepMind。点击图片打开官方介绍和演示视频。</figcaption>
+      </figure>
+      <div>
+        <h3><span class="kicker">教知识</span>先查本地的垃圾分类规定，再动手分</h3>
+        <p>Google DeepMind 在 2025 年发布 Gemini Robotics 1.5 时举了一个例子：让机器人“按我所在地的规定，把这些东西分进厨余、可回收和其他垃圾桶”。它要先上网查当地规则，看清眼前的物品，再一步步放好。</p>
+        <p>大模型把人类积累的文字和图像知识，接到了机器人的判断和动作上。</p>
+        <details class="note"><summary>讲者备注</summary><div><p>来源：<a href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer">官方博客</a>。这是厂商发布的精选演示，不能当作日常环境中的可靠性评估。</p></div></details>
+      </div>
+    </div>
+
+    <div class="demo text-only">
+      <div>
+        <h3><span class="kicker">教情绪</span>回到开场的 Emo</h3>
+        <p>Emo 用大量人脸视频训练，能从面部的细微变化里预判对方要笑，在约 0.8 秒前作出预测，让自己的笑和对方同时出现，而不是慢半拍去模仿。</p>
+        <p>它学会了笑的时机。它知不知道什么时候不该笑，留到第二段再说。</p>
+      </div>
+    </div>
+
+    <div class="demo">
+      <figure>
+        <div class="placeholder"><span><b>AirSpark</b>待补：讲者自己的平台视频或截图</span></div>
+        <figcaption>讲者自己的研究。素材导入前，台上不展示结果。</figcaption>
+      </figure>
+      <div>
+        <h3><span class="kicker">自己练</span>让失败决定下一轮练什么</h3>
+        <p>前三步都是人在教。到了这一步，机器人开始在我们搭好的仿真环境里反复尝试，从失败里调整。</p>
+        <p>这里讲自己的 AirSpark：任务怎样设置，失败怎样记录，下一轮怎样改。</p>
+        <details class="note"><summary>讲者备注：怎样讲自己的研究</summary><div><p>选一个有清楚现象和记录的片段，60 到 90 秒讲完：视频里发生了什么，原来的做法在哪里不够用，实际改了什么，哪些结果还不确定。已经做到的、正在做的和设想分开讲，不说 AirSpark 已经实现了自我改进。</p><p>前沿参照：EmbodiRSI（2026 年 9 月预印本，<a href="https://arxiv.org/html/2609.38905v3" target="_blank" rel="noopener noreferrer">论文</a>）让当前策略的失败决定下一轮采集什么经验。结果限于三个桌面环境、十四个子任务、两轮更新，实机阶段还用了人工纠正轨迹。</p></div></details>
+      </div>
+    </div>
+
+    <div class="media-pair">
+      <figure>
+        <div class="frame"><video controls muted playsinline preload="none" poster="https://lh3.googleusercontent.com/BirHhzrtzHQtXvNG0dXcj9QFA7vGUNWQYbeQiMiY7RL8a7-xGrLDGybf9YZZ1nML7lRVZh4KYARz0PFO8xBAfe7FAatH6xVlRnakHtnESHlpzEBTEA%3Dw1440-h810-n-nu" aria-label="Genie 3 生成的可交互世界录屏"><source src="https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/genie-3-vid-1.mp4" type="video/mp4"></video></div>
+        <figcaption>先在“脑中”预演：Genie 3 随着交互持续生成一个可以走进去的世界。视频：Google DeepMind，<a href="https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/" target="_blank" rel="noopener noreferrer">官方介绍</a>。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+      <figure>
+        <div class="frame"><video controls muted playsinline preload="none" poster="https://mirros-lab.github.io/agent-garten/media/hns/ramp-retry.jpg" aria-label="AgentGarten 智能体移动斜坡后重新尝试"><source src="https://mirros-lab.github.io/agent-garten/media/hns/ramp-retry.mp4" type="video/mp4"></video></div>
+        <figcaption>再动手试：AgentGarten 里的智能体挪动斜坡，重新尝试。视频：MirroS Team，<a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+    </div>
+
+    <div class="undertone"><span class="kicker">暗线</span><p>传统的进化里，一代人的经验要靠基因和教育慢慢传下去。现在，经验可以被采集、复制，再由机器自己迭代。这是一种很不一样的传承。</p></div>
+  </div>
+</section>
+
+<section id="society" class="part" aria-labelledby="society-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">二</span><span class="time">12–24 分钟</span></div>
+  <div class="content">
+    <h2 id="society-title">走进社会的两道坎</h2>
+    <p class="lead">在实验室里学会了，不等于能在社会里长期生活。眼下有两道坎：身体撑不住，以及读不懂人。</p>
+
+    <article class="hurdle" aria-labelledby="h1-title">
+      <h3 id="h1-title"><span class="kicker">坎一</span>身体撑不住</h3>
+      <p>2025 年 4 月 19 日，北京亦庄举办了全球首个人形机器人半程马拉松，21 台机器人和上万名跑者一起出发。</p>
+      <dl class="facts">
+        <dt>2 小时 40 分</dt><dd>冠军天工 Ultra 的成绩。人类男子冠军用时约 1 小时 2 分。</dd>
+        <dt>换了 3 次电池</dt><dd>冠军途中换了三次电池，摔倒一次，是唯一在 3 小时 10 分关门时间内完赛的机器人。</dd>
+        <dt>6 台</dt><dd>21 台里只有 6 台跑完全程。很多机器人过热、摔倒，全都需要团队帮忙：遥控引导、换电池、喷冷却剂，甚至用胶带修补。</dd>
+      </dl>
+      <p>一年后变化很快。2026 年同一场比赛有 300 多台机器人参赛，荣耀的“闪电”自主导航跑出 50 分 26 秒，快过人类半马世界纪录，不过它在离终点约 200 米处也摔了一跤。规则也变了：靠遥控的机器人，成绩要乘以 1.2；每台最多换三次电池。</p>
+      <p class="source">来源：<a href="https://en.wikipedia.org/wiki/Beijing_E-Town_Half-Marathon" target="_blank" rel="noopener noreferrer">Beijing E-Town Half-Marathon，Wikipedia</a>（汇总了赛事报道）；<a href="https://realtimemandarin.substack.com/p/273-the-beijing-humanoid-robot-marathon" target="_blank" rel="noopener noreferrer">Realtime Mandarin，2026-04-25</a>。两届数据均来自这两处。</p>
+      <p>跑得快了，但一场比赛只有两三个小时，还有人在旁边跟着。要在家里、医院、政务大厅连续工作几个月，是另一回事。</p>
+      <div class="placeholder" style="aspect-ratio:auto;min-height:9rem;margin:1.8rem 0"><span><b>讲者亲身经历</b>待补：一两个“本体坏了、整机停下”的实验例子</span></div>
+      <p>今天的机器人本体有三个共同的问题：续航短，容易坏，而且整机像串联电路，一个关节或一块电路板出问题，整台机器就停了。人扭了脚还能一瘸一拐地走回家，机器人目前做不到。</p>
+      <p>汽车能进入社会，靠的不只是车造得好，还因为有加油站、修车厂和驾校。机器人也一样。</p>
+      <figure class="analogy">
+        <table>
+          <caption>右栏是讲者对机器人基础设施的设想，不是已有的体系。</caption>
+          <thead><tr><th scope="col">汽车有</th><th scope="col">机器人需要</th></tr></thead>
+          <tbody>
+            <tr><td>加油站、充电桩</td><td>能源站<small>就近补能、换电</small></td></tr>
+            <tr><td>修车厂、4S 店</td><td>机器人医院<small>诊断、维修、更换零件</small></td></tr>
+            <tr><td>驾校、驾照</td><td>机器人学校<small>上岗前的训练和认证</small></td></tr>
+            <tr><td>标准件、通用接口</td><td>新本体<small>模块化，坏一处只换一处</small></td></tr>
+          </tbody>
+        </table>
+      </figure>
+      <div class="undertone"><span class="kicker">暗线</span><p>生物进化里，一个物种从来不是单独变强的，它需要适合生存的环境和同伴。</p></div>
+    </article>
+
+    <article class="hurdle" aria-labelledby="h2-title">
+      <h3 id="h2-title"><span class="kicker">坎二</span>读不懂人</h3>
+      <p>拿整理房间来说，每个人都做过。</p>
+      <div class="demo">
+        <figure>
+          <div class="frame contain"><video controls muted playsinline preload="none" poster="https://tidybot.cs.princeton.edu/images/paper-thumbnail.jpg" aria-label="TidyBot 按主人习惯把衣物分进两个洗衣篮（16 倍速）"><source src="https://tidybot.cs.princeton.edu/videos/IMG_5028-16x.mp4" type="video/mp4"></video></div>
+          <figcaption>TidyBot 按主人的习惯，把浅色衣物放进草编篮、深色放进白篮。16 倍速。视频：Wu 等，<a href="https://tidybot.cs.princeton.edu/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
+          <p class="media-status" role="status"></p>
+        </figure>
+        <div>
+          <h4 style="margin-top:0">已经能做到的</h4>
+          <p>普林斯顿、斯坦福等团队 2023 年的 TidyBot，只看主人放几件东西的例子，就用大语言模型总结出规律，比如“浅色衣服放这个篮子”“易拉罐扔进回收桶”，再推广到没见过的东西上。</p>
+          <dl class="facts"><dt>91.2%</dt><dd>在测试数据里，没见过的物品放对的比例</dd><dt>85.0%</dt><dd>真实机器人实测，成功收好的比例</dd></dl>
+          <p class="source">来源：Wu 等，<a href="https://arxiv.org/abs/2305.05658" target="_blank" rel="noopener noreferrer">TidyBot: Personalized Robot Assistance with Large Language Models</a>，Autonomous Robots，2023。</p>
+        </div>
+      </div>
+      <div class="rules">
+        <div><h4>能写成规则的</h4><ul><li>浅色衣服 → 草编篮</li><li>易拉罐 → 回收桶</li><li>玩具 → 抽屉</li></ul></div>
+        <div class="open"><h4>说不清的</h4><ul><li>沙发上翻开的那本书，是乱放，还是正在读？</li><li>孩子贴在墙上的画，要不要摘下来？</li><li>花瓶故意摆歪一点，是不是更好看？</li></ul></div>
+      </div>
+      <p style="margin-top:1.6rem">一个家的“整齐”里有审美、有习惯、有生活的温度。很多东西，主人自己也说不清楚。</p>
+      <figure class="quote">
+        <blockquote>“以往的研究侧重情绪表达和情感线索，但人的社会互动还受到更广泛因素的影响，包括个人的目标与角色、自我呈现，以及文化。”</blockquote>
+        <figcaption>Emily S. Cross 与 Arvid Kappas，《社交机器人学不仅关乎机器，更关乎人：心理学在开发社会机器中的作用》，Annual Review of Psychology 第 77 卷，2026。<a href="https://doi.org/10.1146/annurev-psych-040325-025951" target="_blank" rel="noopener noreferrer">DOI</a>。引文由讲者从英文摘要译出。</figcaption>
+      </figure>
+      <p style="margin-top:1.6rem">这篇综述还指出，许多社交机器人公司失败，是因为产品难以维持和用户长期、有意义的互动；生成式 AI 也还没有解决这个根本问题。所以这一步需要心理学和技术一起突破，不是把模型做大就能解决的。</p>
+      <p>回到 Emo：它学会了笑的时机，但它知道什么时候不该笑吗？</p>
+      <div class="undertone"><span class="kicker">暗线</span><p>为了让机器理解什么叫“整齐”，我们得先说清楚自己心里的整齐是什么。教机器的过程，也是重新认识人自己的过程。</p></div>
+      <details class="note"><summary>讲者备注：追问时可用的材料</summary><div><p>社会具身可以分三层看：动作本身（能不能稳稳地把杯子递过去），互动（对方看不看得懂它要递杯子），以及社会关系（谁让它这样做，对方不愿意时怎么办）。这是本次分享的分析框架，不是文献统一的分类。</p><p>匹兹堡事件、CMU 社会导航（2010）和 CoBot 主动向人求助的研究，都可以说明“读懂人”落到具体变量上是什么样子。</p></div></details>
+    </article>
+  </div>
+</section>
+
+<section id="governance" class="part" aria-labelledby="gov-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">三</span><span class="time">24–28 分钟</span></div>
+  <div class="content">
+    <h2 id="gov-title">留给治理的问题</h2>
+    <p class="lead">三个问题，各配一件真事。这里只提问题，答案留到交流时一起讨论。</p>
+    <div class="questions">
+      <article>
+        <h3>基础设施谁来建？</h3>
+        <p>接着坎一：能源站、维修、训练和认证，是各家企业自己建，还是像道路、电网一样，作为公共设施来规划？</p>
+        <p class="ask">标准由谁定，坏了谁来修？</p>
+      </article>
+      <article>
+        <h3>公共空间怎样接纳机器人？</h3>
+        <p>2019 年 10 月，匹兹堡大学一位坐电动轮椅的博士生过马路时，一台送餐机器人停在路口的无障碍坡道上等着过街，不肯让开。交通灯已经变了，她还停在车道上，最后只能从路缘硬上去。学校随后暂停了机器人测试。</p>
+        <p class="ask">机器人按自己的规则做对了，却挡住了别人。准入、路权和出错后的责任，谁来定？</p>
+        <p class="source">来源：<a href="https://www.wtae.com/article/food-delivery-robot-pauses-operations-after-monday-incident/29554279" target="_blank" rel="noopener noreferrer">WTAE，2019-10-22</a>；<a href="https://pittnews.com/article/151679/news/pitt-pauses-testing-of-starship-robots-due-to-safety-concerns/" target="_blank" rel="noopener noreferrer">The Pitt News</a>。</p>
+      </article>
+      <article>
+        <h3>家里的数据归谁？</h3>
+        <p>2020 年，iRobot 测试版扫地机器人在家中拍下的照片，被送去外包标注、训练 AI，其中包括一位女性坐在马桶上的画面。委内瑞拉的标注员把截图发进了 Facebook 等平台的私密群组。iRobot 说，这些设备给的是签了同意书的有偿测试者和员工。</p>
+        <p class="ask">机器人要向我们学习，就要进入我们的生活。采集和使用经验，需要怎样的规则？</p>
+        <p class="source">来源：Eileen Guo，<a href="https://www.technologyreview.com/2022/12/19/1065306/roomba-irobot-robot-vacuums-artificial-intelligence-training-data-privacy/" target="_blank" rel="noopener noreferrer">MIT Technology Review，2022-12-19</a>。页面不展示原图。</p>
+      </article>
+    </div>
+    <div class="undertone"><span class="kicker">暗线</span><p>一种新的“我们”进入社会，就需要新的规则。这些规则，不能只由造它的人来写。</p></div>
+  </div>
+</section>
+
+<section id="closing" class="part closing" aria-labelledby="closing-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">尾</span><span class="time">28–30 分钟</span></div>
+  <div class="content">
+    <h2 id="closing-title">是机器人，<br>也是我们自己</h2>
+    <figure class="lineage reprise" aria-label="回到开场的传承图">
+      <ol>
+        <li><span class="name">DNA</span><span class="bar" style="--w:100%"></span><span class="what">传下身体</span></li>
+        <li><span class="name">文化</span><span class="bar" style="--w:50%"></span><span class="what">传下知识和习惯</span></li>
+        <li class="si"><span class="name">硅基</span><span class="bar" style="--w:19%"></span><span class="what">动作学自人的手，知识来自人的文字，表情模仿人的脸，判断对错也在学人给的反馈</span></li>
+      </ol>
+    </figure>
+    <p class="lead" style="margin-top:2.6rem">它身上装着我们的经验，也装着我们没说清楚的东西：审美、分寸和温度。所以研究机器人，也是在研究人自己。</p>
+    <p class="final">它与我们不同，也带着我们。<span>我们该怎样与硅基的“我们”共处？</span></p>
+    <details class="note"><summary>讲者备注：结尾的分寸</summary><div><p>“新型进化”是讲者的比喻，不是生物学意义上的进化。硅基芯片不等于硅基生命；学习人类数据，也不等于继承了某个人的身份。一个系统有没有生命、主观体验、道德地位和法律责任，是不同的问题，可以分开讨论。</p></div></details>
+  </div>
+</section>
+
+<section id="discussion" class="part" aria-labelledby="disc-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">谈</span><span class="time">交流 · 30–45 分钟</span></div>
+  <div class="content">
+    <h2 id="disc-title">如果政务大厅里<br>放一台引导机器人</h2>
+    <div class="scenario"><p>它准确听懂了一位访客要去哪个窗口，也能安全地把他带到。这次服务算成功吗？你还想知道什么？</p></div>
+    <p>再补几个情况：最近的路线要穿过排队的人群；有人不愿意被摄像头一直拍着；它处理不了的例外，最后都落到了工作人员身上。</p>
+    <p>换一个位置想一想：</p>
+    <div class="roles" role="group" aria-label="选择一个视角">
+      <button type="button" data-role="visitor" aria-pressed="true">办事的人</button>
+      <button type="button" data-role="bystander" aria-pressed="false">排队的人</button>
+      <button type="button" data-role="staff" aria-pressed="false">工作人员</button>
+    </div>
+    <p id="role-result" class="role-result" aria-live="polite">它是否真的帮我把事办成了？我能不能看懂它在做什么，随时打断或纠正它？如果我走得慢、听不清，它还适合我吗？</p>
+    <ol class="prompts">
+      <li>这台机器人的“成功”，应该由谁来定义？</li>
+      <li>出了问题，谁来负责，怎样向受影响的人解释？</li>
+      <li>试用以后，依据谁的反馈来修改规则？</li>
+    </ol>
+    <p class="speaker" style="margin-top:1.4rem">按钮只用来换位思考，不收集任何意见。</p>
+  </div>
+</section>
+
+<section id="studio" class="part studio" aria-labelledby="studio-title">
+  <div class="rail"><span class="numeral" aria-hidden="true">备</span><span class="time">讲者自用</span></div>
+  <div class="content">
+    <h2 id="studio-title">备讲台</h2>
+    <p>这里是准备材料：已提交的简介、时间表、PPT 故事板和关键转场。展示模式下这一部分会隐藏。</p>
+    <div class="studio-grid">
+      <div>
+        <h3>已提交的题目与简介</h3>
+        <div class="poster">
+          <h3 id="poster-title">硅基的我们？——从自主行动到社会共处</h3>
+          <p id="abstract">本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。</p>
+          <button id="copy" type="button">复制题目和简介</button>
+          <span id="copy-status" class="hint" role="status"></span>
+        </div>
+        <p class="speaker" style="margin-top:1rem"><span id="count"></span>。2026 年 10 月 16 日已提交，与海报一致，不再修改。</p>
+      </div>
+      <div>
+        <h3>时间表</h3>
+        <ol class="timeline">
+          <li><time>0–3</time><div>开场<small>Emo、DexUMI 各 5 秒；传承图</small></div></li>
+          <li><time>3–12</time><div>一 向人类学习<small>动作、知识、情绪各约 2 分钟，自己练约 3 分钟</small></div></li>
+          <li><time>12–24</time><div>二 走进社会的两道坎<small>身体撑不住约 5 分钟，读不懂人约 7 分钟</small></div></li>
+          <li><time>24–28</time><div>三 留给治理的问题<small>三个问题，每个约 1 分钟</small></div></li>
+          <li><time>28–30</time><div>结尾<small>回到传承图，留白</small></div></li>
+          <li><time>30–45</time><div>交流<small>政务大厅情境</small></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <h3 style="margin-top:3.5rem">PPT 故事板</h3>
+    <p>按 30 分钟设计，每页约 2 分钟。左侧有紫线的是暗线页。</p>
+    <ol class="board">
+      <li><b>封面</b><span>碳与硅、题目</span></li>
+      <li><b>这个笑容从哪里来？</b><span>Emo、DexUMI 各 5 秒</span></li>
+      <li class="undertone-page"><b>三种传承</b><span>DNA、文化、硅基</span></li>
+      <li><b>教动作</b><span>DexUMI、ASAP</span></li>
+      <li><b>教知识</b><span>Gemini Robotics 垃圾分类</span></li>
+      <li><b>教情绪</b><span>Emo 提前 0.8 秒</span></li>
+      <li><b>自己练</b><span>AirSpark，Genie 3 一张图</span></li>
+      <li class="undertone-page"><b>一种不一样的传承</b><span>采集、复制、自己迭代</span></li>
+      <li><b>坎一：半程马拉松</b><span>2 小时 40 分，3 次换电，6 台完赛</span></li>
+      <li><b>坎一：本体为什么撑不住</b><span>讲者亲身例子</span></li>
+      <li><b>坎一：汽车需要加油站</b><span>能源站、医院、学校、新本体</span></li>
+      <li><b>坎二：TidyBot</b><span>能学会的偏好</span></li>
+      <li><b>坎二：说不清的整齐</b><span>书、画、花瓶；Cross 与 Kappas</span></li>
+      <li><b>三个治理问题</b><span>基础设施、公共空间、数据</span></li>
+      <li class="undertone-page"><b>是机器人，也是我们自己</b><span>传承图回收，留白</span></li>
+      <li><b>交流</b><span>政务大厅里的引导机器人</span></li>
+    </ol>
+
+    <div class="script">
+      <h3 style="margin-top:3.5rem">关键转场</h3>
+      <p>这四句背下来，其余部分可以自由发挥。</p>
+      <h4>开场进入第一段</h4>
+      <p>这个笑容、这个手势，都是从人身上学来的。今天我想先讲讲，我们是怎样把自己一点点教给机器的。</p>
+      <h4>第一段进入第二段</h4>
+      <p>在实验室里，它学得越来越快。可是从实验室走到街上、走进家里，还隔着两道坎。</p>
+      <h4>第二段进入第三段</h4>
+      <p>这两道坎，一道要靠工程师，一道要靠心理学家。但还有一些问题，靠技术本身回答不了，需要在座各位一起来想。</p>
+      <h4>第三段进入结尾</h4>
+      <p>我们再回头看看开场那张图。</p>
+    </div>
+
+    <h3 style="margin-top:3.5rem">上台前待办</h3>
+    <ul class="todo">
+      <li>导入 AirSpark 视频或截图</li>
+      <li>补一两个“本体坏了、整机停下”的亲身例子</li>
+      <li>投影现场测试视频能否加载；不行就提前下载到本地，并保留出处</li>
+      <li>Roomba 事件只讲文字，不放原图</li>
+    </ul>
+
+    <h3 style="margin-top:3.5rem">我的备讲笔记</h3>
+    <label for="notes" class="visually-hidden">备讲笔记</label>
+    <textarea id="notes" placeholder="笔记只保存在这台电脑的浏览器里，可以导出成文本。"></textarea>
+    <div class="notes-bar"><span id="save-status"></span><button id="export" type="button">导出笔记</button><button id="print" type="button">打印或存为 PDF</button></div>
+    <p class="speaker" style="margin-top:2rem">调研依据和核查记录见<a href="research.html">调研页</a>。上一版六章叙事保存在<a href="archive/2026-10-16/index.html">归档</a>。</p>
+  </div>
 </section>
 </main>
-<div class="stage-controls" id="stage-controls" hidden role="group" aria-label="展示模式章节切换"><button id="stage-prev" aria-label="上一章节">←</button><span id="stage-label" aria-live="polite">封面</span><button id="stage-next" aria-label="下一章节">→</button><span class="stage-hint">左右键切换 · Esc 退出</span></div>
-<footer><span>硅基的我们？ / ROBOTICS / ACTION & SOCIAL LIFE</span><p>2026.10.16 · 分享准备版 · <a href="research.html">调研与叙事依据 ↗</a></p><a href="#home">回到开篇 ↑</a></footer>
+
+<footer>
+  <p>硅基的我们？——从自主行动到社会共处</p>
+  <p>2026 年 11 月 3 日 v3 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
+</footer>
+
+<div id="stage" class="stage" hidden>
+  <button id="stage-prev" type="button" aria-label="上一段">←</button>
+  <span id="stage-label">封面</span>
+  <button id="stage-next" type="button" aria-label="下一段">→</button>
+  <button id="stage-exit" type="button">退出</button>
+</div>
 <script src="app.js"></script>
 </body>
 </html>
