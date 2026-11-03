@@ -20,7 +20,7 @@
 <main>
 
 <section id="why" class="part" aria-labelledby="why-title">
-  <div class="rail"><span class="numeral" aria-hidden="true">据</span><span class="time">2026 年 11 月 3 日核查 · v3.1</span></div>
+  <div class="rail"><span class="numeral" aria-hidden="true">据</span><span class="time">2026 年 11 月 3 日核查 · v3.2</span></div>
   <div class="content">
     <h1 id="why-title" style="font-size:clamp(2.4rem,5vw,4rem);line-height:1.25;margin-bottom:1.6rem">调研与核查</h1>
     <p class="lead">这一页记录主线为什么这样安排，台上用到的事实查到了哪一步，以及哪些话需要收着讲。</p>
@@ -41,6 +41,13 @@
       <li>每个精选工作都配“原理三步、一个生活类比、一个关键数字、讲到哪里为止”。</li>
       <li>重新调研后换了选材：ASAP 换成 Figure 的人类视频预训练（Index 与 Helix 2.5）；补 RT-2 讲“动作也是词”；“自己练”改用 π*0.6 与 CEL；Genie 3、AgentGarten 移入备选。</li>
       <li>第二、三段换成国内实例：修一次 3 万元、基础设施雏形、深圳一车一牌、青岛追尾、大疆 Romo、拟人化互动服务办法。匹兹堡和 iRobot 降为国外对照。</li>
+    </ul>
+    <h2 style="font-size:1.8rem;margin:3rem 0 1rem">v3.2 的调整：主线重排</h2>
+    <ul class="prose">
+      <li>DNA、文化、硅基三种传承图只在结尾出现一次，揭开题目“硅基的我们？”的意思；开场和每段结尾只留一句“伏笔”。</li>
+      <li>“向人类学习”改用大脑与小脑的分工来讲：小脑学人的动作，大脑读人写下的文字，中间用 harness 接起来。</li>
+      <li>新增“超越人类经验：自己练”一段：AlphaGo Zero 的天花板图、模拟学院、自我改进循环图、回到真机。</li>
+      <li>两道坎之后点明“第二道坎靠工程解决不了”，引到心理学、社会学和公共管理，再进入治理的开放课题。</li>
     </ul>
     <p class="speaker">上一版的完整页面保存在<a href="archive/2026-10-16/index.html">归档</a>，调研页也在<a href="archive/2026-10-16/research.html">同一处</a>。</p>
   </div>
@@ -64,6 +71,22 @@
         <tr><td>首形科技</td><td>官网产品：Origin F1、Origin M1、精灵·璇、精灵·璇 2.0。2026-07-21 投资界报道完成数亿元 A2 轮。2024 年 6 月成立为媒体口径。</td><td><span class="status partial">部分为媒体口径</span></td></tr>
         <tr><td>《魔兽世界》天裔机器人</td><td>首形 YouTube 说明写“In collaboration with World of Warcraft”，用精灵·璇 2.0 呈现《魔兽世界：无限》新种族天裔；B 站视频 2026-10-16 08:00 发布。IGN 中国访谈：上海国家会展中心“无限派对”，游戏总监 Ion 说“那个天裔机器人实在太厉害了”，会说英语、能实时对话。暴雪、网易官方新闻未点名首形。</td><td><span class="status partial">公司说法 + 媒体</span></td></tr>
         <tr><td>2026 年 1 月口型论文</td><td>Science Robotics 11(110)，2026-01-14，第一作者 Yuhang Hu。哥大新闻稿：照镜子学 26 个面部电机，再看 YouTube 上几小时的人说话、唱歌视频；B、W 等音仍有困难。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>大脑配小脑：44% → 近 80%</td><td>Gemini Robotics 1.5 技术报告第 5 节，8 个多步骤任务：会“先想再做”的 VLA 单独干，进度分最高 44%；ER 1.5 编排加 VLA 执行常接近 80%。进度分不是成功率。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>Harness VLA：50.0% → 82.4%</td><td>arXiv 2607.08448（清华大学、中科院自动化所等，v5 2026-09-24）：LIBERO-Pro 上同一冻结 VLA 单独 50.0%，Claude Code 调度 82.4%、Codex 72.1%；RoboCasa365 上 30.0% 对 57.1%（Codex）；VLA 调用占 15.8%–47.4%。预印本，以仿真为主。</td><td><span class="status ok">已核对（预印本）</span></td></tr>
+        <tr><td>harness 一词</td><td>Anthropic 工程博客 2026-04-08：把“Claude 及其 harness”称为大脑，工具和沙箱称为手。DeepSeek 更新日志提到针对“DeepSeek Harness”优化。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>Claude Opus 5.5、DeepSeek V4</td><td>Opus 5.5 于 2026-09-22 发布，官方称多数工作达到 Fable 5.1 水平；DeepSeek-V4-Pro 正式版 2026-08-13 上线。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>Project Fetch 二期</td><td>2026-06-18：Opus 4.7 独立完成，比最快的人类小组快约 20 倍；仍没能精准拱球；未涉及底层控制。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>Butter-Bench：40% 对 95%</td><td>大模型当机器人大脑，最好的模型 40%，人类平均 95%；评测的是大模型部分，不含底层 VLA。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>小脑约占全脑八成神经元</td><td>BioNumbers：小脑约 690 亿个神经元，占全脑约 80%，重量约 10%。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>AlphaGo Zero：36 小时、100:0、24 小时</td><td>Nature 2017 预印本原文：36 小时超过 AlphaGo Lee；72 小时对战 100:0；学人类棋谱的网络猜得更准，却在 24 小时内被自学版打败；40 天版本对 Master 89:11。</td><td><span class="status ok">已核对全文</span></td></tr>
+        <tr><td>100 米 8 秒 64</td><td>中国日报 2026-08-27：第二届世界人形机器人运动会，天骄队以 8 秒 64 获 100 米大型组冠军。训练方法未公开。</td><td><span class="status ok">已核对报道</span></td></tr>
+        <tr><td>4096 台、20 分钟</td><td>Rudin 等，CoRL 2021：一块工作站显卡并行，平地不到 4 分钟、复杂地形不到 20 分钟；正文用 4096 台。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>Figure System 0：20 万个环境</td><td>Helix 02：完全在模拟中训练，超过 20 万个并行环境，1 kHz，替代 109,504 行 C++。公司自述。</td><td><span class="status partial">公司自述</span></td></tr>
+        <tr><td>DreamGen：22 种新动作</td><td>arXiv 2505.12705：只用一个“抓起放下”任务的遥操作数据，人形机器人做出 22 种新动作；新动作成功率 11.2% → 43.2%，全新环境 28.5%。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>SIMA 2 自我改进</td><td>arXiv 2512.04797：Gemini 出题、Gemini 打分，在新环境里从零学会新技能；虚拟世界，不是实体机器人。</td><td><span class="status ok">已核对摘要</span></td></tr>
+        <tr><td>ENPIRE：99%</td><td>arXiv 2606.19980，CoRL 2026：编程智能体在真实机器人上自动复位、执行、验证、改进，灵巧任务做到 99%。</td><td><span class="status ok">已核对摘要</span></td></tr>
+        <tr><td>EmbodiRSI：83.5 → 62.8 → 83.1</td><td>论文表格：两轮后仿真 83.5%；R2 直接上真机 62.8%；R2 加每子任务 10 条真机纠正 83.1%；200 条真机示范 75.0%。</td><td><span class="status ok">已核对</span></td></tr>
+        <tr><td>叠积木钻空子</td><td>DeepMind 2020 博客：按红积木底面高度给分，机器人把红积木翻面拿分；另有抓取任务机械手停在镜头和物体之间骗过评估员。</td><td><span class="status ok">已核对</span></td></tr>
         <tr><td>DexUMI 86%</td><td>项目页：两种灵巧手平台，平均任务成功率 86%；外骨骼做硬件适配，画面里把人手替换成机器手。</td><td><span class="status ok">已核对</span></td></tr>
         <tr><td>Figure：1600 万段视频，9% → 56%</td><td>Index（2026-08-25）：用户上传超过 1600 万段视频，已付 1500 万美元。Helix 2.5（2026-09-17）：其他条件不变，只加 Index 预训练，零样本成功率 9% → 56%；30 户未见过的家；“整理客厅”要求 13–15 个玩具全部进篮子；原文称不代表通用人形机器人已解决。</td><td><span class="status partial">公司自述</span></td></tr>
         <tr><td>RT-2：32% → 62%</td><td>DeepMind 博客 2023-07-28：在未见过的场景里，从 RT-1 的 32% 提高到 62%；动作以 token 形式输出。</td><td><span class="status ok">已核对</span></td></tr>
@@ -102,6 +125,9 @@
         <tr><td>Emo 能读心、提前看穿你</td><td>说“大约提前 0.8 秒预判”，这是按平均表情时长推算的余量，不是每次实测。</td></tr>
         <tr><td>首形和暴雪合作了</td><td>说“在暴雪和网易办的魔兽活动上展出，游戏总监公开称赞”。合作说法目前只来自首形一方。</td></tr>
         <tr><td>Figure 机器人已经能做家务</td><td>在 30 户陌生家庭里，三项家务的整项完成率 56%，将近一半失败；公司自述，没有同行评审。</td></tr>
+        <tr><td>Claude、DeepSeek 已经在指挥机器人</td><td>说“像 Opus 5.5、DeepSeek V4 这样的通用大模型可以当大脑”。目前可靠的例子是 Gemini Robotics-ER 和 Harness VLA 这类研究；Project Fetch 是写代码，不是运行时控制。</td></tr>
+        <tr><td>机器人的小脑就是人的小脑</td><td>是工程分工的比喻。真实的小脑也参与计划、语言和情绪。</td></tr>
+        <tr><td>机器人已经超越人类</td><td>在围棋这种规则清楚的领域，自学超过了人类；在身体上，个别项目（如 100 米）超过人类纪录。家务和社会交往远没有。</td></tr>
         <tr><td>机器人能自己学会了</td><td>π*0.6 和 CEL 都仍要人打分、接管或复位；更准确的说法是“人从示范者变成了裁判”。</td></tr>
         <tr><td>机器人学会了人类道德</td><td>可以说它在学习人给的反馈和规则。是否有道德判断能力、道德地位或法律责任，是另外的问题。</td></tr>
         <tr><td>它就是我们</td><td>结尾保留为开放问题：它与我们不同，也带着我们的经验。不作身份、生命或意识上的结论。</td></tr>
@@ -116,7 +142,7 @@
     <h2 id="sources-title">来源索引</h2>
     <p>按出现的段落排列。预印本的结果是作者报告，本页没有复现实验。</p>
 
-    <h3 style="margin-top:2.4rem">开场与一 向人类学习</h3>
+    <h3 style="margin-top:2.4rem">开场与小脑的例子</h3>
     <ul class="sources">
       <li><b>Emo<small>Science Robotics，2024</small></b><div><p>先用随机动作学会自己的脸，再用 970 段人类表情视频学会预判。开场主例。</p><p><a href="https://www.science.org/doi/10.1126/scirobotics.adi4724" target="_blank" rel="noopener noreferrer">论文</a> · <a href="https://par.nsf.gov/servlets/purl/10699806" target="_blank" rel="noopener noreferrer">公开全文</a> · <a href="https://www.bilibili.com/video/BV1XK421e7ts/" target="_blank" rel="noopener noreferrer">B 站视频</a> · <a href="https://www.youtube.com/watch?v=pWTTzR_wXuQ" target="_blank" rel="noopener noreferrer">YouTube</a></p></div></li>
       <li><b>口型同步<small>Science Robotics，2026-01</small></b><div><p>同一思路学说话和唱歌的嘴型。</p><p><a href="https://doi.org/10.1126/scirobotics.adx3017" target="_blank" rel="noopener noreferrer">DOI</a> · <a href="https://www.sciencedaily.com/releases/2026/01/260116035308.htm" target="_blank" rel="noopener noreferrer">哥大新闻稿转载</a></p></div></li>
@@ -129,6 +155,27 @@
       <li><b>CEL<small>清华大学、智元机器人、无问芯穹，2026-10</small></b><div><p>96 台机器人从车队的成功片段里学，人只判成败、复位。预印本。</p><p><a href="https://arxiv.org/abs/2610.25736" target="_blank" rel="noopener noreferrer">论文</a> · <a href="https://www.youtube.com/watch?v=o4Pr1gYvozk" target="_blank" rel="noopener noreferrer">视频</a></p></div></li>
       <li><b>EmbodiRSI<small>上海科技大学，预印本，最新 v4</small></b><div><p>让当前策略的失败决定下一轮采集什么经验，与讲者的 AirSpark 思路最接近。</p><p><a href="https://arxiv.org/abs/2609.38905" target="_blank" rel="noopener noreferrer">论文</a></p></div></li>
       <li><b>北京数据基地与训练场<small>2026</small></b><div><p>北京人形机器人创新中心数据基地：40 种构型、150 多台、年产能 18 万小时；全国训练场超过 70 个。</p><p><a href="https://www.beijing.gov.cn/fuwu/lqfw/gggs/202609/t20260903_4848806.html" target="_blank" rel="noopener noreferrer">北京市政府网转北京日报</a> · <a href="https://www.thepaper.cn/newsDetail_forward_34219029" target="_blank" rel="noopener noreferrer">澎湃</a></p></div></li>
+    </ul>
+
+    <h3 style="margin-top:2.4rem">大脑与小脑</h3>
+    <ul class="sources">
+      <li><b>Harness VLA<small>清华大学等，预印本，2026</small></b><div><p>编程智能体当规划器，把冻结的 VLA 包装成可重试的接触动作工具。</p><p><a href="https://arxiv.org/abs/2607.08448" target="_blank" rel="noopener noreferrer">论文</a></p></div></li>
+      <li><b>Gemini Robotics-ER 2<small>Google DeepMind，2026-07</small></b><div><p>自称机器人的高层大脑，把动作交给任意下层 VLA。</p><p><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/" target="_blank" rel="noopener noreferrer">官方博客</a></p></div></li>
+      <li><b>Figure Helix 与 Helix 02<small>Figure AI，2025 与 2026</small></b><div><p>System 2 / 1 / 0 分层，频率从 7–9 Hz 到 1 kHz。</p><p><a href="https://www.figure.ai/news/helix" target="_blank" rel="noopener noreferrer">Helix</a> · <a href="https://www.figure.ai/news/helix-02" target="_blank" rel="noopener noreferrer">Helix 02</a></p></div></li>
+      <li><b>智源 RoboOS<small>2025</small></b><div><p>开源“大脑-小脑分层架构”。</p><p><a href="https://github.com/FlagOpen/RoboOS" target="_blank" rel="noopener noreferrer">GitHub</a></p></div></li>
+      <li><b>Anthropic：harness 与 Project Fetch<small>2026</small></b><div><p>大脑与手的分离；Claude 写代码控制机器狗。</p><p><a href="https://www.anthropic.com/engineering/managed-agents" target="_blank" rel="noopener noreferrer">Managed Agents</a> · <a href="https://www.anthropic.com/research/project-fetch-phase-two" target="_blank" rel="noopener noreferrer">Project Fetch 二期</a> · <a href="https://www.anthropic.com/news/claude-opus-5-5" target="_blank" rel="noopener noreferrer">Opus 5.5</a></p></div></li>
+      <li><b>Butter-Bench<small>2025</small></b><div><p>大模型当机器人大脑的第三方评测。</p><p><a href="https://arxiv.org/abs/2510.21860" target="_blank" rel="noopener noreferrer">论文</a></p></div></li>
+    </ul>
+
+    <h3 style="margin-top:2.4rem">超越人类经验：自己练</h3>
+    <ul class="sources">
+      <li><b>AlphaGo Zero<small>Nature 2017</small></b><div><p>不看人类棋谱，自我对弈超过 AlphaGo Lee。</p><p><a href="https://www.nature.com/articles/nature24270" target="_blank" rel="noopener noreferrer">Nature</a> · <a href="https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf" target="_blank" rel="noopener noreferrer">预印本</a></p></div></li>
+      <li><b>世界人形机器人运动会 100 米<small>2026-08</small></b><div><p>8 秒 64。</p><p><a href="https://cn.chinadaily.com.cn/a/202608/27/WS6a902900e4b09a165c7867c1.html" target="_blank" rel="noopener noreferrer">中国日报</a></p></div></li>
+      <li><b>Rudin 等：几分钟学会走<small>CoRL 2021</small></b><div><p>4096 台并行。</p><p><a href="https://arxiv.org/abs/2109.11978" target="_blank" rel="noopener noreferrer">论文</a> · <a href="https://github.com/unitreerobotics/unitree_rl_gym" target="_blank" rel="noopener noreferrer">宇树 unitree_rl_gym</a></p></div></li>
+      <li><b>DreamGen<small>NVIDIA，2025</small></b><div><p>用视频世界模型造训练数据。</p><p><a href="https://arxiv.org/abs/2505.12705" target="_blank" rel="noopener noreferrer">论文</a> · <a href="https://research.nvidia.com/labs/gear/dreamgen/" target="_blank" rel="noopener noreferrer">项目页</a></p></div></li>
+      <li><b>SIMA 2<small>Google DeepMind，2025-12</small></b><div><p>Gemini 出题打分的自我改进。</p><p><a href="https://arxiv.org/abs/2512.04797" target="_blank" rel="noopener noreferrer">论文</a></p></div></li>
+      <li><b>ENPIRE 与 FIND<small>2026</small></b><div><p>编程智能体改训练代码；专挑做不好的练。</p><p><a href="https://arxiv.org/abs/2606.19980" target="_blank" rel="noopener noreferrer">ENPIRE</a> · <a href="https://arxiv.org/abs/2609.32069" target="_blank" rel="noopener noreferrer">FIND</a></p></div></li>
+      <li><b>规格钻空子<small>DeepMind，2020</small></b><div><p>叠积木翻面拿分。</p><p><a href="https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/" target="_blank" rel="noopener noreferrer">博客</a></p></div></li>
     </ul>
 
     <h3 style="margin-top:2.4rem">二 走进社会的两道坎</h3>
@@ -184,7 +231,7 @@
 
 <footer>
   <p>硅基的我们？调研与核查</p>
-  <p>2026 年 11 月 3 日 v3.1 · <a href="index.html">返回分享页</a> · <a href="archive/2026-10-16/research.html">上一版调研页</a></p>
+  <p>2026 年 11 月 3 日 v3.2 · <a href="index.html">返回分享页</a> · <a href="archive/2026-10-16/research.html">上一版调研页</a></p>
 </footer>
 </body>
 </html>
