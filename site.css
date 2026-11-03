@@ -214,6 +214,48 @@ textarea{width:100%;min-height:12rem;resize:vertical;background:var(--paper);bor
 .notes-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem;margin-top:.8rem}
 .notes-bar span{margin-right:auto;font-size:.85rem;color:var(--muted)}
 
+/* Audience moments: a question put to the room */
+.ask-room{margin:2.4rem 0 0;padding:1.4rem 1.6rem 1.5rem;border:2px solid var(--ink);max-width:48rem}
+.ask-room .kicker{color:var(--ink);font-weight:600}
+.ask-room h3{font-size:clamp(1.35rem,2.2vw,1.65rem);margin:.2rem 0 1rem}
+.ask-room ol{margin:0;padding:0;list-style:none;display:grid;gap:.9rem}
+.ask-room li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 1rem;align-items:center;border-top:1px solid var(--line);padding-top:.8rem}
+.ask-room li:first-child{border-top:0;padding-top:0}
+.ask-room .q{font-family:var(--serif);font-size:1.15rem;line-height:1.6}
+.ask-room .follow{grid-column:1 / -1;font-size:.88rem;color:var(--muted);line-height:1.6;margin:0}
+.tally{display:inline-flex;align-items:center;gap:.4rem}
+.tally button{padding:.2rem .7rem;font-size:.85rem}
+.tally output{min-width:2.4rem;text-align:center;font-variant-numeric:tabular-nums;font-size:.95rem}
+.ask-room .room-note{font-size:.82rem;color:var(--muted);margin:1rem 0 0}
+
+/* Principle: how it works, in three short steps */
+.how{list-style:none;margin:1.2rem 0 1.2rem;padding:0;counter-reset:how;max-width:var(--measure)}
+.how li{counter-increment:how;display:grid;grid-template-columns:2rem minmax(0,1fr);gap:.8rem;padding:.55rem 0;border-top:1px solid var(--line);line-height:1.7}
+.how li::before{content:counter(how);font-family:var(--serif);font-size:1.35rem;line-height:1.3;color:var(--si)}
+.how b{font-weight:600}
+.analog{font-family:var(--serif);font-size:1.1rem;line-height:1.75;border-left:3px solid var(--line);padding-left:1rem;margin:1rem 0;max-width:var(--measure)}
+.numbers{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin:1rem 0;max-width:var(--measure)}
+.numbers div{display:grid}
+.numbers b{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.2}
+.numbers span{font-size:.82rem;color:var(--muted);line-height:1.5;max-width:14rem}
+.limit{font-size:.92rem;color:var(--muted);max-width:var(--measure)}
+.limit::before{content:"讲到这里为止：";color:var(--ink);font-weight:600}
+
+/* Story timeline (one person's path) */
+.story{list-style:none;margin:1.6rem 0;padding:0 0 0 1.2rem;border-left:2px solid var(--ink);max-width:46rem}
+.story li{position:relative;padding:.1rem 0 1rem}
+.story li::before{content:"";position:absolute;left:calc(-1.2rem - 6px);top:.55rem;width:10px;height:10px;background:var(--paper);border:2px solid var(--ink);border-radius:50%}
+.story li.now::before{background:var(--si);border-color:var(--si)}
+.story time{display:block;font-size:.82rem;color:var(--muted)}
+.story b{font-family:var(--serif);font-weight:400;font-size:1.15rem}
+.story p{margin:.2rem 0 0;font-size:.95rem;line-height:1.7}
+
+/* Infrastructure: idea vs what already exists */
+.analogy.three td:first-child{width:22%}
+.analogy.three td:nth-child(2){width:24%}
+.analogy.three td:last-child{font-family:var(--sans);font-size:.92rem;line-height:1.6}
+.analogy.three th:last-child{color:var(--ink)}
+
 /* Research page */
 .doc .part{grid-template-columns:var(--rail) minmax(0,1fr)}
 .checks{width:100%;max-width:64rem;border-collapse:collapse;margin:1.6rem 0 0;font-size:.95rem}
@@ -240,7 +282,7 @@ footer p{margin:0}
 .stage span{font-size:.85rem;color:var(--muted);min-width:7.5rem;text-align:center}
 .stage button{padding:.25rem .8rem}
 body.focus{font-size:20px}
-body.focus .masthead,body.focus #studio,body.focus details.note,body.focus .route,body.focus footer,body.focus .source{display:none}
+body.focus .masthead,body.focus #studio,body.focus details.note,body.focus .room-note,body.focus .route,body.focus footer,body.focus .source{display:none}
 body.focus .part,body.focus .cover{min-height:100vh;padding-top:3.5rem;padding-bottom:4.5rem}
 body.focus .rail{top:3.5rem}
 html:has(body.focus){scroll-padding-top:0}

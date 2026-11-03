@@ -27,7 +27,8 @@ $('notes').addEventListener('input', () => {
   catch { $('save-status').textContent = '保存失败，请导出笔记'; }
 });
 $('export').addEventListener('click', () => {
-  const text = `${talkTitle}\n\n${abstract}\n\n备讲笔记\n${$('notes').value}`;
+  const tallies = [...document.querySelectorAll('[data-poll] li')].map(li => `${li.querySelector('.q').textContent}：${li.querySelector('output').value} 人`).join('\n');
+  const text = `${talkTitle}\n\n${abstract}\n\n现场举手\n${tallies}\n\n备讲笔记\n${$('notes').value}`;
   const url = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
   const link = Object.assign(document.createElement('a'), { href: url, download: '硅基的我们-备讲笔记.txt' });
   document.body.append(link); link.click(); link.remove();
@@ -123,18 +124,47 @@ document.querySelectorAll('video').forEach(video => {
     document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
   });
 });
+// Click-to-load players. Bilibili first (reachable in mainland China), YouTube as fallback.
 document.querySelectorAll('.load-video').forEach(button => button.addEventListener('click', () => {
-  const box = button.closest('[data-youtube]');
+  const box = button.closest('[data-youtube], [data-bilibili]');
   const frame = document.createElement('iframe');
-  frame.src = `https://www.youtube-nocookie.com/embed/${box.dataset.youtube}?autoplay=1&rel=0`;
+  const bvid = box.dataset.bilibili;
+  frame.src = bvid
+    ? `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=1&high_quality=1&danmaku=0`
+    : `https://www.youtube-nocookie.com/embed/${box.dataset.youtube}?autoplay=1&rel=0`;
   frame.title = box.dataset.title || '研究演示视频';
   frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
   frame.allowFullscreen = true;
   frame.referrerPolicy = 'strict-origin-when-cross-origin';
   box.replaceChildren(frame);
   const status = box.closest('figure')?.querySelector('.media-status');
-  if (status) status.textContent = '如果没有画面，可能是当前网络打不开 YouTube，请用说明里的链接。';
+  if (status) status.textContent = bvid
+    ? '正在加载 B 站播放器。没有画面时，请用说明里的链接打开。'
+    : '正在加载 YouTube。国内网络可能打不开，请用说明里的链接或提前下载的本地文件。';
 }));
+
+// Show-of-hands counters. Kept in this browser so opening and later answers can be compared.
+const POLL_KEY = 'robot-common-life-polls';
+let polls = {};
+try { polls = JSON.parse(localStorage.getItem(POLL_KEY) || '{}'); } catch { polls = {}; }
+document.querySelectorAll('[data-poll]').forEach(group => {
+  group.querySelectorAll('.tally').forEach((tally, index) => {
+    const key = `${group.dataset.poll}-${index}`;
+    const out = tally.querySelector('output');
+    out.value = polls[key] || 0;
+    tally.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+      polls[key] = Math.max(0, (polls[key] || 0) + Number(button.dataset.step));
+      out.value = polls[key];
+      try { localStorage.setItem(POLL_KEY, JSON.stringify(polls)); } catch {}
+    }));
+  });
+});
+$('poll-reset').addEventListener('click', () => {
+  polls = {};
+  try { localStorage.removeItem(POLL_KEY); } catch {}
+  document.querySelectorAll('[data-poll] output').forEach(out => { out.value = 0; });
+});
+
 document.querySelectorAll('img').forEach(img => {
   const fail = () => {
     if (img.dataset.failed) return;

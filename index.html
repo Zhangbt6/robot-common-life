@@ -39,33 +39,59 @@
 <section id="route" class="route" aria-labelledby="route-title">
   <h2 id="route-title" class="visually-hidden">分享路线</h2>
   <ol>
-    <li><a href="#opening"><span class="t">0–3 分钟</span><b>开场</b><span>这个笑容从哪里来</span></a></li>
-    <li><a href="#learn"><span class="t">3–12 分钟</span><b>向人类学习</b><span>动作、知识、情绪，再自己练</span></a></li>
-    <li><a href="#society"><span class="t">12–24 分钟</span><b>走进社会的两道坎</b><span>身体撑不住，读不懂人</span></a></li>
-    <li><a href="#governance"><span class="t">24–28 分钟</span><b>留给治理的问题</b><span>基础设施、公共空间、数据</span></a></li>
+    <li><a href="#opening"><span class="t">0–4 分钟</span><b>开场</b><span>举手，再看一个笑容和一个人</span></a></li>
+    <li><a href="#learn"><span class="t">4–13 分钟</span><b>向人类学习</b><span>人从老师变成教练，再变成裁判</span></a></li>
+    <li><a href="#society"><span class="t">13–24 分钟</span><b>走进社会的两道坎</b><span>修一次 3 万，整齐说不清</span></a></li>
+    <li><a href="#governance"><span class="t">24–28 分钟</span><b>留给治理的问题</b><span>一车一牌、追尾、家里的摄像头</span></a></li>
     <li><a href="#closing"><span class="t">28–30 分钟</span><b>结尾</b><span>是机器人，也是我们自己</span></a></li>
-    <li class="talk"><a href="#discussion"><span class="t">30–45 分钟</span><b>交流</b><span>政务大厅里的引导机器人</span></a></li>
+    <li class="talk"><a href="#discussion"><span class="t">30–45 分钟</span><b>交流</b><span>政务大厅情境，三道投票题</span></a></li>
   </ol>
   <p class="legend"><i></i>紫色竖线标出暗线：机器人身上的人影子，以及一种新的传承方式。<i class="dash"></i>虚线是交流环节。</p>
 </section>
 
 <section id="opening" class="part" aria-labelledby="opening-title">
-  <div class="rail"><span class="numeral" aria-hidden="true">序</span><span class="time">开场 · 0–3 分钟</span></div>
+  <div class="rail"><span class="numeral" aria-hidden="true">序</span><span class="time">开场 · 0–4 分钟</span></div>
   <div class="content">
-    <h2 id="opening-title">这个笑容，<br>是从哪里学来的？</h2>
-    <div class="media-pair">
-      <figure>
-        <div class="frame"><div class="yt" data-youtube="pWTTzR_wXuQ" data-title="Emo 人机表情互动：Columbia Engineering 官方演示"><img loading="lazy" src="https://www.engineering.columbia.edu/sites/default/files/styles/wide/public/2024-06/yuhang-hua-of-creative-machines-lab-face-to-face-with-emo.png?itok=L2bTZtqT" alt="研究者与 Emo 机器人面对面，Emo 回以微笑"><button class="load-video" type="button">播放 Emo 演示</button></div></div>
-        <figcaption>Emo 在对方笑出来之前，就预判并同步回以微笑。图与视频：Yuhang Hu / Creative Machines Lab, Columbia Engineering，<a href="https://www.youtube.com/watch?v=pWTTzR_wXuQ" target="_blank" rel="noopener noreferrer">在 YouTube 打开</a>。点击播放后才会加载 YouTube。</figcaption>
-        <p class="media-status" role="status"></p>
-      </figure>
-      <figure>
-        <div class="frame"><video controls muted playsinline preload="metadata" aria-label="DexUMI 机器灵巧手用镊子夹取茶叶"><source src="https://dex-umi.github.io/static/videos/xhand_tea.mp4" type="video/mp4"></video></div>
-        <figcaption>DexUMI 的机器手用镊子夹茶叶，动作来自人戴着装置做的示范。视频：DexUMI 作者团队，<a href="https://dex-umi.github.io/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
-        <p class="media-status" role="status"></p>
-      </figure>
+    <div class="ask-room" data-poll="opening">
+      <span class="kicker">先举个手</span>
+      <h3>开始之前，想先认识一下在座的各位</h3>
+      <ol>
+        <li><span class="q">这几天用过 AI 的请举手，比如问 DeepSeek、豆包，或者让它写材料。</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">举手的人多就接一句：“它会写、会答，但还没有身体。今天讲的是有身体的 AI。”</p></li>
+        <li><span class="q">现场亲眼见过人形机器人的请举手，比如春晚、展会、商场、政务大厅。</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">请一位举手的同学说一句：它当时在做什么？你第一感觉是什么？</p></li>
+        <li><span class="q">愿意让机器人进自己家帮忙做家务的请举手。</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">先记下人数，不评价。第二段讲完“读不懂人”和远程遥操作之后，再问一次。</p></li>
+      </ol>
+      <p class="room-note">计数只留在这台电脑的浏览器里，用来前后对比，不上传。<button type="button" id="poll-reset" style="margin-left:.6rem;padding:.1rem .7rem;font-size:.8rem">清零全部计数</button></p>
     </div>
-    <p class="lead">答案很简单：都是从人身上学来的。表情学自人的脸，手势学自人的手。</p>
+
+    <h2 id="opening-title" style="margin-top:3.6rem">这个笑容，<br>是从哪里学来的？</h2>
+    <figure>
+      <div class="frame"><div class="yt" data-youtube="pWTTzR_wXuQ" data-bilibili="BV1XK421e7ts" data-title="Emo 人机表情互动：Columbia Engineering 官方演示"><img loading="lazy" src="https://www.engineering.columbia.edu/sites/default/files/styles/wide/public/2024-06/yuhang-hua-of-creative-machines-lab-face-to-face-with-emo.png?itok=L2bTZtqT" alt="研究者胡宇航与 Emo 机器人面对面，Emo 回以微笑"><button class="load-video" type="button">播放 Emo 演示</button></div></div>
+      <figcaption>画面右边就是 Emo 的作者胡宇航。视频：Creative Machines Lab, Columbia Engineering。国内网络默认加载 B 站版本（作者本人上传），<a href="https://www.bilibili.com/video/BV1XK421e7ts/" target="_blank" rel="noopener noreferrer">B 站</a> · <a href="https://www.youtube.com/watch?v=pWTTzR_wXuQ" target="_blank" rel="noopener noreferrer">YouTube</a>。</figcaption>
+      <p class="media-status" role="status"></p>
+    </figure>
+    <p class="lead">Emo 的笑不是程序员写死的。它像婴儿一样，分两步学会。</p>
+    <ol class="how">
+      <li><span><b>先认识自己的脸。</b>Emo 脸皮下有 26 个电机，眼睛里各装一个摄像头。研究者让它对着镜头随机乱动电机，记下“拉哪几根，脸会变成什么样”。论文把这叫“运动牙牙学语”（motor babbling）。</span></li>
+      <li><span><b>再看别人的脸。</b>它看了 45 个人的 970 段表情视频，学会从嘴角、眼角刚开始的细微变化，判断“这个人马上要笑了”。</span></li>
+      <li><span><b>抢在你前面笑。</b>人从开始变表情到表情最明显，平均要 0.84 秒；Emo 的计算只要 0.002 秒，剩下约 0.839 秒正好够电机把笑做出来，所以能和你同时笑，而不是慢半拍去模仿。</span></li>
+    </ol>
+    <div class="numbers"><div><b>26</b><span>个面部电机</span></div><div><b>970</b><span>段人类表情视频（45 人）</span></div><div><b>约 0.84 秒</b><span>提前量，按人的平均表情时长推算</span></div></div>
+
+    <h3 style="margin-top:3rem"><span class="kicker">一个人的路</span>从厦门的机械系，到上海的仿生机器人公司</h3>
+    <ol class="story">
+      <li><time>2015–2019</time><b>厦门大学嘉庚学院，机械设计制造及自动化</b><p>连续 7 个学期专业第一，2019 年考上哥伦比亚大学机械工程研究生。</p></li>
+      <li><time>2021</time><b>参与上一代机器人脸 Eva</b><p>Hod Lipson 的创意机器实验室。Eva 靠拉线驱动，已经能“照镜子”学自己的表情。</p></li>
+      <li><time>2024 年 3 月</time><b>Emo 发表在 Science Robotics，第一作者</b><p>换成磁铁直接带动的可更换硅胶皮肤，26 个电机，学会提前预判笑容。</p></li>
+      <li><time>2024 年 6 月</time><b>还在读博时，在上海创办首形科技（AheadForm）</b><p>做仿生面部机器人：桌面头像 Origin、上半身可动的“精灵·璇”。2026 年 7 月完成数亿元 A2 轮融资。</p></li>
+      <li><time>2026 年 1 月</time><b>学会对口型，登上 Science Robotics 封面</b><p>先对着镜子学会控制 26 个电机，再看 YouTube 上几小时的人说话、唱歌视频，把声音对应到嘴型。能说多种语言，B、W 这类音还做不好。</p></li>
+      <li class="now"><time>2026 年 10 月 16–18 日</time><b>《魔兽世界》新种族“天裔”走进现实</b><p>暴雪与网易在上海国家会展中心办“无限派对”，首形把“精灵·璇 2.0”做成天裔精灵的样子，能用英语实时对话。游戏总监 Ion Hazzikostas 接受采访时说：“那个天裔机器人，实在太厉害了。”</p></li>
+    </ol>
+    <figure>
+      <div class="frame"><div class="yt" data-bilibili="BV118JS6eEsD" data-youtube="-vzJyt1HZ8k" data-title="首形科技：魔兽世界天裔机器人"><img loading="lazy" src="https://i.ytimg.com/vi/-vzJyt1HZ8k/maxresdefault.jpg" alt="首形科技按《魔兽世界》天裔造型制作的仿生机器人"><button class="load-video" type="button">播放天裔机器人（54 秒）</button></div></div>
+      <figcaption>视频：U航-首形科技，<a href="https://www.bilibili.com/video/BV118JS6eEsD/" target="_blank" rel="noopener noreferrer">B 站</a>（2026-10-16 发布）· <a href="https://www.youtube.com/watch?v=-vzJyt1HZ8k" target="_blank" rel="noopener noreferrer">YouTube</a>。公司称“与《魔兽世界》合作”；暴雪、网易的官方新闻里没有点名首形。</figcaption>
+      <p class="media-status" role="status"></p>
+    </figure>
+    <p class="lead">两年时间，一张实验室里的机器人脸，变成了游戏玩家排队合影的“角色”。它的笑、口型、对话，全是从人身上学来的。</p>
     <figure class="lineage" aria-labelledby="lineage-cap">
       <ol>
         <li><span class="name">DNA</span><span class="bar" style="--w:100%"></span><span class="what"><b>几十亿年</b>，传下的是身体。</span></li>
@@ -75,54 +101,113 @@
       <figcaption id="lineage-cap">三种传承方式，横条长度按时间的对数刻度示意。这是讲者用来组织问题的比喻，三者的机制并不相同。</figcaption>
     </figure>
     <div class="undertone"><span class="kicker">暗线</span><p>今天从技术讲起：我们是怎样把自己教给机器的，它又卡在哪里。最后再回到这个问题：它是机器人，还是我们自己？</p></div>
-    <details class="note"><summary>讲者备注</summary><div><p>两段视频各放 5 秒，静音即可。不急着解释技术，只问一句“这是从哪里学来的”。传承图在结尾还会再出现一次。</p><p>Emo：Hu 等，《Human-robot facial coexpression》，Science Robotics，2024 年 3 月。论文报告它能在人笑出来约 839 毫秒前作出预测。表情像人，不代表它有同样的感受，这一点留到第二段。</p></div></details>
+    <details class="note"><summary>讲者备注</summary><div><p>节奏：举手约 1 分钟，Emo 视频放 15 秒，原理三步约 1 分钟，胡宇航的故事加天裔视频约 1.5 分钟。天裔视频只放前 20 秒即可。</p><p>“约 0.84 秒”是按人的平均表情时长（0.841 ± 0.713 秒）减去计算时间推算出来的余量，不是每次实测的提前量。不要说成“读心”。</p><p>“魔兽合作”目前只是首形一方的说法，建议讲成“在暴雪和网易办的魔兽活动上展出，游戏总监公开称赞”。2024 年 6 月成立、融资金额都是媒体口径。</p><p>来源：<a href="https://www.science.org/doi/10.1126/scirobotics.adi4724" target="_blank" rel="noopener noreferrer">Emo 论文</a>（<a href="https://par.nsf.gov/servlets/purl/10699806" target="_blank" rel="noopener noreferrer">公开全文</a>）· <a href="https://doi.org/10.1126/scirobotics.adx3017" target="_blank" rel="noopener noreferrer">口型论文</a> · <a href="https://www.xujc.com/info/y48mr2on.html" target="_blank" rel="noopener noreferrer">嘉庚学院报道</a> · <a href="http://yuhang-hu.com/" target="_blank" rel="noopener noreferrer">个人主页</a> · <a href="https://news.pedaily.cn/202607/566643.shtml" target="_blank" rel="noopener noreferrer">投资界</a> · <a href="https://www.ign.com.cn/world-of-warcraft-game/63630/mo-shou-shi-jie-kai-fa-zhe-fang-tan-wu-xian-bu-shi-huai-jiu-fu-20" target="_blank" rel="noopener noreferrer">IGN 中国访谈</a>。</p></div></details>
   </div>
 </section>
 
 <section id="learn" class="part" aria-labelledby="learn-title">
-  <div class="rail"><span class="numeral" aria-hidden="true">一</span><span class="time">3–12 分钟</span></div>
+  <div class="rail"><span class="numeral" aria-hidden="true">一</span><span class="time">4–13 分钟</span></div>
   <div class="content">
     <h2 id="learn-title">向人类学习</h2>
-    <p class="lead">机器人学会做事，靠的是人把自己的经验交给它。下面按“教什么”分四步，每一步看一个例子。</p>
+    <p class="lead">Emo 学的是表情。机器人还要学动作、学知识，最后学会自己练。每一步都看一个工作，讲清它是怎么做到的。</p>
     <ol class="teach">
-      <li><b>教动作</b><span>人的身体经验，搬到另一个身体里</span></li>
-      <li><b>教知识</b><span>人类留下的文字和图像，成了它理解世界的起点</span></li>
-      <li><b>教情绪</b><span>学会表情的时机</span></li>
-      <li class="self"><b>自己练</b><span>在我们搭好的环境里，自己反复试</span></li>
+      <li><b>教动作</b><span>看人怎么做，再换成自己的身体做</span></li>
+      <li><b>教知识</b><span>把人类写下的文字和图像，接到动作上</span></li>
+      <li><b>教情绪</b><span>开场的 Emo：先认识自己，再预判别人</span></li>
+      <li class="self"><b>自己练</b><span>人从老师变成教练，再变成裁判</span></li>
     </ol>
 
     <div class="demo">
       <figure>
-        <div class="frame"><video controls muted playsinline preload="metadata" aria-label="ASAP 人形机器人做出足球运动员的庆祝动作"><source src="https://agile.human2humanoid.com/static/videos/ASAP-Motion-CR7_level1-1080P.mp4" type="video/mp4"></video></div>
-        <figcaption>人形机器人学做 C 罗的标志性庆祝动作。视频：ASAP 作者团队，<a href="https://agile.human2humanoid.com/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
+        <div class="frame"><video controls muted playsinline preload="metadata" aria-label="DexUMI：人戴外骨骼示范，机器手复现"><source src="https://dex-umi.github.io/static/videos/xhand_tea.mp4" type="video/mp4"></video></div>
+        <figcaption>DexUMI 的机器手用镊子夹茶叶。视频：DexUMI 作者团队，<a href="https://dex-umi.github.io/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
         <p class="media-status" role="status"></p>
       </figure>
       <div>
-        <h3><span class="kicker">教动作</span>人的动作，怎样换一个身体做出来</h3>
-        <p>开场的 DexUMI 让人戴着装置示范，把手上的技巧迁移到机器手上。ASAP 把人的全身动作迁移到人形机器人上：先在仿真里练，再用真机数据校正仿真和现实的差距。</p>
-        <p>机器人的身体和人不一样，所以示范不能照搬，要经过适配。</p>
-        <details class="note"><summary>讲者备注</summary><div><p>DexUMI：CoRL 2025，<a href="https://arxiv.org/abs/2505.21864" target="_blank" rel="noopener noreferrer">论文</a>。ASAP：RSS 2025，<a href="https://agile.human2humanoid.com/static/asap.pdf" target="_blank" rel="noopener noreferrer">论文</a>。两项都是在指定任务上的演示，不代表通用能力。</p></div></details>
+        <h3><span class="kicker">教动作 · 手</span>穿上机器人尺寸的“手套”做示范</h3>
+        <p>人手和机器手长得不一样，直接照搬示范，机器手做不出来。DexUMI 用两步把差别抹平：</p>
+        <ol class="how">
+          <li><span><b>硬件对齐：</b>人戴一副按机器手尺寸做的外骨骼，手指只能做机器手也能做的动作。</span></li>
+          <li><span><b>画面对齐：</b>软件把录像里的人手“换成”机器手，机器人看到的训练画面和它自己干活时一样。</span></li>
+        </ol>
+        <p class="analog">像替身演员穿着主角同款的戏服排练，镜头里就分不出是谁在演。</p>
+        <div class="numbers"><div><b>86%</b><span>两种灵巧手、四个任务的平均成功率</span></div></div>
+        <p class="limit">每换一种机器手，就要重做一副外骨骼。</p>
       </div>
     </div>
 
     <div class="demo flip">
       <figure>
-        <a class="frame" href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://lh3.googleusercontent.com/gWwpRQKqcoVvkXtc-b2pdCCMu82CgDbQB7U6nCGFSKWF9R1AsgLukMkBXW4Ft55LiuLW5W0M9grV6nFlsyNDSj1qK7nuSRBYk4_NZrUzETEYaWgh=w1440-h810-n-nu" alt="Gemini Robotics 1.5 官方发布图"></a>
-        <figcaption>图：Google DeepMind。点击图片打开官方介绍和演示视频。</figcaption>
+        <div class="frame"><video controls muted playsinline preload="none" aria-label="Figure Helix 2.5 在没去过的家里整理、叠毛巾、铺床"><source src="https://videos.ctfassets.net/qx5k8y1u9drj/3o0Slich33yfh6rGIrnfjU/34a724da8c10868d0e403d9d52b85c13/3_Task_Overview_91726A.mp4" type="video/mp4"></video></div>
+        <figcaption>Helix 2.5 在 30 个没去过的家里做三项家务。视频约 24 MB，点击才加载。来源：Figure AI，<a href="https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization" target="_blank" rel="noopener noreferrer">官方博客</a>，2026-09-17。</figcaption>
+        <p class="media-status" role="status"></p>
       </figure>
       <div>
-        <h3><span class="kicker">教知识</span>先查本地的垃圾分类规定，再动手分</h3>
-        <p>Google DeepMind 在 2025 年发布 Gemini Robotics 1.5 时举了一个例子：让机器人“按我所在地的规定，把这些东西分进厨余、可回收和其他垃圾桶”。它要先上网查当地规则，看清眼前的物品，再一步步放好。</p>
-        <p>大模型把人类积累的文字和图像知识，接到了机器人的判断和动作上。</p>
-        <details class="note"><summary>讲者备注</summary><div><p>来源：<a href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer">官方博客</a>。这是厂商发布的精选演示，不能当作日常环境中的可靠性评估。</p></div></details>
+        <h3><span class="kicker">教动作 · 全身</span>先看一千多万段普通人做家务</h3>
+        <p>外骨骼一次只能教一只手。美国公司 Figure 换了思路：花钱请普通人用手机拍自己干活。</p>
+        <ol class="how">
+          <li><span><b>攒视频：</b>2026 年 8 月公布的 Index 项目，用户已上传超过 1600 万段视频，公司已付给拍摄者 1500 万美元。</span></li>
+          <li><span><b>先看再学：</b>模型先在这些视频上学“人是怎么动的”，再只用少量机器人数据学具体家务。</span></li>
+          <li><span><b>进陌生的家：</b>直接进 30 户从没去过的家，整理客厅、叠毛巾、铺床。</span></li>
+        </ol>
+        <p class="analog">先看遍许多人怎么收拾屋子，再去陌生人家里干活。</p>
+        <div class="numbers"><div><b>9% → 56%</b><span>其他条件全不变，只加“先看人类视频”这一步，整项家务完成率的变化</span></div></div>
+        <p class="limit">这是公司自述，没有同行评审；56% 意味着将近一半会失败。Figure 自己也写道，这不代表通用人形机器人已经解决。</p>
       </div>
     </div>
 
-    <div class="demo text-only">
+    <p class="speaker" style="margin-top:2rem">人在中国也在大规模“教动作”：北京人形机器人创新中心的数据基地有 40 种构型、150 多台机器人，年产能 18 万小时数据；全国已经运营的具身智能训练场超过 70 个。这些“机器人学校”第二段还会讲到。</p>
+
+    <div class="demo">
+      <figure>
+        <a class="frame" href="https://deepmind.google/blog/gemini-robotics-15-brings-ai-agents-into-the-physical-world/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://lh3.googleusercontent.com/gWwpRQKqcoVvkXtc-b2pdCCMu82CgDbQB7U6nCGFSKWF9R1AsgLukMkBXW4Ft55LiuLW5W0M9grV6nFlsyNDSj1qK7nuSRBYk4_NZrUzETEYaWgh=w1440-h810-n-nu" alt="Gemini Robotics 1.5 官方发布图"></a>
+        <figcaption>图：Google DeepMind。点击打开官方介绍和演示视频。</figcaption>
+      </figure>
       <div>
-        <h3><span class="kicker">教情绪</span>回到开场的 Emo</h3>
-        <p>Emo 用大量人脸视频训练，能从面部的细微变化里预判对方要笑，在约 0.8 秒前作出预测，让自己的笑和对方同时出现，而不是慢半拍去模仿。</p>
-        <p>它学会了笑的时机。它知不知道什么时候不该笑，留到第二段再说。</p>
+        <h3><span class="kicker">教知识</span>把动作也当成一种语言</h3>
+        <p>大模型从网上学会了“什么是垃圾”“哪个是可回收的”。怎样把这些知识接到机械臂上？</p>
+        <ol class="how">
+          <li><span><b>动作写成“词”：</b>2023 年的 RT-2 把机械臂的每个动作编成一串数字，和网上的图文放在一起训练，动作成了模型学会的又一门语言。</span></li>
+          <li><span><b>一个想，一个做：</b>2025 年的 Gemini Robotics 1.5 分成两个模型：负责思考的看场景、上网查资料、把任务拆成步骤；负责动作的照着一步步做。</span></li>
+          <li><span><b>例子：</b>DeepMind 举的例子是“按我所在地的规定，把这些东西分进厨余、可回收和其他垃圾桶”。它要先查当地规则，再动手分。</span></li>
+        </ol>
+        <p class="analog">像新员工先用手机查本市的垃圾分类指南，再开始分。</p>
+        <div class="numbers"><div><b>32% → 62%</b><span>RT-2 在没见过的场景里的成功率，对比只用机器人数据训练的上一代</span></div></div>
+        <p class="limit">网上的知识帮它判断“对什么下手”，教不会新的动作。垃圾分类是官方博客里的示例，技术报告里实测的是简化版任务。</p>
+      </div>
+    </div>
+
+    <div class="demo flip">
+      <figure>
+        <div class="frame"><video controls muted playsinline preload="none" aria-label="π*0.6：人在机器人出错时接管纠正"><source src="https://website.pi-asset.com/pi06star/intervention_example.mp4" type="video/mp4"></video></div>
+        <figcaption>机器人出错时，人接管纠正，这段纠正会成为训练数据。来源：Physical Intelligence，<a href="https://www.pi.website/blog/pistar06" target="_blank" rel="noopener noreferrer">官方博客</a>，2025-11-17。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+      <div>
+        <h3><span class="kicker">自己练</span>人从老师，变成教练，再变成裁判</h3>
+        <p>只靠模仿，机器人能做到“一半时候成功”，很难每次都成功。美国 Physical Intelligence 的 π*0.6 让人的角色一步步退后：</p>
+        <ol class="how">
+          <li><span><b>老师：</b>先看人的示范，学会大致怎么做。</span></li>
+          <li><span><b>教练：</b>它出错时，人接手把动作纠正过来。</span></li>
+          <li><span><b>裁判：</b>它大量自己练，一个打分模型判断每一段动作让局面变好还是变坏，训练时只强化“变好”的那些。</span></li>
+        </ol>
+        <p class="analog">像练字时，老师先写范字，再握着手改，最后只在作业上画圈打叉。</p>
+        <div class="numbers"><div><b>2 倍以上</b><span>部分最难任务上的单位时间完成量</span></div><div><b>13 小时</b><span>连续做咖啡不中断（论文）</span></div></div>
+        <p class="limit">论文自己写明“并非完全自主”：仍要人打分、接管和复位场景；每个任务单独训练。</p>
+      </div>
+    </div>
+
+    <div class="demo">
+      <figure>
+        <div class="frame"><div class="yt" data-youtube="o4Pr1gYvozk" data-title="CEL：96 台机器人共享经验"><img loading="lazy" src="https://i.ytimg.com/vi/o4Pr1gYvozk/maxresdefault.jpg" alt="CEL 论文演示：多台机器人同时包装手机"><button class="load-video" type="button">播放演示</button></div></div>
+        <figcaption>视频：CEL 作者团队（清华大学、智元机器人、无问芯穹），<a href="https://arxiv.org/abs/2610.25736" target="_blank" rel="noopener noreferrer">论文</a>，2026 年 10 月预印本。YouTube，国内可能打不开。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+      <div>
+        <h3><span class="kicker">自己练 · 一群</span>96 台机器人共用一本错题本</h3>
+        <p>一台机器人练得慢。清华大学、智元机器人和无问芯穹 2026 年 10 月的 CEL 让人只判成败、负责复位，不再示范：某台机器人失败时，系统从整个车队的成功片段里找相似的局面重点学，更新后的模型再发回所有机器人。</p>
+        <div class="numbers"><div><b>79.2% → 98.3%</b><span>96 台一起学，多步骤手机包装任务的成功率</span></div><div><b>每 22 分钟</b><span>车队里平均出一次局部故障，但不影响整体继续采集</span></div></div>
+        <p class="limit">预印本；要先用人的示范把模型教到能用，5 个任务分开训练。</p>
       </div>
     </div>
 
@@ -132,32 +217,19 @@
         <figcaption>讲者自己的研究。素材导入前，台上不展示结果。</figcaption>
       </figure>
       <div>
-        <h3><span class="kicker">自己练</span>让失败决定下一轮练什么</h3>
-        <p>前三步都是人在教。到了这一步，机器人开始在我们搭好的仿真环境里反复尝试，从失败里调整。</p>
-        <p>这里讲自己的 AirSpark：任务怎样设置，失败怎样记录，下一轮怎样改。</p>
-        <details class="note"><summary>讲者备注：怎样讲自己的研究</summary><div><p>选一个有清楚现象和记录的片段，60 到 90 秒讲完：视频里发生了什么，原来的做法在哪里不够用，实际改了什么，哪些结果还不确定。已经做到的、正在做的和设想分开讲，不说 AirSpark 已经实现了自我改进。</p><p>前沿参照：EmbodiRSI（2026 年 9 月预印本，<a href="https://arxiv.org/html/2609.38905v3" target="_blank" rel="noopener noreferrer">论文</a>）让当前策略的失败决定下一轮采集什么经验。结果限于三个桌面环境、十四个子任务、两轮更新，实机阶段还用了人工纠正轨迹。</p></div></details>
+        <h3><span class="kicker">自己练 · 我的研究</span>给机器搭一个练习场</h3>
+        <p>这里讲自己的 AirSpark：任务怎样设置，失败怎样记录，下一轮怎样改。和 π*0.6、CEL 对照着讲：人在哪一步退场，又在哪一步必须在场。</p>
+        <details class="note"><summary>讲者备注：怎样讲自己的研究</summary><div><p>选一个有清楚现象和记录的片段，60 到 90 秒讲完：视频里发生了什么，原来的做法在哪里不够用，实际改了什么，哪些结果还不确定。已经做到的、正在做的和设想分开讲。</p><p>最接近的学术参照：EmbodiRSI（上海科技大学，<a href="https://arxiv.org/abs/2609.38905" target="_blank" rel="noopener noreferrer">arXiv 2609.38905</a>，最新 v4）。两轮更新后仿真成功率从 50.4% 到 83.5%；每个子任务只用 10 条真机轨迹，真机成功率 83.1%，直接用 200 条真机示范为 75.0%。</p></div></details>
       </div>
     </div>
 
-    <div class="media-pair">
-      <figure>
-        <div class="frame"><video controls muted playsinline preload="none" poster="https://lh3.googleusercontent.com/BirHhzrtzHQtXvNG0dXcj9QFA7vGUNWQYbeQiMiY7RL8a7-xGrLDGybf9YZZ1nML7lRVZh4KYARz0PFO8xBAfe7FAatH6xVlRnakHtnESHlpzEBTEA%3Dw1440-h810-n-nu" aria-label="Genie 3 生成的可交互世界录屏"><source src="https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/genie-3-vid-1.mp4" type="video/mp4"></video></div>
-        <figcaption>先在“脑中”预演：Genie 3 随着交互持续生成一个可以走进去的世界。视频：Google DeepMind，<a href="https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/" target="_blank" rel="noopener noreferrer">官方介绍</a>。</figcaption>
-        <p class="media-status" role="status"></p>
-      </figure>
-      <figure>
-        <div class="frame"><video controls muted playsinline preload="none" poster="https://mirros-lab.github.io/agent-garten/media/hns/ramp-retry.jpg" aria-label="AgentGarten 智能体移动斜坡后重新尝试"><source src="https://mirros-lab.github.io/agent-garten/media/hns/ramp-retry.mp4" type="video/mp4"></video></div>
-        <figcaption>再动手试：AgentGarten 里的智能体挪动斜坡，重新尝试。视频：MirroS Team，<a href="https://mirros-lab.github.io/agent-garten/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
-        <p class="media-status" role="status"></p>
-      </figure>
-    </div>
-
-    <div class="undertone"><span class="kicker">暗线</span><p>传统的进化里，一代人的经验要靠基因和教育慢慢传下去。现在，经验可以被采集、复制，再由机器自己迭代。这是一种很不一样的传承。</p></div>
+    <div class="undertone"><span class="kicker">暗线</span><p>四步看下来，人一步步退后，却始终在场：先示范，再纠正，最后打分。经验可以被采集、复制、再由机器自己迭代，这是一种很不一样的传承。</p></div>
+    <details class="note"><summary>讲者备注：备选与替换理由</summary><div><p>这一版换下了 ASAP（被规模更大的 Figure 人类视频工作超过）、Genie 3（已有 Genie 4，且两者都没有机器人方面的量化结果）和 AgentGarten（研究的是游戏世界里的大模型笔记，不是机器人学习）。它们都留在调研页的备选里。</p><p>想讲“先在脑中预演”，可以用 DeepMind 的 <a href="https://arxiv.org/abs/2512.10675" target="_blank" rel="noopener noreferrer">Veo 世界模拟器</a>：用视频模型想象机器人动作的后果，1600 多次真机对照，新场景下预测与真实成功率相关系数 0.86；只用来考核，不在里面训练。</p><p>RT-2 来源：<a href="https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/" target="_blank" rel="noopener noreferrer">DeepMind 博客</a>，2023-07-28。π*0.6：<a href="https://arxiv.org/abs/2511.14759" target="_blank" rel="noopener noreferrer">论文</a>；博客写“早 5:30 到晚 11:30”，与论文 13 小时口径不同，台上只用论文数字。</p></div></details>
   </div>
 </section>
 
 <section id="society" class="part" aria-labelledby="society-title">
-  <div class="rail"><span class="numeral" aria-hidden="true">二</span><span class="time">12–24 分钟</span></div>
+  <div class="rail"><span class="numeral" aria-hidden="true">二</span><span class="time">13–24 分钟</span></div>
   <div class="content">
     <h2 id="society-title">走进社会的两道坎</h2>
     <p class="lead">在实验室里学会了，不等于能在社会里长期生活。眼下有两道坎：身体撑不住，以及读不懂人。</p>
@@ -172,22 +244,31 @@
       </dl>
       <p>一年后变化很快。2026 年同一场比赛有 300 多台机器人参赛，荣耀的“闪电”自主导航跑出 50 分 26 秒，快过人类半马世界纪录，不过它在离终点约 200 米处也摔了一跤。规则也变了：靠遥控的机器人，成绩要乘以 1.2；每台最多换三次电池。</p>
       <p class="source">来源：<a href="https://en.wikipedia.org/wiki/Beijing_E-Town_Half-Marathon" target="_blank" rel="noopener noreferrer">Beijing E-Town Half-Marathon，Wikipedia</a>（汇总了赛事报道）；<a href="https://realtimemandarin.substack.com/p/273-the-beijing-humanoid-robot-marathon" target="_blank" rel="noopener noreferrer">Realtime Mandarin，2026-04-25</a>。两届数据均来自这两处。</p>
-      <p>跑得快了，但一场比赛只有两三个小时，还有人在旁边跟着。要在家里、医院、政务大厅连续工作几个月，是另一回事。</p>
+      <p>跑得快了，但一场比赛只有一两个小时，还有一整支团队跟着。要在家里、医院、政务大厅连续工作几个月，是另一回事。</p>
       <div class="placeholder" style="aspect-ratio:auto;min-height:9rem;margin:1.8rem 0"><span><b>讲者亲身经历</b>待补：一两个“本体坏了、整机停下”的实验例子</span></div>
       <p>今天的机器人本体有三个共同的问题：续航短，容易坏，而且整机像串联电路，一个关节或一块电路板出问题，整台机器就停了。人扭了脚还能一瘸一拐地走回家，机器人目前做不到。</p>
-      <p>汽车能进入社会，靠的不只是车造得好，还因为有加油站、修车厂和驾校。机器人也一样。</p>
-      <figure class="analogy">
+      <dl class="facts">
+        <dt>修一次 3 万元</dt><dd>一位用户 20 万元买的人形机器人，在家过门槛时摔倒，髋关节减速器发生肉眼看不见的形变，步态全乱。换整个髋关节模组，再用激光扫描全身校准，花了 3 万元、10 天。</dd>
+        <dt>电池 4000 元，用 2 小时</dt><dd>某品牌人形机器人专用电池的价格和续航。</dd>
+        <dt>前臂最常坏</dt><dd>Figure 的机器人在宝马工厂每天 10 小时、干了 11 个月，累计运行 1250 多小时，前臂是最常出故障的部位，下一代因此重新设计了手腕。</dd>
+      </dl>
+      <p class="source">来源：Tech星球，<a href="https://m.chinaventure.com.cn/news/116-20260305-390345.html" target="_blank" rel="noopener noreferrer">《修一次3万块》</a>，2026-03-05（个案，媒体采访）；<a href="https://www.figure.ai/news/production-at-bmw" target="_blank" rel="noopener noreferrer">Figure，2025-11-19</a>（公司自述）。</p>
+      <p>汽车能进入社会，靠的不只是车造得好，还因为有加油站、修车厂和驾校。机器人也需要这些。有意思的是，2025 年到 2026 年，这些东西在中国已经陆续冒出了雏形：</p>
+      <figure class="analogy three">
         <table>
-          <caption>右栏是讲者对机器人基础设施的设想，不是已有的体系。</caption>
-          <thead><tr><th scope="col">汽车有</th><th scope="col">机器人需要</th></tr></thead>
+          <caption>中间一栏是讲者的设想；右栏是已经出现的雏形，多数还是个别城市、个别企业的做法。</caption>
+          <thead><tr><th scope="col">汽车有</th><th scope="col">机器人需要</th><th scope="col">已经出现的雏形</th></tr></thead>
           <tbody>
-            <tr><td>加油站、充电桩</td><td>能源站<small>就近补能、换电</small></td></tr>
-            <tr><td>修车厂、4S 店</td><td>机器人医院<small>诊断、维修、更换零件</small></td></tr>
-            <tr><td>驾校、驾照</td><td>机器人学校<small>上岗前的训练和认证</small></td></tr>
-            <tr><td>标准件、通用接口</td><td>新本体<small>模块化，坏一处只换一处</small></td></tr>
+            <tr><td>加油站、充电桩</td><td>能源站<small>就近补能、换电</small></td><td>优必选 Walker S2 能 3 分钟内自己换电池（厂商称可 7×24 小时工作）。2026 世界人形机器人运动会的“机器人之家”设了 200 个充电柜，可同时充至少 1200 块电池。</td></tr>
+            <tr><td>修车厂、4S 店</td><td>机器人医院<small>诊断、维修、更换零件</small></td><td>北京亦庄 Robot Mall 2025 年 8 月开业，三层是维保区。京东推出“机器人救护车”，承诺 1 分钟响应、2 小时上门、当日修好，全国 8 个维修中心。</td></tr>
+            <tr><td>驾校、驾照</td><td>机器人学校<small>上岗前的训练和认证</small></td><td>全国运营中的具身智能训练场超过 70 个，另有 46 个在规划或建设。人社部 2026 年 9 月发布新职业“具身智能机器人应用技术员”。但机器人本身还没有“上岗证”。</td></tr>
+            <tr><td>车牌、行驶证</td><td>身份<small>一机一码，可追溯</small></td><td>运动会推行“一机一码、一电池一码”，30 秒完成存取登记。深圳的无人配送车实行“一车一牌”（第三段细讲）。</td></tr>
+            <tr><td>标准件、国家标准</td><td>新本体<small>模块化，坏一处只换一处</small></td><td>首批人形机器人国家标准已发布，2027 年 4 月 1 日实施，都是推荐性标准；跨厂家通用接口还没有。</td></tr>
           </tbody>
         </table>
       </figure>
+      <p class="source">来源：<a href="https://m.21jingji.com/article/20260813/herald/0cef17d2e4b41bacbc65d3f9db56a5ac.html" target="_blank" rel="noopener noreferrer">北京发布，2026-08-13</a>；<a href="https://kw.beijing.gov.cn/xwdt/kcyx/xwdtshgg/202508/t20250807_4168180.html" target="_blank" rel="noopener noreferrer">北京市科委</a>；<a href="https://www.bbtnews.com.cn/2026/0415/590588.shtml" target="_blank" rel="noopener noreferrer">北京商报</a>；<a href="https://www.ithome.com/0/868/869.htm" target="_blank" rel="noopener noreferrer">IT之家</a>；<a href="https://www.thepaper.cn/newsDetail_forward_34219029" target="_blank" rel="noopener noreferrer">澎湃</a>；<a href="https://finance.sina.com.cn/roll/2026-09-09/doc-inirfivw3759484.shtml" target="_blank" rel="noopener noreferrer">科技日报</a>；<a href="https://jxj.beijing.gov.cn/jxdt/zwyw/202610/t20261019_4908655.html" target="_blank" rel="noopener noreferrer">北京市经信局</a>。</p>
+      <p>雏形有了，但还在洗牌。北京首钢园 2025 年揭牌的人形机器人数据训练中心，原计划放 108 台机器人，不到 18 个月，原运营方就撤走了设备，理由是数据质量没有达到预期。</p>
       <div class="undertone"><span class="kicker">暗线</span><p>生物进化里，一个物种从来不是单独变强的，它需要适合生存的环境和同伴。</p></div>
     </article>
 
@@ -212,12 +293,23 @@
         <div class="open"><h4>说不清的</h4><ul><li>沙发上翻开的那本书，是乱放，还是正在读？</li><li>孩子贴在墙上的画，要不要摘下来？</li><li>花瓶故意摆歪一点，是不是更好看？</li></ul></div>
       </div>
       <p style="margin-top:1.6rem">一个家的“整齐”里有审美、有习惯、有生活的温度。很多东西，主人自己也说不清楚。</p>
+      <p>三年后最先进的系统也一样。第一段那个进了 30 户陌生家庭的 Figure，“整理客厅”的成功标准写的是：散落的 13 到 15 个玩具全部放进篮子。工程师只能这样定义“整齐”，因为只有这样才能打分。</p>
+      <h4>它不会的时候，谁在帮它？</h4>
+      <p>美国 1X 公司的家用人形机器人 NEO，2025 年 10 月开放预订，售价 2 万美元，或每月 499 美元。官方说明：它默认自主干活；遇到不会的家务，主人可以预约公司的“专家”远程接管，接管时机器人耳朵上的灯环会变色。CEO 在接受《华尔街日报》采访时说，买家必须接受操作员透过机器人的摄像头看到家里的样子，“没有你的数据，我们没法把产品做得更好”。</p>
+      <p class="source">来源：<a href="https://www.figure.ai/news/helix-2-5-zero-shot-30-home-generalization" target="_blank" rel="noopener noreferrer">Figure 附录评分标准</a>；<a href="https://www.1x.tech/neo" target="_blank" rel="noopener noreferrer">1X 官网</a>；<a href="https://www.engadget.com/ai/1x-neo-is-a-20000-home-robot-that-will-learn-chores-via-teleoperation-040252200.html" target="_blank" rel="noopener noreferrer">Engadget 转述《华尔街日报》采访</a>。截至 2026 年 10 月下旬，没有查到经独立核实的用户交付。</p>
       <figure class="quote">
         <blockquote>“以往的研究侧重情绪表达和情感线索，但人的社会互动还受到更广泛因素的影响，包括个人的目标与角色、自我呈现，以及文化。”</blockquote>
         <figcaption>Emily S. Cross 与 Arvid Kappas，《社交机器人学不仅关乎机器，更关乎人：心理学在开发社会机器中的作用》，Annual Review of Psychology 第 77 卷，2026。<a href="https://doi.org/10.1146/annurev-psych-040325-025951" target="_blank" rel="noopener noreferrer">DOI</a>。引文由讲者从英文摘要译出。</figcaption>
       </figure>
-      <p style="margin-top:1.6rem">这篇综述还指出，许多社交机器人公司失败，是因为产品难以维持和用户长期、有意义的互动；生成式 AI 也还没有解决这个根本问题。所以这一步需要心理学和技术一起突破，不是把模型做大就能解决的。</p>
+      <p style="margin-top:1.6rem">这篇综述还指出，许多社交机器人公司失败，是因为产品难以维持和用户长期、有意义的互动；生成式 AI 也还没有解决这个根本问题。2019 年，陪伴机器人 Jibo 的公司停掉服务器前，它最后一次对主人说：“我真的很享受我们在一起的时光。”这一步需要心理学和技术一起突破，不是把模型做大就能解决的。</p>
+      <p class="source">来源：<a href="https://techcrunch.com/2019/03/04/the-lonely-death-of-jibo-the-social-robot/" target="_blank" rel="noopener noreferrer">TechCrunch，2019-03-04</a>。</p>
       <p>回到 Emo：它学会了笑的时机，但它知道什么时候不该笑吗？</p>
+      <div class="ask-room" data-poll="again">
+        <span class="kicker">再举一次手</span>
+        <ol>
+          <li><span class="q">知道它收拾时可能有一个远方的人在看着你家，还愿意让它进门的请举手。</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">和开场第三题对比。人数变少很正常，问一位改主意的同学：是什么让你犹豫了？</p></li>
+        </ol>
+      </div>
       <div class="undertone"><span class="kicker">暗线</span><p>为了让机器理解什么叫“整齐”，我们得先说清楚自己心里的整齐是什么。教机器的过程，也是重新认识人自己的过程。</p></div>
       <details class="note"><summary>讲者备注：追问时可用的材料</summary><div><p>社会具身可以分三层看：动作本身（能不能稳稳地把杯子递过去），互动（对方看不看得懂它要递杯子），以及社会关系（谁让它这样做，对方不愿意时怎么办）。这是本次分享的分析框架，不是文献统一的分类。</p><p>匹兹堡事件、CMU 社会导航（2010）和 CoBot 主动向人求助的研究，都可以说明“读懂人”落到具体变量上是什么样子。</p></div></details>
     </article>
@@ -228,27 +320,38 @@
   <div class="rail"><span class="numeral" aria-hidden="true">三</span><span class="time">24–28 分钟</span></div>
   <div class="content">
     <h2 id="gov-title">留给治理的问题</h2>
-    <p class="lead">三个问题，各配一件真事。这里只提问题，答案留到交流时一起讨论。</p>
+    <p class="lead">三个问题，各配一件发生在中国的事，再配一件国外的对照。这里只提问题，答案留到交流时一起讨论。</p>
     <div class="questions">
       <article>
         <h3>基础设施谁来建？</h3>
-        <p>接着坎一：能源站、维修、训练和认证，是各家企业自己建，还是像道路、电网一样，作为公共设施来规划？</p>
-        <p class="ask">标准由谁定，坏了谁来修？</p>
+        <p>接着坎一：能源站、维修、训练和认证。2025 年 11 月，国家发改委在新闻发布会上说，国内人形机器人企业已超过 150 家，半数以上是初创或跨行进入，要防范重复度高的产品“扎堆”上市，建立行业准入和退出机制。</p>
+        <p>另一面是首钢园那个撤场的训练中心：建得快，不等于建得对。</p>
+        <p class="ask">哪些该由企业自己建，哪些该像道路、电网一样作为公共设施来规划？</p>
+        <p class="source">来源：<a href="https://www.ndrc.gov.cn/xwdt/wszb/11yxwfbh1/wzsl/202511/t20251127_1401983.html" target="_blank" rel="noopener noreferrer">国家发改委发布会文字实录，2025-11-27</a>。</p>
       </article>
       <article>
         <h3>公共空间怎样接纳机器人？</h3>
-        <p>2019 年 10 月，匹兹堡大学一位坐电动轮椅的博士生过马路时，一台送餐机器人停在路口的无障碍坡道上等着过街，不肯让开。交通灯已经变了，她还停在车道上，最后只能从路缘硬上去。学校随后暂停了机器人测试。</p>
-        <p class="ask">机器人按自己的规则做对了，却挡住了别人。准入、路权和出错后的责任，谁来定？</p>
-        <p class="source">来源：<a href="https://www.wtae.com/article/food-delivery-robot-pauses-operations-after-monday-incident/29554279" target="_blank" rel="noopener noreferrer">WTAE，2019-10-22</a>；<a href="https://pittnews.com/article/151679/news/pitt-pauses-testing-of-starship-robots-due-to-safety-concerns/" target="_blank" rel="noopener noreferrer">The Pitt News</a>。</p>
+        <p>深圳的无人配送车最早卡在一根停车场闸杆上：没有车牌，摄像头不抬杆。后来实行“一车一牌”，标识牌内嵌芯片，接入市级监管平台，一条线路的审批从约二十天压到 5 天以内。截至 2026 年 9 月，深圳在册 1453 辆。全国保有量已超过 5 万台，但这类车至今缺少全国统一的法律身份。</p>
+        <p>出了事怎么办？2026 年青岛一辆无人配送车追尾特斯拉，交警判运营企业全责；它只买了 300 万元公众责任险，没达到当地要求的 500 万元。</p>
+        <p class="speaker">国外对照：2019 年匹兹堡，一台送餐机器人停在无障碍坡道上不让开，坐轮椅的博士生被困在车道上。</p>
+        <p class="ask">准入、路权和出错后的责任，谁来定？</p>
+        <p class="source">来源：<a href="https://m.21jingji.com/article/20261028/herald/0c922988999c9422229816873cce0365.html" target="_blank" rel="noopener noreferrer">南方周末，2026-10</a>；<a href="https://finance.sina.com.cn/jjxw/2026-06-26/doc-inieskuh5376249.shtml" target="_blank" rel="noopener noreferrer">千龙网，2026-06-26</a>；<a href="https://www.wtae.com/article/food-delivery-robot-pauses-operations-after-monday-incident/29554279" target="_blank" rel="noopener noreferrer">WTAE，2019-10-22</a>。</p>
       </article>
       <article>
         <h3>家里的数据归谁？</h3>
-        <p>2020 年，iRobot 测试版扫地机器人在家中拍下的照片，被送去外包标注、训练 AI，其中包括一位女性坐在马桶上的画面。委内瑞拉的标注员把截图发进了 Facebook 等平台的私密群组。iRobot 说，这些设备给的是签了同意书的有偿测试者和员工。</p>
-        <p class="ask">机器人要向我们学习，就要进入我们的生活。采集和使用经验，需要怎样的规则？</p>
-        <p class="source">来源：Eileen Guo，<a href="https://www.technologyreview.com/2022/12/19/1065306/roomba-irobot-robot-vacuums-artificial-intelligence-training-data-privacy/" target="_blank" rel="noopener noreferrer">MIT Technology Review，2022-12-19</a>。页面不展示原图。</p>
+        <p>2026 年 2 月，一位开发者想用游戏手柄控制自家的大疆 Romo 扫地机器人，结果意外能访问约 7000 台别人家设备的麦克风和视频画面。他立即报告，大疆称已修复。</p>
+        <p>再加上前面 NEO 的远程专家：机器人要向我们学习，就要进入我们的生活。</p>
+        <p class="speaker">国外对照：2020 年 iRobot 测试机在家中拍的照片，送去外包标注时被发进了社交群组。</p>
+        <p class="ask">采集和使用家里的经验，需要怎样的规则？谁能看、看多久、怎样删？</p>
+        <p class="source">来源：<a href="https://www.kbtx.com/2026/02/27/security-flaw-accidentally-gave-man-control-thousands-robot-vacuums/" target="_blank" rel="noopener noreferrer">CNN，2026-02-27</a>；<a href="https://www.technologyreview.com/2022/12/19/1065306/roomba-irobot-robot-vacuums-artificial-intelligence-training-data-privacy/" target="_blank" rel="noopener noreferrer">MIT Technology Review，2022-12-19</a>。</p>
       </article>
     </div>
+    <div class="scenario" style="margin-top:2.6rem">
+      <p><b>规则已经开始写了。</b>国家网信办等五部门的《人工智能拟人化互动服务管理暂行办法》2026 年 7 月 15 日起施行：连续使用每超过 2 小时要提醒用户；停止服务必须提前告知用户。前面那个 Jibo 的故事，正是这条规定想避免的。它管的是文字、图片、音频、视频形式的陪伴服务，会不会延伸到有身体的陪伴机器人，还没有定论。</p>
+      <p class="source" style="margin-top:.6rem">来源：<a href="https://www.cac.gov.cn/2026-04/10/c_1777558395078289.htm" target="_blank" rel="noopener noreferrer">中国网信网，2026-04-10</a>。杭州 2026 年 5 月 1 日施行全国首部具身智能机器人产业地方性法规，提出编码管理和“沙盒监管”（<a href="http://zj.news.cn/20260503/966b4b6409d44354a33978596ace6533/c.html" target="_blank" rel="noopener noreferrer">新华网</a>）。</p>
+    </div>
     <div class="undertone"><span class="kicker">暗线</span><p>一种新的“我们”进入社会，就需要新的规则。这些规则，不能只由造它的人来写。</p></div>
+    <details class="note"><summary>讲者备注</summary><div><p>每个问题只讲一件国内的事，国外对照一句带过。深圳的例子最贴近政务听众：讲的就是审批流程怎样跟着改。</p><p>南方周末、千龙网、CNN 都是媒体报道（二手）；发改委、网信办是官方原文。大疆事件最早由 The Verge 报道，原文未取到。</p><p>如果有人问欧盟：AI 法案修订包 2026 年 7 月生效，嵌入机械等实体产品的高风险 AI 推迟到 2028 年 8 月适用；新机械法规 2027 年 1 月起强制适用。</p></div></details>
   </div>
 </section>
 
@@ -288,6 +391,16 @@
       <li>试用以后，依据谁的反馈来修改规则？</li>
     </ol>
     <p class="speaker" style="margin-top:1.4rem">按钮只用来换位思考，不收集任何意见。</p>
+
+    <div class="ask-room" data-poll="discussion">
+      <span class="kicker">现场投票</span>
+      <h3>三选一，举手表决</h3>
+      <ol>
+        <li><span class="q">它在大厅里摔倒、撞了人，第一责任该算谁？A 生产厂家　B 使用它的单位　C 远程操作员</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">先数 A，再数 B、C，计数器只记一个选项的人数即可。对照青岛追尾：交警判的是运营企业全责。</p></li>
+        <li><span class="q">大厅的引导机器人该不该一直开着摄像头？A 一直开　B 只在服务时开　C 不开，用其他传感器</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">追问：选 B 的同学，“服务时”由谁判断？怎样让排队的人知道？</p></li>
+        <li><span class="q">机器人上岗前要不要“考证”？A 机器人要考　B 操作员要考　C 都要</span><span class="tally"><button type="button" data-step="-1" aria-label="减一">−</button><output>0</output><button type="button" data-step="1" aria-label="加一">+</button></span><p class="follow">对照：从业者告诉记者，机器人表演操作员不需要考任何资质证件（<a href="https://www.yicai.com/news/103344513.html" target="_blank" rel="noopener noreferrer">第一财经，2026-09-02</a>）；人社部已经有了“具身智能机器人应用技术员”这个职业。</p></li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -310,46 +423,48 @@
       <div>
         <h3>时间表</h3>
         <ol class="timeline">
-          <li><time>0–3</time><div>开场<small>Emo、DexUMI 各 5 秒；传承图</small></div></li>
-          <li><time>3–12</time><div>一 向人类学习<small>动作、知识、情绪各约 2 分钟，自己练约 3 分钟</small></div></li>
-          <li><time>12–24</time><div>二 走进社会的两道坎<small>身体撑不住约 5 分钟，读不懂人约 7 分钟</small></div></li>
-          <li><time>24–28</time><div>三 留给治理的问题<small>三个问题，每个约 1 分钟</small></div></li>
+          <li><time>0–4</time><div>开场<small>举手三问约 1 分钟；Emo 原理三步；胡宇航时间线与天裔机器人；传承图</small></div></li>
+          <li><time>4–13</time><div>一 向人类学习<small>DexUMI 与 Figure 各约 1.5 分钟；RT-2 与 Gemini 约 2 分钟；π*0.6、CEL 约 2 分钟；AirSpark 约 2 分钟</small></div></li>
+          <li><time>13–24</time><div>二 走进社会的两道坎<small>半马、修一次 3 万、雏形表约 5 分钟；TidyBot、Figure 的整齐标准、NEO、再举手约 6 分钟</small></div></li>
+          <li><time>24–28</time><div>三 留给治理的问题<small>发改委与首钢园、深圳一车一牌与青岛追尾、大疆 Romo；拟人化互动办法</small></div></li>
           <li><time>28–30</time><div>结尾<small>回到传承图，留白</small></div></li>
-          <li><time>30–45</time><div>交流<small>政务大厅情境</small></div></li>
+          <li><time>30–45</time><div>交流<small>政务大厅情境、三个视角、三道投票题</small></div></li>
         </ol>
       </div>
     </div>
 
     <h3 style="margin-top:3.5rem">PPT 故事板</h3>
-    <p>按 30 分钟设计，每页约 2 分钟。左侧有紫线的是暗线页。</p>
+    <p>按 30 分钟设计，18 页，平均每页不到 2 分钟。左侧有紫线的是暗线页。</p>
     <ol class="board">
       <li><b>封面</b><span>碳与硅、题目</span></li>
-      <li><b>这个笑容从哪里来？</b><span>Emo、DexUMI 各 5 秒</span></li>
+      <li><b>先举个手</b><span>用过 AI、见过人形机器人、愿不愿让它进家门</span></li>
+      <li><b>这个笑容从哪里来？</b><span>Emo 视频 15 秒</span></li>
+      <li><b>它怎样学会笑</b><span>认识自己的脸、看别人的脸、提前 0.84 秒</span></li>
+      <li><b>一个人的路</b><span>嘉庚学院 → 哥大 → 首形科技 → 天裔机器人</span></li>
       <li class="undertone-page"><b>三种传承</b><span>DNA、文化、硅基</span></li>
-      <li><b>教动作</b><span>DexUMI、ASAP</span></li>
-      <li><b>教知识</b><span>Gemini Robotics 垃圾分类</span></li>
-      <li><b>教情绪</b><span>Emo 提前 0.8 秒</span></li>
-      <li><b>自己练</b><span>AirSpark，Genie 3 一张图</span></li>
-      <li class="undertone-page"><b>一种不一样的传承</b><span>采集、复制、自己迭代</span></li>
-      <li><b>坎一：半程马拉松</b><span>2 小时 40 分，3 次换电，6 台完赛</span></li>
-      <li><b>坎一：本体为什么撑不住</b><span>讲者亲身例子</span></li>
-      <li><b>坎一：汽车需要加油站</b><span>能源站、医院、学校、新本体</span></li>
-      <li><b>坎二：TidyBot</b><span>能学会的偏好</span></li>
-      <li><b>坎二：说不清的整齐</b><span>书、画、花瓶；Cross 与 Kappas</span></li>
-      <li><b>三个治理问题</b><span>基础设施、公共空间、数据</span></li>
+      <li><b>教动作</b><span>DexUMI 外骨骼；Figure 9% → 56%</span></li>
+      <li><b>教知识</b><span>RT-2 动作也是词；Gemini 垃圾分类</span></li>
+      <li><b>自己练</b><span>π*0.6 老师、教练、裁判；CEL 96 台共用错题本</span></li>
+      <li><b>我的研究</b><span>AirSpark</span></li>
+      <li class="undertone-page"><b>人一步步退后</b><span>采集、复制、自己迭代</span></li>
+      <li><b>坎一：跑得快，修不起</b><span>两届半马；修一次 3 万；宝马工厂前臂</span></li>
+      <li><b>坎一：汽车需要加油站</b><span>设想与已有雏形对照表</span></li>
+      <li><b>坎二：说不清的整齐</b><span>TidyBot；Figure 的“玩具全进篮子”</span></li>
+      <li><b>坎二：远方的那个人</b><span>NEO 远程专家；再举一次手</span></li>
+      <li><b>三个治理问题</b><span>发改委、深圳一车一牌、大疆 Romo</span></li>
       <li class="undertone-page"><b>是机器人，也是我们自己</b><span>传承图回收，留白</span></li>
-      <li><b>交流</b><span>政务大厅里的引导机器人</span></li>
+      <li><b>交流</b><span>政务大厅；三道投票题</span></li>
     </ol>
 
     <div class="script">
       <h3 style="margin-top:3.5rem">关键转场</h3>
       <p>这四句背下来，其余部分可以自由发挥。</p>
       <h4>开场进入第一段</h4>
-      <p>这个笑容、这个手势，都是从人身上学来的。今天我想先讲讲，我们是怎样把自己一点点教给机器的。</p>
+      <p>Emo 学的是表情。一个机器人要走进生活，还要学动作、学知识，最后学会自己练。我们一步步看，人是怎样把自己教给机器的。</p>
       <h4>第一段进入第二段</h4>
-      <p>在实验室里，它学得越来越快。可是从实验室走到街上、走进家里，还隔着两道坎。</p>
+      <p>四步看下来，人一步步退后，但始终在场。在实验室里它学得越来越快，可是走到街上、走进家里，还隔着两道坎。</p>
       <h4>第二段进入第三段</h4>
-      <p>这两道坎，一道要靠工程师，一道要靠心理学家。但还有一些问题，靠技术本身回答不了，需要在座各位一起来想。</p>
+      <p>这两道坎，一道要靠工程师，一道要靠心理学家。但能源站谁来建、出了事谁负责、家里的画面谁能看，这些靠技术本身回答不了，需要在座各位一起来想。</p>
       <h4>第三段进入结尾</h4>
       <p>我们再回头看看开场那张图。</p>
     </div>
@@ -358,7 +473,8 @@
     <ul class="todo">
       <li>导入 AirSpark 视频或截图</li>
       <li>补一两个“本体坏了、整机停下”的亲身例子</li>
-      <li>投影现场测试视频能否加载；不行就提前下载到本地，并保留出处</li>
+      <li>投影现场测试视频能否加载：Emo 和天裔机器人默认走 B 站；Figure、π*0.6 的视频来自国外站点，CEL 在 YouTube，最好提前下载到本地并保留出处</li>
+      <li>开场举手前点“清零全部计数”（浏览器会保留上次的数字）</li>
       <li>Roomba 事件只讲文字，不放原图</li>
     </ul>
 
@@ -373,7 +489,7 @@
 
 <footer>
   <p>硅基的我们？——从自主行动到社会共处</p>
-  <p>2026 年 11 月 3 日 v3 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
+  <p>2026 年 11 月 3 日 v3.1 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
 </footer>
 
 <div id="stage" class="stage" hidden>
