@@ -31,7 +31,7 @@
     <h1 id="title">硅基的<br>我们？</h1>
     <p class="subtitle">从自主行动到社会共处</p>
     <p id="hero-abstract" class="abstract">本次分享从自主机器人的研究实践出发，结合前沿进展，探讨机器人如何理解世界、积累经验并自主行动。围绕社会具身智能，讨论机器人走进日常生活、参与社会互动所带来的开放议题，在技术与社会的交汇处思考人机共处。</p>
-    <p class="format">政务学院分享，主讲约 30 分钟，交流约 15 分钟。</p>
+    <p class="format">张博韬 · 中山大学计算机学院 RAPID 实验室<br>政务学院分享，主讲约 30 分钟，交流约 15 分钟。</p>
     <div class="actions"><a class="button primary" href="#opening">从开场读起</a><a class="button" href="#studio">打开备讲台</a></div>
   </div>
 </section>
@@ -112,7 +112,7 @@
         <span class="tag">学动作</span>
         <p><span class="from">从人那里学</span><b>人的示范、遥操作、做家务的视频</b></p>
         <p class="q">杯子滑了怎么握紧？脚下一歪怎么站稳？</p>
-        <p class="eg">DexUMI 外骨骼示范；Figure 的 1600 万段家务视频</p>
+        <p class="eg">我们实验室 RAPID Hand 的遥操作；Figure 的 1600 万段家务视频</p>
         <p class="map"><b>像“小脑”</b>：和力、摩擦、接触打交道 · 一秒调整几百上千次</p>
       </div>
       <div class="col">
@@ -141,20 +141,21 @@
     <h3 style="margin-top:3.4rem"><span class="kicker">学动作</span>手上功夫，看人怎么做学来</h3>
     <div class="demo">
       <figure>
-        <div class="frame"><video controls muted playsinline preload="metadata" aria-label="DexUMI：人戴外骨骼示范，机器手复现"><source src="https://dex-umi.github.io/static/videos/xhand_tea.mp4" type="video/mp4"></video></div>
-        <figcaption>DexUMI 的机器手用镊子夹茶叶。视频：DexUMI 作者团队，<a href="https://dex-umi.github.io/" target="_blank" rel="noopener noreferrer">项目页</a>。</figcaption>
+        <div class="frame"><div class="yt" data-bilibili="BV1ijtEzaErY" data-title="RAPID Hand：面向灵巧遥操作的低成本全驱动仿生手（IROS 2025）"><img loading="lazy" src="media/rapid-hand.jpg" alt="操作员戴 VR 头显，红色五指灵巧手同步从一堆物体里取东西"><button class="load-video" type="button">播放 RAPID Hand（3 分钟）</button></div></div>
+        <figcaption>RAPID Hand 遥操作：人戴 VR 头显，机器手同步做。视频：中山大学 RAPID 机器人实验室，<a href="https://www.bilibili.com/video/BV1ijtEzaErY/" target="_blank" rel="noopener noreferrer">B 站</a>。</figcaption>
         <p class="media-status" role="status"></p>
       </figure>
       <div>
-        <h3><span class="kicker">教动作 · 手</span>穿上机器人尺寸的“手套”做示范</h3>
-        <p>人手和机器手长得不一样，直接照搬示范，机器手做不出来。DexUMI 用两步把差别抹平：</p>
+        <h3><span class="kicker">我们实验室 · 教一只手</span>人戴上 VR 头显，手把手教机器手</h3>
+        <p>中山大学 RAPID 实验室自己做的五指灵巧手 RAPID Hand（IROS 2025），零件靠 3D 打印和定制齿轮，成本不高、坏了好修。它靠遥操作学动作：</p>
         <ol class="how">
-          <li><span><b>硬件对齐：</b>人戴一副按机器手尺寸做的外骨骼，手指只能做机器手也能做的动作。</span></li>
-          <li><span><b>画面对齐：</b>软件把录像里的人手“换成”机器手，机器人看到的训练画面和它自己干活时一样。</span></li>
+          <li><span><b>捕捉：</b>操作员戴 VR 头显做动作，系统实时捕捉手指的姿态。</span></li>
+          <li><span><b>映射：</b>人手和机器手长得不一样，把人手的姿态换算成机器手各个关节该转多少。</span></li>
+          <li><span><b>录下来：</b>人教一遍、机器手做一遍，这段过程就成了一份动作数据。视频里它能扒拉物体、用勺子，还能弹钢琴。</span></li>
         </ol>
-        <p class="analog">像替身演员穿着主角同款的戏服排练，镜头里就分不出是谁在演。</p>
-        <div class="numbers"><div><b>86%</b><span>两种灵巧手、四个任务的平均成功率</span></div></div>
-        <p class="limit">每换一种机器手，就要重做一副外骨骼。</p>
+        <p class="analog">像手把手教人写毛笔字，只不过握着的是一只机器手。</p>
+        <div class="numbers"><div><b>20</b><span>个可以独立驱动的关节</span></div></div>
+        <p class="limit">一个人一次只能教一台机器，这种办法很贵。</p>
       </div>
     </div>
 
@@ -166,7 +167,7 @@
       </figure>
       <div>
         <h3><span class="kicker">教动作 · 全身</span>先看一千多万段普通人做家务</h3>
-        <p>外骨骼一次只能教一只手。美国公司 Figure 换了思路：花钱请普通人用手机拍自己干活。</p>
+        <p>遥操作一次只能一个人教一台。美国公司 Figure 换了思路：花钱请普通人用手机拍自己干活。</p>
         <ol class="how">
           <li><span><b>攒视频：</b>2026 年 8 月公布的 Index 项目，用户已上传超过 1600 万段视频，公司已付给拍摄者 1500 万美元。</span></li>
           <li><span><b>先看再学：</b>模型先在这些视频上学“人是怎么动的”，再只用少量机器人数据学具体家务。</span></li>
@@ -313,13 +314,21 @@
 
     <div class="demo">
       <figure>
-        <div class="placeholder"><span><b>AirSpark</b>待补：讲者自己的平台视频或截图</span></div>
-        <figcaption>讲者自己的研究。素材导入前，台上不展示结果。</figcaption>
+        <div class="frame"><video controls muted playsinline preload="none" poster="media/airspark-demo.jpg" aria-label="AirSpark：仿真学校里，空中机器人避障穿过走廊，找到教室 A 课桌上的水瓶并抓取"><source src="media/airspark-demo.mp4" type="video/mp4"></video></div>
+        <figcaption>AirSpark 演示（前 75 秒，无声）：在仿真学校里抓取教室 A 课桌上的水瓶，再到街道上换天气、换光线批量采集。中山大学 × 深圳河套学院。</figcaption>
+        <p class="media-status" role="status"></p>
       </figure>
       <div>
-        <h3><span class="kicker">我的研究</span>AirSpark：给机器搭一个练习场</h3>
-        <p>这里讲自己的 AirSpark：模拟世界怎样搭，任务怎样设置，失败怎样记录，下一轮练什么。对照右边的循环图讲：自己的平台走到了哪一步，人又在哪一步必须在场。</p>
-        <details class="note"><summary>讲者备注：怎样讲自己的研究</summary><div><p>选一个有清楚现象和记录的片段，60 到 90 秒讲完：视频里发生了什么，原来的做法在哪里不够用，实际改了什么，哪些结果还不确定。已经做到的、正在做的和设想分开讲。</p><p>最接近的学术参照：EmbodiRSI（上海科技大学，<a href="https://arxiv.org/abs/2609.38905" target="_blank" rel="noopener noreferrer">arXiv 2609.38905</a>，最新 v4）。两轮更新后仿真成功率从 50.4% 到 83.5%；每个子任务只用 10 条真机轨迹，真机成功率 83.1%，直接用 200 条真机示范为 75.0%。</p></div></details>
+        <h3><span class="kicker">我的研究</span>AirSpark：给机器人搭一个模拟世界</h3>
+        <p>我们用游戏引擎和物理引擎，搭出一个能模拟真实世界的地方：</p>
+        <ol class="how">
+          <li><span><b>场景是真实的：</b>学校、走廊、教室、街道。</span></li>
+          <li><span><b>物理是真实的：</b>飞行器怎么动、碰到东西会怎样，都按物理规律算。</span></li>
+          <li><span><b>看到的是真实的：</b>彩色画面、深度、每样东西是什么，机器人靠这些去感知、去决策。比如“抓取教室 A 课桌上的水瓶”：先避障穿过门口，找到教室 A，认出瓶子，再找角度去抓。</span></li>
+          <li><span><b>世界可以随时变：</b>换天气、换光线、换起点、换目标，同一个任务练很多遍。</span></li>
+        </ol>
+        <p class="analog">下一步，我们想把“人”也放进这个世界：模拟政务大厅里排队的人群、路口来往的行人和车辆，让机器人在走进社会之前，先在这里演练怎样和人相处。</p>
+        <details class="note"><summary>讲者备注：怎样讲自己的研究</summary><div><p>定位：演示我们搭的模拟世界，能模拟真实场景、机器人物理运动、视觉感知与决策，以及天气和光线变化。“加入人、模拟政务和交通等社会场景”是下一步计划，讲成“想做”，不说“已经能做”。</p><p>被问到它和循环图的关系：系统会自动规划路线、批量飞、自动标注每一帧，并记录失败发生在哪一步，用来决定下一批练什么。碰没碰到、抓没抓住这些物理事实，由仿真器和几何规则判断，不交给大模型。底座是 UE5 + AirSim + MuJoCo。</p><p>最接近的学术参照：EmbodiRSI（上海科技大学，<a href="https://arxiv.org/abs/2609.38905" target="_blank" rel="noopener noreferrer">arXiv 2609.38905</a>）。</p></div></details>
       </div>
     </div>
 
@@ -345,14 +354,34 @@
       <p>一年后变化很快。2026 年同一场比赛有 300 多台机器人参赛，荣耀的“闪电”自主导航跑出 50 分 26 秒，快过人类半马世界纪录，不过它在离终点约 200 米处也摔了一跤。规则也变了：靠遥控的机器人，成绩要乘以 1.2；每台最多换三次电池。</p>
       <p class="source">来源：<a href="https://en.wikipedia.org/wiki/Beijing_E-Town_Half-Marathon" target="_blank" rel="noopener noreferrer">Beijing E-Town Half-Marathon，Wikipedia</a>（汇总了赛事报道）；<a href="https://realtimemandarin.substack.com/p/273-the-beijing-humanoid-robot-marathon" target="_blank" rel="noopener noreferrer">Realtime Mandarin，2026-04-25</a>。两届数据均来自这两处。</p>
       <p>跑得快了，但一场比赛只有一两个小时，还有一整支团队跟着。要在家里、医院、政务大厅连续工作几个月，是另一回事。</p>
-      <div class="placeholder" style="aspect-ratio:auto;min-height:9rem;margin:1.8rem 0"><span><b>讲者亲身经历</b>待补：一两个“本体坏了、整机停下”的实验例子</span></div>
-      <p>今天的机器人本体有三个共同的问题：续航短，容易坏，而且整机像串联电路，一个关节或一块电路板出问题，整台机器就停了。人扭了脚还能一瘸一拐地走回家，机器人目前做不到。</p>
-      <dl class="facts">
-        <dt>修一次 3 万元</dt><dd>一位用户 20 万元买的人形机器人，在家过门槛时摔倒，髋关节减速器发生肉眼看不见的形变，步态全乱。换整个髋关节模组，再用激光扫描全身校准，花了 3 万元、10 天。</dd>
-        <dt>电池 4000 元，用 2 小时</dt><dd>某品牌人形机器人专用电池的价格和续航。</dd>
-        <dt>前臂最常坏</dt><dd>Figure 的机器人在宝马工厂每天 10 小时、干了 11 个月，累计运行 1250 多小时，前臂是最常出故障的部位，下一代因此重新设计了手腕。</dd>
-      </dl>
-      <p class="source">来源：Tech星球，<a href="https://m.chinaventure.com.cn/news/116-20260305-390345.html" target="_blank" rel="noopener noreferrer">《修一次3万块》</a>，2026-03-05（个案，媒体采访）；<a href="https://www.figure.ai/news/production-at-bmw" target="_blank" rel="noopener noreferrer">Figure，2025-11-19</a>（公司自述）。</p>
+      <h4 class="sub"><span class="kicker">我们自己的实验</span>走出实验室：海蚀洞里的 42 天</h4>
+      <p>2025 年，我们团队三次登上烟台长岛的大黑山岛，在龙爪山下的海蚀洞里做多无人机与多无人艇的协同穿越实验，前后累计 42 天。</p>
+      <div class="cave">
+        <figure class="tall">
+          <div class="frame portrait"><video controls muted playsinline preload="none" poster="media/yantai-sea-cave.jpg" aria-label="现场花絮：无人艇集群进洞、风浪、抢救坠海的无人机、团队合影"><source src="media/yantai-sea-cave.mp4" type="video/mp4"></video></div>
+          <figcaption>现场花絮（2 分 32 秒）。讲者团队拍摄。</figcaption>
+        </figure>
+        <div>
+          <ol class="chain" aria-label="一台机器人的五类部件">
+            <li><b>电池</b><span>续航</span></li><li><b>电机</b><span>螺旋桨 · 推进器</span></li><li><b>传感器</b><span>激光雷达 · 相机</span></li><li><b>定位</b><span>GNSS 天线 · IMU</span></li><li><b>计算单元</b><span>机载电脑</span></li>
+          </ol>
+          <p><b>整机像一串串联电路：</b>任何一环出问题，整台就停。人扭了脚还能一瘸一拐走回家，机器人目前做不到。到了海上，每一环都被考验：</p>
+          <dl class="facts">
+            <dt>没有定位</dt><dd>动捕、高精度 GPS 都用不上，只能靠机上传感器自己算位置。</dd>
+            <dt>海水和盐</dt><dd>浪花打在相机和雷达上，视觉和雷达频频失效；岛离大陆 17 公里，海水盐度高，螺旋桨、电机被腐蚀。</dd>
+            <dt>风和浪</dt><dd>正赶上季风转换，大风大浪，船身有时被海水短暂淹没。</dd>
+          </dl>
+          <p>真实的代价是，无人机数次坠海，捞上来、拆开、烘干、修好，再飞。最后加了防水、防撞、防腐蚀三重改造，无人艇集群才无碰撞地穿过了海蚀洞。</p>
+          <div class="cave-pics">
+            <figure><img loading="lazy" src="media/yantai-boat-hatch.jpg" alt="打开无人艇舱盖，相机、激光雷达和计算单元挤在一起"><figcaption>打开舱盖：相机、雷达和计算单元</figcaption></figure>
+            <figure><img loading="lazy" src="media/yantai-arch.jpg" alt="长岛海边的石拱，几位队员站在石拱下"><figcaption>海边的石拱</figcaption></figure>
+            <figure><img loading="lazy" src="media/yantai-team.jpg" alt="海蚀洞里，团队围着无人机调试"><figcaption>洞里调试无人机</figcaption></figure>
+          </div>
+          <p class="speaker">海岛很美，工程很难忘。它也让我明白：今天的机器人身体，离“自己在外面长期干活”还很远。</p>
+        </div>
+      </div>
+      <details class="note"><summary>讲者备注：来源与备用例子</summary><div><p>来源：国家重点研发计划课题四《2025 年度进展报告》4.3 节：2025-08-23 至 08-29、09-07 至 09-29、11-03 至 11-14 三次赴大黑山岛，累计 42 天；距大陆 17 公里；防水、防撞、防腐蚀三重防护。无人艇搭载组件化 PNT 平台、北天四星全频天线、UM982 定位模块、Mid-360 激光雷达。</p><p>备用例子：修一次 3 万元（一位用户 20 万元买的人形机器人过门槛摔倒，髋关节减速器形变，换模组、全身校准，3 万元、10 天；Tech星球，<a href="https://m.chinaventure.com.cn/news/116-20260305-390345.html" target="_blank" rel="noopener noreferrer">《修一次3万块》</a>，2026-03-05，个案）；Figure 机器人在宝马工厂每天 10 小时、干了 11 个月，前臂最常坏（<a href="https://www.figure.ai/news/production-at-bmw" target="_blank" rel="noopener noreferrer">Figure，2025-11-19</a>，公司自述）。</p></div></details>
+      <p>在岛上，我们几个人就是这些机器人的“医院”：哪里坏了，自己拆、自己修。可要让机器人在社会里长期干活，不能每台身后都跟一个研发团队。</p>
       <p>汽车能进入社会，靠的不只是车造得好，还因为有加油站、修车厂和驾校。机器人也需要这些。有意思的是，2025 年到 2026 年，这些东西在中国已经陆续冒出了雏形：</p>
       <figure class="analogy three">
         <table>
@@ -533,7 +562,7 @@
         <h3>时间表</h3>
         <ol class="timeline">
           <li><time>0–3</time><div>开场<small>举手三问约 1 分钟；天裔机器人与 Emo：“这个笑容从哪里来”约 1.5 分钟；一句伏笔；四步路线约 30 秒</small></div></li>
-          <li><time>3–11</time><div>一 向人类学习<small>三样总览（大脑/小脑作辅助）约 1 分钟；学知识约 1.5 分钟；学动作 DexUMI、Figure 约 2 分钟；知识和动作接起来约 1 分钟；学情绪 Emo 与对口型约 2 分钟</small></div></li>
+          <li><time>3–11</time><div>一 向人类学习<small>三样总览（大脑/小脑作辅助）约 1 分钟；学知识约 1.5 分钟；学动作 RAPID Hand、Figure 约 2 分钟；知识和动作接起来约 1 分钟；学情绪 Emo 与对口型约 2 分钟</small></div></li>
           <li><time>11–17</time><div>二 超越人类经验<small>AlphaGo Zero 天花板图约 1.5 分钟；模拟学院数字约 1 分钟；循环图与翻积木约 1.5 分钟；回到真机与 AirSpark 约 2 分钟</small></div></li>
           <li><time>17–25</time><div>三 走进社会的两道坎<small>半马、修一次 3 万、雏形表约 4 分钟；整齐、NEO、再举手、心理学与社会学约 4 分钟</small></div></li>
           <li><time>25–28</time><div>四 治理的开放课题<small>三个问题各约 1 分钟</small></div></li>
@@ -553,7 +582,7 @@
       <li><b>分段：向人类学习</b><span>知识、动作、情绪</span></li>
       <li><b>向人学三样</b><span>三栏总览；大脑/小脑作辅助对应</span></li>
       <li><b>学知识</b><span>Opus 5.5、DeepSeek V4；Gemini 垃圾分类；教不会手上功夫</span></li>
-      <li><b>学动作</b><span>DexUMI 外骨骼；Figure 9% → 56%</span></li>
+      <li><b>学动作</b><span>RAPID Hand 遥操作；Figure 9% → 56%</span></li>
       <li><b>知识和动作接起来</b><span>44% → 近 80%；Harness VLA 50.0% → 82.4%</span></li>
       <li><b>学情绪</b><span>Emo 三步；对口型；表情像人不等于感受像人</span></li>
       <li><b>分段：超越人类经验</b><span>两个天花板</span></li>
@@ -564,7 +593,7 @@
       <li><b>错题本与我的练习场</b><span>CEL 96 台；AirSpark</span></li>
       <li><b>分段：两道坎</b><span>身体撑不住；读不懂人</span></li>
       <li><b>坎一：半马</b><span>2025 与 2026 两届对比</span></li>
-      <li><b>坎一：串联电路</b><span>修一次 3 万；亲身例子</span></li>
+      <li><b>坎一：海蚀洞里的 42 天</b><span>花絮视频；五类部件像串联电路</span></li>
       <li><b>汽车有的，机器人也要</b><span>基础设施雏形对照表</span></li>
       <li><b>坎二：什么叫“整齐”</b><span>TidyBot；说不清的整齐</span></li>
       <li><b>它不会的时候谁在帮它</b><span>NEO 远程专家；再举手</span></li>
@@ -594,9 +623,7 @@
 
     <h3 style="margin-top:3.5rem">上台前待办</h3>
     <ul class="todo">
-      <li>导入 AirSpark 视频或截图</li>
-      <li>补一两个“本体坏了、整机停下”的亲身例子</li>
-      <li>投影现场测试视频能否加载：Emo 和天裔机器人默认走 B 站；Figure、π*0.6 的视频来自国外站点，CEL 在 YouTube，最好提前下载到本地并保留出处</li>
+            <li>投影现场测试视频能否加载：Emo 和天裔机器人默认走 B 站；Figure、π*0.6 的视频来自国外站点，CEL 在 YouTube，最好提前下载到本地并保留出处</li>
       <li>开场举手前点“清零全部计数”（浏览器会保留上次的数字）</li>
       <li>Roomba 事件只讲文字，不放原图</li>
     </ul>
@@ -612,7 +639,7 @@
 
 <footer>
   <p>硅基的我们？——从自主行动到社会共处</p>
-  <p>2026 年 11 月 4 日 v3.3 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
+  <p>2026 年 11 月 4 日 v3.4 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
 </footer>
 
 <div id="stage" class="stage" hidden>
