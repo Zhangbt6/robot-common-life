@@ -57,7 +57,7 @@ document.querySelectorAll('[data-role]').forEach(button => button.addEventListen
 
 // Reading position, active nav item and presentation stage label.
 const stops = [
-  ['home', '封面'], ['opening', '开场'], ['learn', '一 大脑与小脑'], ['beyond', '二 自己练'],
+  ['home', '封面'], ['opening', '开场'], ['learn', '一 向人类学习'], ['beyond', '二 自己练'],
   ['society', '三 两道坎'], ['governance', '四 治理课题'], ['closing', '结尾'], ['discussion', '交流']
 ];
 const navTargets = ['opening', 'learn', 'beyond', 'society', 'governance', 'closing', 'discussion', 'studio'];
