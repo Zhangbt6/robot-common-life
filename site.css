@@ -293,6 +293,10 @@ textarea{width:100%;min-height:12rem;resize:vertical;background:var(--paper);bor
 .callout b{font-weight:600}
 .callout.exit{border-left-color:var(--si)}
 
+/* Opening: dimension tags on what it learned */
+.facts.dims dt i{display:inline-block;font-style:normal;font-family:var(--sans);font-size:.72rem;line-height:1;padding:.25rem .45rem;margin-right:.6rem;background:var(--si);color:#fff;vertical-align:.15em}
+.facts.dims dt i.off{background:transparent;color:var(--si);box-shadow:inset 0 0 0 1px var(--si)}
+
 /* Field experiment: sea cave (portrait video, part chain, small photos) */
 h4.sub{font-size:1.5rem;margin:3rem 0 1rem}
 .cave{display:grid;grid-template-columns:minmax(0,15rem) minmax(0,1fr);gap:1.6rem 2.4rem;align-items:start;margin:1.6rem 0 0;max-width:62rem}
