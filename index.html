@@ -186,41 +186,44 @@
     <p class="speaker" style="margin-top:2rem">动作这门课，老师就是千千万万个普通人。美国 Figure 也在做同样的事：花钱请普通人拍自己做家务，已攒了 1600 多万段视频，只多加“先看人类视频”这一步，家务完成率从 9% 提到 56%（公司自述）。全国已经运营的具身智能训练场超过 70 个。</p>
 
     <h3 style="margin-top:3.4rem"><span class="kicker">知识 + 动作</span>会想的和会做的，接到一起</h3>
+    <p>先想想我们自己：早上出门前，脑子里想的是“今天要下雨，得带伞”，然后手就伸过去拿伞。你不会去想手指头该怎么弯，那是另一层在管。机器人现在也是这样分两层：会想的“大脑”，和会做的“小脑”。</p>
     <div class="demo">
       <figure>
-        <div class="frame"><video controls muted playsinline preload="none" poster="media/gemini-agentic.jpg" aria-label="Gemini Robotics 1.5：按旧金山的规定把桌上的东西分进垃圾桶"><source src="media/gemini-agentic.mp4" type="video/mp4"></video></div>
-        <figcaption>谷歌 Gemini Robotics 1.5：“按旧金山的规定，把这些东西分进对应的垃圾桶。”（52 秒，无声；搜索框和地图为官方示意动画）来源：Google DeepMind，<a href="https://www.youtube.com/watch?v=AMRxbIO04kQ" target="_blank" rel="noopener noreferrer">YouTube</a>，2025-09。</figcaption>
+        <div class="frame"><video controls muted playsinline preload="none" poster="media/gemini-london.jpg" aria-label="Gemini Robotics 1.5：人形机器人帮研究员收拾去伦敦的行李，查天气后把伞放进包里"><source src="media/gemini-london.mp4" type="video/mp4"></video></div>
+        <figcaption>谷歌 Gemini Robotics 1.5：帮研究员收拾去伦敦的行李（32 秒，无声；原视频第 61–93 秒，搜索框和天气卡片为官方示意动画）。来源：Google DeepMind，<a href="https://www.youtube.com/watch?v=AMRxbIO04kQ" target="_blank" rel="noopener noreferrer">YouTube</a>，2025-09。</figcaption>
         <p class="media-status" role="status"></p>
       </figure>
       <div>
-        <p>知识和动作，一个像“大脑”，一个像“小脑”，两边要接起来才能干活。看这个演示里的分工：</p>
+        <p>研究员对人形机器人 Apollo 说：“我下周要和朋友去伦敦，帮我收拾行李”，又问：“我在那儿会下雨吗？”</p>
         <ol class="how">
-          <li><span><b>大脑：想。</b>Gemini Robotics-ER 1.5 看清桌上有什么；不知道旧金山怎么分，就上网去查：蓝桶可回收，绿桶厨余，黑桶其他。</span></li>
-          <li><span><b>harness：派单、验收、重试。</b>把任务拆成一步一步派给小脑：“把易拉罐放进蓝桶”；做完再看一眼，放对了吗？不对就换个角度再来。</span></li>
-          <li><span><b>小脑：做。</b>Gemini Robotics 1.5（VLA）看着画面，直接算出手臂每一刻该怎么动。</span></li>
+          <li><span><b>大脑：想。</b>Gemini Robotics-ER 1.5 上网查伦敦的天气，看到下周好几天有雨。</span></li>
+          <li><span><b>harness：派单、验收、重试。</b>研究员没让带伞，它自己说：“我把雨伞放进你的包里。”这一步变成一张具体的单子派给小脑，做完再验收。</span></li>
+          <li><span><b>小脑：做。</b>Gemini Robotics 1.5（VLA）看着画面，算出手臂和手指每一刻怎么动，把伞放进包里。</span></li>
         </ol>
-        <p class="analog">像厨师长配颠勺老师傅：老师傅手上功夫好，厨师长负责排菜、催单、验菜。两边快慢也不同：Figure Helix 的大脑一秒想 7–9 次，小脑一秒调整 200 次。</p>
       </div>
     </div>
-    <div class="numbers">
-      <div><b>44% → 近 80%</b><span>谷歌多步骤任务：会“先想再做”的小脑单干，进度分最高 44%；配上大脑编排，常接近 80%</span></div>
-      <div><b>50.0% → 82.4%</b><span>清华等 Harness VLA：同一个小脑单独跑 50.0%；让 Claude Code 当大脑来调度，82.4%</span></div>
+    <div class="cave-pics pics4">
+      <figure><img loading="lazy" src="media/gemini-london-1.jpg" alt="研究员坐在紫色行李包旁说话"><figcaption><b>1 你说了什么</b>“下周去伦敦，帮我收拾行李……会下雨吗？”</figcaption></figure>
+      <figure><img loading="lazy" src="media/gemini-london-2.jpg" alt="示意动画：搜索 weather in London，弹出天气卡片"><figcaption><b>2 大脑想到什么</b>查伦敦天气：下周好几天有雨（示意动画）</figcaption></figure>
+      <figure><img loading="lazy" src="media/gemini-london-3.jpg" alt="机器手伸向沙发上的折叠伞"><figcaption><b>3 大脑派单</b>“我把雨伞放进你的包里。”</figcaption></figure>
+      <figure><img loading="lazy" src="media/gemini-london-4.jpg" alt="机器手把伞放进紫色的包"><figcaption><b>4 小脑动手</b>把伞放进包里（自主，1 倍速）</figcaption></figure>
     </div>
-    <p class="limit">两个都是在自家设计的测试上，谷歌的是“进度分”而不是成功率，Harness VLA 是预印本、以仿真为主。第三方测试 Butter-Bench 里，大模型当机器人大脑最好只有 40%，人类平均 95%。</p>
+    <p class="speaker">架构：大脑 Gemini Robotics-ER 1.5 → harness 派单、验收、重试 → 小脑 Gemini Robotics 1.5（VLA）。谷歌多步骤任务里，小脑单干进度分最高 44%，配上大脑常接近 80%。</p>
+    <p class="limit">这是谷歌自己设计的测试，而且是“进度分”不是成功率。清华等的 Harness VLA 预印本里，编程 AI 调度让同一个小脑从 50.0% 到 82.4%（以仿真为主）；第三方测试 Butter-Bench 里，大模型当机器人大脑最好只有 40%，人类平均 95%。</p>
 
     <div class="undertone"><span class="kicker">伏笔</span><p>表情来自人的脸，知识来自人写下的书，动作来自人的手。到这里为止，它学到的一切，都还在人类经验的范围里。</p></div>
 
-    <details class="note"><summary>讲者备注：来源与分寸</summary><div><p>“harness”是 2026 年 AI 圈的常用词：Anthropic 把“Claude 及其 harness”称为大脑，把工具和沙箱称为手（<a href="https://www.anthropic.com/engineering/managed-agents" target="_blank" rel="noopener noreferrer">Anthropic 工程博客，2026-04-08</a>）；DeepSeek 的更新日志也针对“DeepSeek Harness”做了优化。“Harness VLA”是清华大学等的一篇预印本标题（<a href="https://arxiv.org/abs/2607.08448" target="_blank" rel="noopener noreferrer">arXiv 2607.08448</a>），不是行业通用术语：它把一个不再训练的 VLA 包装成可重试的“接触动作”工具，其余移动、松手交给普通控制，VLA 调用只占 15.8%–47.4%。LIBERO-Pro 上 Claude Code 调度 82.4%、Codex 调度 72.1%，同一个 VLA 单独 50.0%。</p><p>谷歌数据：<a href="https://arxiv.org/abs/2510.03342" target="_blank" rel="noopener noreferrer">Gemini Robotics 1.5 技术报告</a>第 5 节，8 个多步骤任务；“44%”是单干上限、“近 80%”是常见水平。ER 2（2026-07-30）自称“机器人的高层大脑”，可把动作交给任意下层 VLA。</p><p>其他分层的例子：Figure Helix 的 System 2（7–9 Hz）、System 1（200 Hz）、System 0（1 kHz）；智源 RoboOS 官方写明“大脑-小脑分层架构”；北京人形“慧思开物”也用大脑、小脑的说法。国内“小脑”的含义不统一，有的指技能库，有的指全身运动控制。</p><p>模型现状：Claude Opus 5.5（2026-09-22），Anthropic 最强的是 Fable 5.1，所以台上不报版本号，只说“DeepSeek、Claude 这样的大模型”；DeepSeek 旗舰 V4-Pro（2026-08-13 正式版）。不要说 Claude 或 DeepSeek 已经能直接操控机器人：<a href="https://www.anthropic.com/research/project-fetch-phase-two" target="_blank" rel="noopener noreferrer">Project Fetch 二期</a>是写代码；DeepSeek 没查到可靠的机器人运行时案例。<a href="https://arxiv.org/abs/2510.21860" target="_blank" rel="noopener noreferrer">Butter-Bench</a>：最好的大模型 40%，人类 95%。</p><p>学情绪：“约 0.84 秒”是按人的平均表情时长（0.841 ± 0.713 秒）减去计算时间推算出来的余量，不是每次实测的提前量，不要说成“读心”。口型论文：<a href="https://doi.org/10.1126/scirobotics.adx3017" target="_blank" rel="noopener noreferrer">Science Robotics 11(110)</a>，2026-01-14。Emo 官方视频里，负责对话的是 ChatGPT 这类大模型，可以用来说明“脸上的功夫像小脑，说什么靠大脑”。来源：<a href="https://www.science.org/doi/10.1126/scirobotics.adi4724" target="_blank" rel="noopener noreferrer">Emo 论文</a>（<a href="https://par.nsf.gov/servlets/purl/10699806" target="_blank" rel="noopener noreferrer">公开全文</a>）。</p><p>学知识讲大语言模型本身：“猜下一个字”的百分比是示意；14.8 万亿来自 DeepSeek-V3 技术报告（<a href="https://arxiv.org/abs/2412.19437" target="_blank" rel="noopener noreferrer">arXiv 2412.19437</a>），“四十万年”按 1 个 token 约 1 个汉字粗算；4 亿对来自 CLIP 论文（<a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener noreferrer">arXiv 2103.00020</a>）。第一视角：京东 EgoLive（<a href="https://arxiv.org/abs/2604.23570" target="_blank" rel="noopener noreferrer">arXiv 2604.23570</a>），1680 小时、65866 段、346 种任务；印度工人视频见腾讯新闻、南方都市报 2026-04-15。Gemini 演示片段是原视频第 6–58 秒。</p><p>这一段的主线是“向人学三样东西”，顺序是情绪、知识、动作：先接着开场那张脸讲情绪，再讲知识和动作，最后接起来。大脑/小脑只是帮助理解的分工比喻，在学知识、学动作两处各引出一次，不展开讲架构；机器人不是照着人脑造的。</p><p>小脑：约 690 亿个神经元，占全脑约 80%，重量约 10%（BioNumbers）；小脑病变也会影响计划、语言和情绪。</p></div></details>
+    <details class="note"><summary>讲者备注：来源与分寸</summary><div><p>“harness”是 2026 年 AI 圈的常用词：Anthropic 把“Claude 及其 harness”称为大脑，把工具和沙箱称为手（<a href="https://www.anthropic.com/engineering/managed-agents" target="_blank" rel="noopener noreferrer">Anthropic 工程博客，2026-04-08</a>）；DeepSeek 的更新日志也针对“DeepSeek Harness”做了优化。“Harness VLA”是清华大学等的一篇预印本标题（<a href="https://arxiv.org/abs/2607.08448" target="_blank" rel="noopener noreferrer">arXiv 2607.08448</a>），不是行业通用术语：它把一个不再训练的 VLA 包装成可重试的“接触动作”工具，其余移动、松手交给普通控制，VLA 调用只占 15.8%–47.4%。LIBERO-Pro 上 Claude Code 调度 82.4%、Codex 调度 72.1%，同一个 VLA 单独 50.0%。</p><p>谷歌数据：<a href="https://arxiv.org/abs/2510.03342" target="_blank" rel="noopener noreferrer">Gemini Robotics 1.5 技术报告</a>第 5 节，8 个多步骤任务；“44%”是单干上限、“近 80%”是常见水平。ER 2（2026-07-30）自称“机器人的高层大脑”，可把动作交给任意下层 VLA。</p><p>其他分层的例子：Figure Helix 的 System 2（7–9 Hz）、System 1（200 Hz）、System 0（1 kHz）；智源 RoboOS 官方写明“大脑-小脑分层架构”；北京人形“慧思开物”也用大脑、小脑的说法。国内“小脑”的含义不统一，有的指技能库，有的指全身运动控制。</p><p>模型现状：Claude Opus 5.5（2026-09-22），Anthropic 最强的是 Fable 5.1，所以台上不报版本号，只说“DeepSeek、Claude 这样的大模型”；DeepSeek 旗舰 V4-Pro（2026-08-13 正式版）。不要说 Claude 或 DeepSeek 已经能直接操控机器人：<a href="https://www.anthropic.com/research/project-fetch-phase-two" target="_blank" rel="noopener noreferrer">Project Fetch 二期</a>是写代码；DeepSeek 没查到可靠的机器人运行时案例。<a href="https://arxiv.org/abs/2510.21860" target="_blank" rel="noopener noreferrer">Butter-Bench</a>：最好的大模型 40%，人类 95%。</p><p>学情绪：“约 0.84 秒”是按人的平均表情时长（0.841 ± 0.713 秒）减去计算时间推算出来的余量，不是每次实测的提前量，不要说成“读心”。口型论文：<a href="https://doi.org/10.1126/scirobotics.adx3017" target="_blank" rel="noopener noreferrer">Science Robotics 11(110)</a>，2026-01-14。Emo 官方视频里，负责对话的是 ChatGPT 这类大模型，可以用来说明“脸上的功夫像小脑，说什么靠大脑”。来源：<a href="https://www.science.org/doi/10.1126/scirobotics.adi4724" target="_blank" rel="noopener noreferrer">Emo 论文</a>（<a href="https://par.nsf.gov/servlets/purl/10699806" target="_blank" rel="noopener noreferrer">公开全文</a>）。</p><p>学知识讲大语言模型本身：“猜下一个字”的百分比是示意；14.8 万亿来自 DeepSeek-V3 技术报告（<a href="https://arxiv.org/abs/2412.19437" target="_blank" rel="noopener noreferrer">arXiv 2412.19437</a>），“四十万年”按 1 个 token 约 1 个汉字粗算；4 亿对来自 CLIP 论文（<a href="https://arxiv.org/abs/2103.00020" target="_blank" rel="noopener noreferrer">arXiv 2103.00020</a>）。第一视角：京东 EgoLive（<a href="https://arxiv.org/abs/2604.23570" target="_blank" rel="noopener noreferrer">arXiv 2604.23570</a>），1680 小时、65866 段、346 种任务；印度工人视频见腾讯新闻、南方都市报 2026-04-15。Gemini 演示片段是原视频第 61–93 秒（伦敦行李）：已按官方字幕核实，研究员只让放毛线帽、问会不会下雨，带伞是机器人自己提出的；片中搜索框和天气卡片标注为 Illustrative visualization（示意动画），派给小脑的内部指令片中没有显示。同一视频第 6–58 秒是旧金山分垃圾，可作备用。</p><p>这一段的主线是“向人学三样东西”，顺序是情绪、知识、动作：先接着开场那张脸讲情绪，再讲知识和动作，最后接起来。大脑/小脑只是帮助理解的分工比喻，在学知识、学动作两处各引出一次，不展开讲架构；机器人不是照着人脑造的。</p><p>小脑：约 690 亿个神经元，占全脑约 80%，重量约 10%（BioNumbers）；小脑病变也会影响计划、语言和情绪。</p></div></details>
   </div>
 </section>
 
 <section id="beyond" class="part" aria-labelledby="beyond-title">
-  <div class="rail"><span class="numeral" aria-hidden="true">二</span><span class="time">12–18 分钟</span></div>
+  <div class="rail"><span class="numeral" aria-hidden="true">二</span><span class="time">11–19 分钟</span></div>
   <div class="content">
     <h2 id="beyond-title">超越人类经验：<br>自己练</h2>
-    <p class="lead">只向人学，有两个天花板：上限大致就是人的水平；而且机器人的身体和人不一样，很多动作，人自己都没做过，没法教。</p>
+    <p class="lead">前面讲的都是模仿学习，人做什么它学什么；可人的经验有边界，机器人的身体、看世界的方式也和人不一样。</p>
 
-    <h3 style="margin-top:2.6rem"><span class="kicker">天花板</span>不看人类棋谱，3 天赢了看棋谱的版本 100:0</h3>
+    <h3 style="margin-top:2.6rem"><span class="kicker">超过了人</span>在规则清楚、能打分的地方，自己练已经超过了人</h3>
     <p>最好懂的例子来自围棋。2016 年打败李世石的 AlphaGo，先学了大量人类棋谱。2017 年的 AlphaGo Zero 只知道规则，从乱下开始自己跟自己下：赢了的招数加强，输了的招数修正。</p>
     <figure class="chart" aria-labelledby="ceiling-cap">
       <svg viewBox="0 0 720 300" role="img" aria-label="只学人类，水平停在人附近；自己练，越过人类水平">
@@ -239,9 +242,35 @@
       </svg>
       <figcaption id="ceiling-cap">曲线形状为示意，三个关键点来自 Silver 等，《Mastering the game of Go without human knowledge》，Nature 2017。同一结构、专学人类棋谱的网络，猜人类下一步猜得更准，却在 24 小时内被自学版打败。</figcaption>
     </figure>
-    <p>身体也一样。2026 年 8 月世界人形机器人运动会上，人形机器人跑出 100 米 8 秒 64，比人类世界纪录 9 秒 58 还快。没有一个人能给它示范这种跑法。</p>
+    <div class="demo">
+      <figure>
+        <div class="frame"><video controls muted playsinline preload="none" poster="media/swift-race.jpg" aria-label="无人机竞速：蓝色的 Swift 与红色的人类冠军一对一比赛，4 倍慢放"><source src="media/swift-race.mp4" type="video/mp4"></video></div>
+        <figcaption>蓝圈是 Swift，红圈是人类冠军（18 秒，无声，4 倍慢放）。来源：苏黎世大学 Robotics and Perception Group，<a href="https://www.youtube.com/watch?v=fBiataDpGIo" target="_blank" rel="noopener noreferrer">YouTube</a>，2023-08。</figcaption>
+        <p class="media-status" role="status"></p>
+      </figure>
+      <div>
+        <h3><span class="kicker">无人机竞速</span>Swift：在模拟里自己练，赢了人类冠军</h3>
+        <p>这个例子离我更近，因为我平时做的就是会飞的机器人。2023 年，苏黎世大学的无人机 Swift 在真实赛道上和三位人类无人机竞速冠军一对一比赛。它主要在模拟世界里用强化学习自己练：电脑里飞了相当于一个月，实际不到一个小时；再用少量真实飞行数据校正模拟器。</p>
+        <div class="numbers"><div><b>15 / 25</b><span>场一对一比赛赢了人类冠军（对三人分别 5/9、4/7、6/9）</span></div><div><b>快约半秒</b><span>全场最快的一次比赛成绩，比最好的人类选手</span></div></div>
+        <p class="limit">人也有人的长处：光线等条件和训练时不一样，Swift 就容易失败，人类选手适应得更好。</p>
+      </div>
+    </div>
 
-    <h3 style="margin-top:3rem"><span class="kicker">模拟学院</span>真实世界练太慢、太贵、会摔坏，那就造一个世界来练</h3>
+    <h3 style="margin-top:3rem"><span class="kicker">为什么</span>机器人为什么更需要自己练</h3>
+    <ol class="how">
+      <li><span><b>人的经验有边界。</b>示范只覆盖人做过、做得到的事；模仿学得再好，上限也就是示范它的那个人。</span></li>
+      <li><span><b>身体不一样。</b>2026 年 8 月世界人形机器人运动会上，人形机器人跑出 100 米 8 秒 64，比人类世界纪录 9 秒 58 还快，没有一个人能给它示范这种跑法。螺旋桨怎么飞，也没人能手把手教。</span></li>
+      <li><span><b>看世界的方式不一样。</b>人用眼睛；机器人用相机、深度、激光雷达。下面是我们实验室模拟世界里一架飞行器“看到”的东西。</span></li>
+    </ol>
+    <div class="cave-pics pics4">
+      <figure><img loading="lazy" src="media/airspark-rgb.jpg" alt="彩色画面：学校走廊"><figcaption>彩色画面</figcaption></figure>
+      <figure><img loading="lazy" src="media/airspark-depth.jpg" alt="深度图：灰度表示远近"><figcaption>深度：每个点有多远</figcaption></figure>
+      <figure><img loading="lazy" src="media/airspark-seg.jpg" alt="语义分割：不同物体涂成不同颜色"><figcaption>分割：每样东西是什么</figcaption></figure>
+      <figure><img loading="lazy" src="media/airspark-lidar.jpg" alt="激光雷达实时建图的彩色点云"><figcaption>激光雷达扫出的点</figcaption></figure>
+    </div>
+    <p class="speaker"><b>所以，它得自己去试。</b>画面截自 AirSpark 演示视频，下面会介绍。</p>
+
+    <h3 style="margin-top:3rem"><span class="kicker">模拟学院</span>去哪儿试？真实世界练太慢、太贵、会摔坏，那就造一个世界来练</h3>
     <div class="numbers">
       <div><b>4096 台</b><span>同时在一块显卡上练走路的四足机器人；复杂地形不到 20 分钟学会。以前同类工作要 12 到 120 小时</span></div>
       <div><b>20 万个</b><span>Figure 人形机器人的“System 0”全身平衡控制，完全在模拟里训练时同时开的环境数量，之后直接上真机</span></div>
@@ -256,7 +285,7 @@
       </figure>
       <div>
         <h3><span class="kicker">我们的工作</span>AirSpark：我们给机器人搭的练习场</h3>
-        <p>这样的世界，我们实验室自己也在搭。我们用游戏引擎和物理引擎，搭出一个尽量接近真实的世界：</p>
+        <p>这样的世界，我们实验室自己也在搭，上面那几张“机器人眼里的画面”就来自这里。我们用游戏引擎和物理引擎，搭出一个尽量接近真实的世界：</p>
         <ol class="how">
           <li><span><b>场景是真实的：</b>学校、走廊、教室、街道。</span></li>
           <li><span><b>物理是真实的：</b>飞行器怎么动、碰到东西会怎样，都按物理规律算。</span></li>
@@ -268,27 +297,27 @@
       </div>
     </div>
 
-    <p style="margin-top:2rem">有了练习场，机器人在里面具体怎么练？本质上是一个循环：</p>
+    <h3 style="margin-top:3rem"><span class="kicker">自进化</span>不只是练，还在改进怎么练</h3>
+    <p>有了练习场，具体怎么练？就是一个循环：<b>尝试 → 打分 → 更新</b>。没人告诉它每一步怎么做，只告诉它结果好不好；好的留下，差的改掉。这就是强化学习，AlphaGo Zero 和 Swift 都是这样练出来的。最近的研究还在往上走：</p>
     <figure class="loop" aria-labelledby="loop-cap">
-      <svg viewBox="0 0 370 400" role="img" aria-label="自我改进的循环：尝试、打分、更新、决定下一轮练什么">
-        <text class="small" x="185" y="14" text-anchor="middle">外圈：连“怎么学”也交给 AI 改</text>
-        <circle class="outer" cx="185" cy="195" r="165"/>
-        <circle class="ring" cx="185" cy="195" r="115"/>
-        <circle class="hub" cx="185" cy="195" r="54"/>
-        <text class="hubt" x="185" y="191" text-anchor="middle">模拟</text><text class="hubt" x="185" y="215" text-anchor="middle">练习场</text>
-        <rect class="node" x="150" y="60" width="70" height="40" rx="20"/><text x="185" y="86" text-anchor="middle">尝试</text><text class="n" x="162" y="54">1</text><rect class="node" x="265" y="175" width="70" height="40" rx="20"/><text x="300" y="201" text-anchor="middle">打分</text><text class="n" x="277" y="169">2</text><rect class="node" x="150" y="290" width="70" height="40" rx="20"/><text x="185" y="316" text-anchor="middle">更新</text><text class="n" x="162" y="284">3</text><rect class="node" x="8" y="175" width="124" height="40" rx="20"/><text x="70" y="201" text-anchor="middle">下一轮练什么</text><text class="n" x="20" y="169">4</text>
-        <text class="small" x="185" y="392" text-anchor="middle">↓ 出口：上真机考试</text>
+      <svg viewBox="0 0 370 330" role="img" aria-label="强化学习的循环：尝试、打分、更新">
+        <circle class="ring" cx="185" cy="170" r="115"/>
+        <circle class="hub" cx="185" cy="170" r="58"/>
+        <text class="hubt" x="185" y="166" text-anchor="middle">强化</text><text class="hubt" x="185" y="190" text-anchor="middle">学习</text>
+        <rect class="node" x="150" y="35" width="70" height="40" rx="20"/><text x="185" y="61" text-anchor="middle">尝试</text>
+        <rect class="node" x="270" y="215" width="70" height="40" rx="20"/><text x="305" y="241" text-anchor="middle">打分</text>
+        <rect class="node" x="30" y="215" width="70" height="40" rx="20"/><text x="65" y="241" text-anchor="middle">更新</text>
+        <text class="small" x="185" y="318" text-anchor="middle">没人教每一步，只告诉它结果好不好</text>
       </svg>
       <div>
         <ol>
-          <li><span>1</span><span><b>尝试</b>：几千个机器人在模拟世界里同时练。<small>Rudin 等，2021：4096 台四足机器人在一块显卡上并行，平地不到 4 分钟、复杂地形不到 20 分钟学会走。</small></span></li>
-          <li><span>2</span><span><b>打分</b>：按规则给分，或者由另一个 AI 当裁判。<small>谷歌 SIMA 2：一个 Gemini 出题，另一个 Gemini 打分，智能体在新的虚拟世界里自己学会新技能。</small></span></li>
-          <li><span>3</span><span><b>更新</b>：保留让分数变高的做法，修正让分数变低的。</span></li>
-          <li><span>4</span><span><b>下一轮练什么</b>：专挑自己做得差的练。<small>上海科技大学 EmbodiRSI 按当前弱点生成新的练习；英伟达等的 ENPIRE 更进一步，让编程 AI 自己读日志、改训练代码，灵巧任务做到 99%。</small></span></li>
+          <li><span>1</span><span><b>自己练动作</b>：就是左边这个循环。<small>AlphaGo Zero、Swift。</small></span></li>
+          <li><span>2</span><span><b>自己挑该练什么</b>：看自己哪类任务做得差，专门生成这类练习。<small>上海科技大学 EmbodiRSI。</small></span></li>
+          <li><span>3</span><span><b>自己改训练方法</b>：让编程 AI 读训练日志、改训练代码。<small>ENPIRE，灵巧任务做到 99%。</small></span></li>
         </ol>
         <p class="callout"><b>小心钻空子。</b>DeepMind 的叠积木实验，按“红积木底面离桌面多高”给分，机器人没有去叠，而是把红积木翻了个面，分数照拿。打分规则是人写的，写错了它就照着错的练。</p>
       </div>
-      <figcaption id="loop-cap" style="grid-column:1 / -1">讲者整理的示意图。各步骤的例子来自不同研究，见讲者备注。</figcaption>
+      <figcaption id="loop-cap" style="grid-column:1 / -1">三层是讲者的归纳，不是统一定义。业内有人把这类做法叫“递归自我改进”（recursive self-improvement，RSI），这个说法还很新，没有统一的定义。</figcaption>
     </figure>
 
     <h3 style="margin-top:3rem"><span class="kicker">回到现实</span>驾校场地考满分，上路照样得练</h3>
@@ -329,12 +358,12 @@
     </div>
 
     <div class="undertone"><span class="kicker">伏笔</span><p>机器从人这里学会了起步，又在我们给它搭的世界里，长出了人没有教过的本事。可这个世界的规则、打分的标准、最后的考官，还是人。</p></div>
-    <details class="note"><summary>讲者备注：来源与分寸</summary><div><p>AlphaGo Zero：<a href="https://www.nature.com/articles/nature24270" target="_blank" rel="noopener noreferrer">Nature 2017</a>（<a href="https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf" target="_blank" rel="noopener noreferrer">预印本</a>）：36 小时超过 AlphaGo Lee；72 小时对战 100:0；学棋谱的网络 24 小时内被打败；40 天版本对 AlphaGo Master 89:11。对手是 AlphaGo Lee，不是 Master。</p><p>100 米 8 秒 64：<a href="https://www.news.cn/photo/20260826/a659737a9e8a461f969b11a1f5914727/c.html" target="_blank" rel="noopener noreferrer">新华网，2026-08-26</a>、<a href="https://cn.chinadaily.com.cn/a/202608/27/WS6a902900e4b09a165c7867c1.html" target="_blank" rel="noopener noreferrer">中国日报，2026-08-27</a>，第二届世界人形机器人运动会，天骄队获 100 米大型组冠军。训练方法官方未公开，台上只说“没人能示范这种跑法”，不说“它是靠模拟练出来的”。</p><p>Rudin 等：<a href="https://arxiv.org/abs/2109.11978" target="_blank" rel="noopener noreferrer">arXiv 2109.11978</a>，CoRL 2021。Figure System 0：<a href="https://www.figure.ai/news/helix-02" target="_blank" rel="noopener noreferrer">Helix 02</a>，公司自述。DreamGen：<a href="https://arxiv.org/abs/2505.12705" target="_blank" rel="noopener noreferrer">arXiv 2505.12705</a>，新动作成功率 11.2% → 43.2%，全新环境 28.5%。宇树：<a href="https://github.com/unitreerobotics/unitree_rl_gym" target="_blank" rel="noopener noreferrer">unitree_rl_gym</a>。</p><p>SIMA 2：<a href="https://arxiv.org/abs/2512.04797" target="_blank" rel="noopener noreferrer">arXiv 2512.04797</a>，虚拟世界导航，不是实体机器人。ENPIRE：<a href="https://arxiv.org/abs/2606.19980" target="_blank" rel="noopener noreferrer">arXiv 2606.19980</a>，CoRL 2026，实体机器人。EmbodiRSI：<a href="https://arxiv.org/abs/2609.38905" target="_blank" rel="noopener noreferrer">arXiv 2609.38905</a>，表格 R2 真机 62.8%，R2+10 为 83.1%。叠积木：<a href="https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/" target="_blank" rel="noopener noreferrer">DeepMind，2020</a>。</p><p>“递归自我改进”的三层可以这样分：改数据（EmbodiRSI 按弱点生成练习），改策略（CEL、π*0.6），改学习方法本身（ENPIRE 让 AI 改训练代码）。目前都还需要人：CEL 里人判成败，π*0.6 里人给纠正，FIND 里人负责复位场景。</p></div></details>
+    <details class="note"><summary>讲者备注：来源与分寸</summary><div><p>AlphaGo Zero：<a href="https://www.nature.com/articles/nature24270" target="_blank" rel="noopener noreferrer">Nature 2017</a>（<a href="https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf" target="_blank" rel="noopener noreferrer">预印本</a>）：36 小时超过 AlphaGo Lee；72 小时对战 100:0；学棋谱的网络 24 小时内被打败；40 天版本对 AlphaGo Master 89:11。对手是 AlphaGo Lee，不是 Master。</p><p>100 米 8 秒 64：<a href="https://www.news.cn/photo/20260826/a659737a9e8a461f969b11a1f5914727/c.html" target="_blank" rel="noopener noreferrer">新华网，2026-08-26</a>、<a href="https://cn.chinadaily.com.cn/a/202608/27/WS6a902900e4b09a165c7867c1.html" target="_blank" rel="noopener noreferrer">中国日报，2026-08-27</a>，第二届世界人形机器人运动会，天骄队获 100 米大型组冠军。训练方法官方未公开，台上只说“没人能示范这种跑法”，不说“它是靠模拟练出来的”。</p><p>Rudin 等：<a href="https://arxiv.org/abs/2109.11978" target="_blank" rel="noopener noreferrer">arXiv 2109.11978</a>，CoRL 2021。Figure System 0：<a href="https://www.figure.ai/news/helix-02" target="_blank" rel="noopener noreferrer">Helix 02</a>，公司自述。DreamGen：<a href="https://arxiv.org/abs/2505.12705" target="_blank" rel="noopener noreferrer">arXiv 2505.12705</a>，新动作成功率 11.2% → 43.2%，全新环境 28.5%。宇树：<a href="https://github.com/unitreerobotics/unitree_rl_gym" target="_blank" rel="noopener noreferrer">unitree_rl_gym</a>。</p><p>SIMA 2：<a href="https://arxiv.org/abs/2512.04797" target="_blank" rel="noopener noreferrer">arXiv 2512.04797</a>，虚拟世界导航，不是实体机器人。ENPIRE：<a href="https://arxiv.org/abs/2606.19980" target="_blank" rel="noopener noreferrer">arXiv 2606.19980</a>，CoRL 2026，实体机器人。EmbodiRSI：<a href="https://arxiv.org/abs/2609.38905" target="_blank" rel="noopener noreferrer">arXiv 2609.38905</a>，表格 R2 真机 62.8%，R2+10 为 83.1%。叠积木：<a href="https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/" target="_blank" rel="noopener noreferrer">DeepMind，2020</a>。</p><p>Swift：Kaufmann 等，<a href="https://www.nature.com/articles/s41586-023-06419-4" target="_blank" rel="noopener noreferrer">Champion-level drone racing using deep reinforcement learning</a>，Nature 620:982–987，2023。对手 Alex Vanover（2019 DRL 世界冠军）、Thomas Bitmatta（MultiGP 世界杯冠军）、Marvin Schaepper（三届瑞士冠军）；25 场赢 15 场；最快比赛成绩领先最好的人类约半秒。训练 1 亿次交互，一台工作站约 50 分钟；另用真实赛道数据建立感知和动力学残差模型，所以不是纯模拟。<a href="https://www.news.uzh.ch/en/articles/media/2023/Drone-race.html" target="_blank" rel="noopener noreferrer">UZH 新闻稿</a>：相当于一个月模拟飞行、台式机不到一小时；光线等条件变化时会失败。讲者不是作者。</p><p>“自进化”三层是讲者的归纳：自己练动作（强化学习）、自己挑该练什么（EmbodiRSI 按弱点生成练习）、自己改训练方法（ENPIRE 让 AI 改训练代码）。“递归自我改进（RSI）”目前没有权威、统一的定义，台上不下定义，也不说“已经实现了 RSI”。目前都还需要人：CEL 里人判成败，π*0.6 里人给纠正，FIND 里人负责复位场景。</p></div></details>
   </div>
 </section>
 
 <section id="society" class="part" aria-labelledby="society-title">
-  <div class="rail"><span class="numeral" aria-hidden="true">三</span><span class="time">18–28 分钟</span></div>
+  <div class="rail"><span class="numeral" aria-hidden="true">三</span><span class="time">19–28 分钟</span></div>
   <div class="content">
     <h2 id="society-title">走进社会的两道坎</h2>
     <p class="lead">在实验室和模拟世界里学会了，不等于能在社会里长期生活。眼下有两道坎：身体撑不住，以及读不懂人。</p>
@@ -346,7 +375,12 @@
         <dt>2 小时 40 分 42 秒</dt><dd>冠军天工 Ultra 的成绩。人类男子冠军用时约 1 小时 2 分。</dd>
         <dt>6 支</dt><dd>20 支队伍里只有 6 支完赛。冠军途中换了电池、摔倒一次；很多机器人过热、摔倒，全程需要团队跟着：领航、换电池、喷冷却剂，甚至用胶带修补。</dd>
       </dl>
-      <p>一年后变化很快。2026 年同一场比赛，47 支队伍跑完全程。冠军荣耀“闪电”自主导航跑出 50 分 26 秒，快过人类半马世界纪录 56 分 42 秒；它能赢，很大程度上靠专门做的液冷，给腿上的电机降温。可就在同一场比赛里，去年的冠军天工 Ultra 冲过终点后系统紊乱，一头扎进路边的草丛；宇树 H1 跑完就倒下，被担架抬走。规则也严了：遥控组成绩乘以 1.2，自主组人工干预超过 3 次就按遥控算。</p>
+      <div class="cave-pics">
+        <figure><img loading="lazy" src="media/halfmarathon-2025.jpg" alt="2025 年，天工 Ultra 冲过终点，身边跟着几位团队成员"><figcaption>2025：冠军天工 Ultra（左二）冲过终点，身边跟着团队成员。新华社记者 李欣 摄（<a href="http://www.news.cn/tech/20250420/53172980dd8a4c5e81b4519380a09eac/c.html" target="_blank" rel="noopener noreferrer">新华网</a>）</figcaption></figure>
+        <figure><img loading="lazy" src="media/halfmarathon-2026.jpg" alt="2026 年，红色的荣耀闪电机器人冲过终点线"><figcaption>2026：冠军“闪电”自主冲线。新华社记者 张晨霖 摄（<a href="https://www.news.cn/photo/20260419/caa4dfa1c0d340cbbac8210fbb20b44e/c.html" target="_blank" rel="noopener noreferrer">新华网图集</a>）</figcaption></figure>
+        <figure><img loading="lazy" src="media/halfmarathon-2026-fall.jpg" alt="2026 年，一台天工机器人在比赛中摔倒，工作人员上前处理"><figcaption>2026：另一支队伍的天工 Ultra-2026 途中摔倒。新华社记者 雒圆 摄（同上）</figcaption></figure>
+      </div>
+      <p>一年后变化很快。2026 年同一场比赛，47 支队伍跑完全程。冠军荣耀“闪电”自主导航跑出 50 分 26 秒，快过人类半马世界纪录 56 分 42 秒；它能赢，很大程度上靠专门做的液冷，给腿上的电机降温。可就在同一场比赛里，去年的冠军天工 Ultra 冲过终点后系统紊乱，一头扎进路边的草丛；宇树 H1 在终点前几米失衡倒地，被担架抬走（这两件只找到文字报道）。规则也严了：遥控组成绩乘以 1.2，自主组人工干预超过 3 次就按遥控算。</p>
       <p class="source">来源：<a href="http://www.news.cn/science/20250419/624a79549602425591320182e682e315/c.html" target="_blank" rel="noopener noreferrer">新华网，2025-04-19</a>；<a href="http://www.news.cn/tech/20250421/35fb32e8235f489ab28167fd95fdbf20/c.html" target="_blank" rel="noopener noreferrer">新华网，2025-04-21</a>（6 支完赛）；<a href="https://www.thepaper.cn/newsDetail_forward_33004042" target="_blank" rel="noopener noreferrer">澎湃新闻，2026-04-19</a>；<a href="https://www.bjnews.com.cn/detail/1776560074129906.html" target="_blank" rel="noopener noreferrer">新京报，2026-04-19</a>；<a href="https://www.cls.cn/detail/2348447" target="_blank" rel="noopener noreferrer">《科创板日报》，2026-04-19</a>（冲线后倒下、液冷）。人类男子半马世界纪录 56 分 42 秒（基普利莫，2025 年 2 月）；部分报道写的 57 分 20 秒有误。</p>
       <p><b>跑得快，不等于撑得住。</b>一场比赛只有一两个小时，身后还跟着一整支团队；要在家里、医院、政务大厅连续工作几个月，是另一回事。</p>
       <h4 class="sub"><span class="kicker">我们自己的实验</span>走出实验室：海蚀洞里的 42 天</h4>
@@ -542,7 +576,7 @@
   <div class="rail"><span class="numeral" aria-hidden="true">备</span><span class="time">讲者自用</span></div>
   <div class="content">
     <h2 id="studio-title">备讲台</h2>
-    <p>这里是准备材料：已提交的简介、时间表、PPT 故事板和关键转场。逐页讲稿、备选说法和 PPT 文件在本地 PPT 文件夹（PPT 与演讲稿 v2026.11.04.6）。展示模式下这一部分会隐藏。</p>
+    <p>这里是准备材料：已提交的简介、时间表、PPT 故事板和关键转场。逐页讲稿、备选说法和 PPT 文件在本地 PPT 文件夹（PPT 与演讲稿 v2026.11.04.7）。展示模式下这一部分会隐藏。</p>
     <div class="studio-grid">
       <div>
         <h3>已提交的题目与简介</h3>
@@ -558,9 +592,9 @@
         <h3>时间表</h3>
         <ol class="timeline">
           <li><time>0–4</time><div>开场<small>举手三问约 1 分钟；天裔机器人与 Emo：“这个笑容从哪里来”约 1.5 分钟；五步路线约 45 秒</small></div></li>
-          <li><time>4–12</time><div>一 向人类学习<small>学情绪约 2 分钟；学知识（猜下一个字、看图配说明）约 2 分钟；学动作（RAPID Hand、第一视角）约 2 分钟；接起来（Gemini 演示）并小结约 2 分钟</small></div></li>
-          <li><time>12–18</time><div>二 超越人类经验<small>AlphaGo Zero 与 100 米约 1 分钟；模拟学院约 1 分钟；AirSpark 约 1.5 分钟；循环图约 1 分钟；回到真机约 1.5 分钟</small></div></li>
-          <li><time>18–28</time><div>三 走进社会的两道坎<small>半马、海蚀洞、雏形表约 5.5 分钟；整齐、NEO 与长隆、再举手、技术解决不了的那一半约 4 分钟</small></div></li>
+          <li><time>4–11</time><div>一 向人类学习<small>学情绪约 2 分钟；学知识（猜下一个字、看图配说明）约 1.5 分钟；学动作（RAPID Hand、第一视角）约 2 分钟；接起来（伦敦行李演示、四格分镜）并小结约 2 分钟</small></div></li>
+          <li><time>11–19</time><div>二 超越人类经验<small>自己练已经超过了人（AlphaGo Zero、Swift）约 1.5 分钟；为什么更需要自己练约 1 分钟；模拟学院约 1 分钟；AirSpark 约 1.5 分钟；自进化约 1.5 分钟；回到真机约 1.5 分钟</small></div></li>
+          <li><time>19–28</time><div>三 走进社会的两道坎<small>半马、海蚀洞、雏形表约 5.5 分钟；整齐、NEO 与长隆、再举手、技术解决不了的那一半约 4 分钟</small></div></li>
           <li><time>28–30</time><div>四 硅基的我们？<small>三种传承图首次出现，四句回收；最后一问引出第五步</small></div></li>
           <li><time>30–33</time><div>五 怎样共处<small>三个治理问题各约 1 分钟；规矩还没写完，主讲结束</small></div></li>
           <li><time>33–45</time><div>交流<small>政务大厅情境、三个视角、三道投票题</small></div></li>
@@ -569,7 +603,7 @@
     </div>
 
     <h3 style="margin-top:3.5rem">PPT 故事板</h3>
-    <p>按 30 分钟设计，29 页（含 5 张分段页），和 PPT v2026.11.04.6 一一对应。左侧有紫线的两页是暗线：第 3 页提出问题，第 24 页揭开。</p>
+    <p>按约 33 分钟设计，30 页（含 5 张分段页），和 PPT v2026.11.04.7 一一对应。左侧有紫线的两页是暗线：第 3 页提出问题，第 25 页揭开。</p>
     <ol class="board">
       <li><b>封面</b><span>碳与硅、题目、署名</span></li>
       <li><b>先举个手</b><span>用过 AI、见过人形机器人、愿不愿让它进家门</span></li>
@@ -579,15 +613,16 @@
       <li><b>学情绪</b><span>Emo 三步；对口型；表情像人不等于感受像人</span></li>
       <li><b>学知识</b><span>猜下一个字（14.8 万亿）；看图配说明（4 亿对）；教不会手上功夫</span></li>
       <li><b>学动作</b><span>手把手教（RAPID Hand）；戴上相机录（第一视角，约 2 倍）；京东 EgoLive</span></li>
-      <li><b>知识和动作接起来</b><span>Gemini 分垃圾演示；大脑、harness、小脑架构图；第一步小结</span></li>
-      <li><b>分段：超越人类经验</b><span>两个天花板</span></li>
-      <li><b>天花板</b><span>AlphaGo Zero 曲线图；100 米 8 秒 64</span></li>
-      <li><b>模拟学院</b><span>4096 台、20 万个环境、22 种新动作</span></li>
+      <li><b>知识和动作接起来</b><span>出门带伞的例子；Gemini 伦敦行李演示与四格分镜；第一步小结</span></li>
+      <li><b>分段：超越人类经验</b><span>模仿学习有边界</span></li>
+      <li><b>自己练，已经超过了人</b><span>AlphaGo Zero 曲线；Swift 无人机竞速 25 场赢 15 场</span></li>
+      <li><b>为什么更需要自己练</b><span>经验有边界；身体不一样（8 秒 64）；看世界的方式不一样（AirSpark 画面）</span></li>
+      <li><b>模拟学院</b><span>去哪儿试：4096 台、20 万个环境、22 种新动作</span></li>
       <li><b>我们搭的练习场</b><span>AirSpark；下一步把人放进来</span></li>
-      <li><b>自己练的循环</b><span>循环图；翻积木钻空子</span></li>
+      <li><b>自进化</b><span>尝试、打分、更新；三层（讲者归纳）；翻积木钻空子</span></li>
       <li><b>回到现实</b><span>83.5% → 62.8% → 83.1%；CEL 96 台；考官还是人</span></li>
       <li><b>分段：两道坎</b><span>身体撑不住；读不懂人</span></li>
-      <li><b>坎一：半马</b><span>2025 与 2026 对比；跑得快不等于撑得住</span></li>
+      <li><b>坎一：半马</b><span>新华社现场照片；2025 与 2026 对比；跑得快不等于撑得住</span></li>
       <li><b>坎一：海蚀洞里的 42 天</b><span>花絮视频；五类部件像串联电路</span></li>
       <li><b>汽车有的，机器人也要</b><span>基础设施雏形对照表</span></li>
       <li><b>坎二：什么叫“整齐”</b><span>TidyBot；说不清的整齐</span></li>
@@ -608,7 +643,7 @@
       <h4>开场进入第一段</h4>
       <p>先讲第一步：机器人怎样向人学。</p>
       <h4>第一段进入第二段</h4>
-      <p>可是，只向人学，有两个天花板。</p>
+      <p>可是，只向人学，是有边界的。</p>
       <h4>第二段进入第三段</h4>
       <p>驾校考满分，上路还得练。可真要走出实验室、走进社会，还隔着两道坎。</p>
       <h4>第三段进入第四段</h4>
@@ -619,7 +654,7 @@
 
     <h3 style="margin-top:3.5rem">上台前待办</h3>
     <ul class="todo">
-            <li>投影现场测试视频能否加载：Emo 和天裔机器人默认走 B 站；第一视角、Gemini、AirSpark、海蚀洞视频已放在本仓库 media/；π*0.6 来自国外站点，CEL 在 YouTube，PPT 里都已嵌入本地版本</li>
+            <li>投影现场测试视频能否加载：Emo 和天裔机器人默认走 B 站；第一视角、Gemini 伦敦行李、Swift、AirSpark、海蚀洞视频已放在本仓库 media/；π*0.6 来自国外站点，CEL 在 YouTube，PPT 里都已嵌入本地版本</li>
       <li>开场举手前点“清零全部计数”（浏览器会保留上次的数字）</li>
       <li>Roomba 事件只讲文字，不放原图</li>
     </ul>
@@ -635,7 +670,7 @@
 
 <footer>
   <p>硅基的我们？——从自主行动到社会共处</p>
-  <p>2026 年 11 月 4 日 v3.7 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
+  <p>2026 年 11 月 4 日 v3.8 · <a href="research.html">调研与核查</a> · <a href="https://github.com/zhangbt6/robot-common-life" target="_blank" rel="noopener noreferrer">源代码</a></p>
 </footer>
 
 <div id="stage" class="stage" hidden>

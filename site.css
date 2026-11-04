@@ -403,3 +403,8 @@ html:has(body.focus){scroll-padding-top:0}
   .board li{border:1px solid #ccc}
   a{color:var(--ink)}
 }
+
+.cave-pics.pics4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cave-pics.pics4 img{aspect-ratio:16/9}
+.cave-pics figcaption b{display:block;color:var(--si)}
+@media (max-width:640px){.cave-pics.pics4{grid-template-columns:repeat(2,minmax(0,1fr))}}
